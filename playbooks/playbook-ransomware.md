@@ -7,80 +7,54 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 
 ### Investigación
 
-`OBJETIVO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el ransomware.`
-
-1. **Determinar el tipo** de ransomware (_es decir, _ ¿cuál es la familia, la variante o el tipo?)[<sup>[1]</sup>](#ransomware-playbook-ref-1)
-    1. Encuentre cualquier mensaje relacionado.  Compruebe:
-        * las interfaces gráficas de usuario (GUI) del propio malware
-        * archivos de texto o html, que a veces se abren automáticamente tras el cifrado
-        * archivos de imange, a menudo, como fondos de pantalla del sistema infectado
-        * correos electrónicos de contacto en extensiones de archivo encriptadas
-        * ventanas emergentes después de intentar abrir un archivo encriptado
-        * mensajes de voz
-    1. Analice los mensajes en busca de pistas sobre el tipo de ransomware:
-        * nombre del ransomware
-        * lenguaje, estructura, frases, material gráfico
-        * correo electrónico de contacto
-        * formato de la identificación del usuario
-        * especificaciones de la demanda de rescate (_p.ej._, moneda digital, tarjetas de regalo)
-        * dirección de pago en caso de moneda digital
-        * chat de soporte o página de soporte
-    1. Analice los archivos afectados y/o nuevos.  Compruebe:
-        * el esquema de cambio de nombre de los archivos encriptados, incluyendo la extensión (_p.ej._, `.cry`, `.cry`, `.locked`) y el nombre base
-        * corrupción de archivos frente a encriptación
-        * Tipos de archivos y ubicaciones objetivo
-        * usuario/grupo propietario de los archivos afectados
-        * Icono de los archivos encriptados
-        * marcadores de archivos
-        * existencia de listados de archivos, archivos clave u otros archivos de datos
-
-    1. Analice los tipos de software o sistemas afectados.  Algunas variantes de ransomware sólo afectan a determinadas herramientas (_p.ej._, [databases](https://www.bleepingcomputer.com/news/security/mongodb-apocalypse-professional-ransomware-group-gets-involved-infections-reach-28k-servers/)) or platforms (_e.g._, [NAS products](https://forum.synology.com/enu/viewtopic.php?f=3&t=88716))
-    1. Subir los indicadores a servicios de categorización automatizados como [Crypto Sheriff](https://www.nomoreransom.org/crypto-sheriff.php), [ID Ransomware](https://id-ransomware.malwarehunterteam.com/), o similar.
-1. **Determinar el alcance:**
-    1. ¿Qué sistemas están afectados? `TODO: Especificar herramientas y procedimientos`
-        * Busque indicadores de compromiso (IOC), como archivos/hashes, procesos, conexiones de red, etc.  Utilice [endpoint protection/EDR](#TODO-link-to-actual-resource), [endpoint telemetry](#TODO-link-to-actual-resource), [system logs](#TODO-link-to-actual-resource), etc.
-        * Comprobar la infección de sistemas similares (_por ejemplo, usuarios, grupos, datos, herramientas, departamento, configuración, estado de los parches): comprobar [IAM tools](#TODO-link-to-actual-resource), [permissions management tools](#TODO-link-to-actual-resource), [directory services](#TODO-link-to-actual-resource), _etc._
-        * Find external command and control (C2), if present, and find other systems connecting to it: check [firewall or IDS logs](#TODO-link-to-actual-resource), [system logs/EDR](#TODO-link-to-actual-resource), [DNS logs](#TODO-link-to-actual-resource), [netflow or router logs](#TODO-link-to-actual-resource), _etc._
-    1. ¿Qué datos están afectados? (_e.g._, tipos de archivo, departamento o grupo, software afectado) `TODO: Especifique la(s) herramienta(s) y el procedimiento`.
-        * Buscar cambios anómalos en los metadatos de los archivos, como cambios masivos en las horas de creación o modificación.  Comprobar [herramientas de búsqueda de metadatos de archivos](#TODO-link-to-actual-resource)
-        * Buscar cambios en archivos de datos normalmente estables o críticos.  Comprobar las herramientas de [supervisión de la integridad de los archivos](#TODO-link-to-actual-resource)
-1. **Evaluar el impacto** para priorizar y motivar los recursos
-    1. Evaluar el impacto funcional: impacto en la empresa o en la misión.
-        * ¿Cuánto dinero se pierde o está en riesgo?
-        * ¿Cuántas (y cuáles) misiones se degradan o están en riesgo?
-    1. Evaluar el impacto en la información: impacto en la confidencialidad, integridad y disponibilidad de los datos.
-        * ¿Qué importancia tienen los datos para la empresa/misión?
-        * ¿Cuán sensibles son los datos? (_p.ej._, secretos comerciales)
-        * ¿Cuál es la situación reglamentaria de los datos (_p.ej._, PII, PHI)?
-
-1. **Encuentra el vector de infección.** Comprueba las tácticas capturadas en la [Initial Access tactic](https://attack.mitre.org/tactics/TA0001/) of MITRE ATT&CK[<sup>[4]</sup>](#ransomware-playbook-ref-4).  Los datos más comunes y las fuentes de datos son:
-    * archivo adjunto de correo electrónico: comprobar [email logs](#TODO-link-to-actual-resource), [email security appliances and services](#TODO-link-to-actual-resource), [e-discovery tools](#TODO-link-to-actual-resource), _etc._
-    * insecure remote desktop protocol (RDP): check [vulnerability scanning results](#TODO-link-to-actual-resource), [firewall configurations](#TODO-link-to-actual-resource), _etc._
-    * auto-propagación (worm or virus) (check [host telemetry/EDR](#TODO-link-to-actual-resource), [system logs](#TODO-link-to-actual-resource), [forensic analysis](#TODO-link-to-actual-resource), _etc._)
-
-
-
-
-
-
 Determinar el tipo de ransomware:
-    - Equipo asignado: Equipo de Análisis de Malware.
-    - Estrategia: Utilizar herramientas avanzadas de análisis de malware para identificar la familia, variante o tipo específico de ransomware involucrado en el incidente. Analizar firmas, comportamiento y características únicas del malware.
+- Equipo asignado: Equipo de Análisis de Malware.
+- Estrategia: Utilizar herramientas avanzadas de análisis de malware para identificar la familia, variante o tipo específico de ransomware involucrado en el incidente. Analizar firmas, comportamiento y características únicas del malware.
 
 Analizar mensajes relacionados:
-    - Equipo asignado: Equipo de Análisis de Mensajes.
-    - Estrategia: Revisar detenidamente todos los mensajes relacionados con el ransomware, incluyendo interfaces gráficas, archivos de texto/html, mensajes de voz, etc. Identificar patrones de lenguaje, contactos de correo electrónico, instrucciones de rescate y cualquier otra información relevante.
+- Equipo asignado: Equipo de Análisis de Mensajes.
+- Estrategia: Revisar detenidamente todos los mensajes relacionados con el ransomware, incluyendo interfaces gráficas, archivos de texto/html, mensajes de voz, etc. Identificar patrones de lenguaje, contactos de correo electrónico, instrucciones de rescate y cualquier otra información relevante.
 
 Examinar archivos afectados:
-    - Equipo asignado: Equipo de Análisis de Archivos.
-    - Estrategia: Investigar a fondo los archivos afectados por el ransomware. Analizar el esquema de cambio de nombre de los archivos encriptados, tipos de archivos afectados, iconos de archivos, etc. Determinar la extensión de la encriptación y evaluar la posibilidad de recuperación de datos.
-
+- Equipo asignado: Equipo de Análisis de Archivos.
+- Estrategia: Investigar a fondo los archivos afectados por el ransomware. Analizar el esquema de cambio de nombre de los archivos encriptados, tipos de archivos afectados, iconos de archivos, etc. Determinar la extensión de la encriptación y evaluar la posibilidad de recuperación de datos.
+- Comprobad:
+  * Corrupción de archivos frente a encriptación
+  * Tipos de archivos y ubicaciones
+  * Usuario/grupo propietario de los archivos que son afectados
+  * Icono de los archivos encriptados
+  * Marcadores de archivos
+ 
 Determinar el alcance:
-    - Equipo asignado: Equipo de Investigación de Alcance.
-    - Estrategia: Identificar el alcance total del incidente de ransomware. Determinar qué sistemas están afectados, identificar indicadores de compromiso (IOC), evaluar la sensibilidad de los datos comprometidos y encontrar el vector de infección utilizado por el atacante.
+- Equipo asignado: Equipo de Investigación de Alcance.
+- Estrategia: Identificar el alcance total del incidente de ransomware. Determinar qué sistemas están afectados, identificar indicadores de compromiso (IOC), evaluar la sensibilidad de los datos comprometidos y encontrar el vector de infección utilizado por el atacante.
 
+1. Evaluación del Impacto: Priorización y Justificación de Recursos
+Evaluación del Impacto Operacional y Económico:
+- Estima las pérdidas económicas potenciales y el riesgo financiero.
+- Identifica operaciones críticas afectadas y misiones comprometidas.
+- Calcula el costo de la interrupción del negocio, incluyendo la pérdida de productividad y el impacto en las relaciones con clientes y socios.
 
+Evaluación del Impacto en los Datos:
+- Valora la criticidad de los datos afectados para las operaciones de la empresa o la misión.
+- Determina la sensibilidad de los datos comprometidos (por ejemplo, información confidencial, secretos comerciales).
+- Analiza las implicaciones legales y de cumplimiento asociadas con los datos afectados (por ejemplo, GDPR para datos personales, HIPAA para información de salud).
 
+2. Identificación del Vector de Infección:
+Para localizar cómo se introdujo el ransomware, consulta las tácticas de "Acceso Inicial" en el marco de MITRE ATT&CK. Es crucial revisar las siguientes fuentes de información:
+
+Adjuntos de Correo Electrónico:
+- Examina los registros de correo electrónico para identificar mensajes sospechosos.
+- Utiliza dispositivos y servicios de seguridad de correo electrónico para detectar amenazas.
+- Emplea herramientas de descubrimiento electrónico para buscar pruebas de phishing o malware en comunicaciones.
+
+Protocolo de Escritorio Remoto (RDP) Inseguro:
+- Revisa los resultados de escaneos de vulnerabilidades que puedan indicar exposiciones de RDP.
+- Verifica las configuraciones de firewall para detectar reglas permisivas que puedan haber sido explotadas.
+
+Auto-propagación (Gusano o Virus):
+- Analiza la telemetría del host y los datos del Endpoint Detection and Response (EDR) para rastrear movimientos laterales o signos de auto-propagación.
+- Consulta los registros del sistema y realiza análisis forenses para identificar mecanismos de propagación.
 
 ### Remediar
 
@@ -149,25 +123,27 @@ Recuperación de datos y consideraciones legales:
 
 #### Referencia: Acciones de los usuarios ante la sospecha de ransomware
 
-`OBJETIVO: Personalizar los pasos para los usuarios ante la sospecha de ransomware`.
+1. **Mantén la Serenidad:** Respire hondo y mantén la calma para pensar con claridad.
+   
+2. **Aísla tu Equipo:** Desconecta inmediatamente tu computadora de cualquier red para evitar la propagación del ransomware.
 
-1. Mantenga la calma y respire profundamente.
-1. Desconecte su sistema de la red `OBJETIVO: incluya pasos detallados con capturas de pantalla, una herramienta preinstalada o un script para facilitar esta tarea ("romper en caso de emergencia"), considere los interruptores de corte de red por hardware`.
-1. Haz fotos de tu pantalla con tu smartphone mostrando las cosas que has notado: mensajes de rescate, archivos encriptados, mensajes de error del sistema, _etc._.
-1. 2. Toma notas sobre el problema o los problemas utilizando la aplicación de notas de voz de tu smartphone o con papel y lápiz.  Todo ayuda.  Documenta lo siguiente:
-    1. ¿Qué has notado?
-    1. ¿Por qué pensaste que era un problema?
-    1. ¿Qué estabas haciendo en el momento en que lo detectaste?
-    1. ¿Cuándo se produjo por primera vez, y con qué frecuencia desde entonces?
-    1. ¿Dónde estaba cuando ocurrió y en qué red? (oficina/casa/tienda, con cable/inalámbrica, con/sin VPN, _etc._)
-    1. ¿Qué sistemas está utilizando? (sistema operativo, nombre de host, _etc._)
-    1. ¿Qué cuenta utilizas?
-    1. ¿A qué datos suele acceder?
-    1. ¿Con quién más se ha puesto en contacto en relación con este incidente y qué le ha dicho?
-1. Contacta al  [help desk](#TODO-link-to-actual-resource) y ser lo más útil posible
-1. Tenga paciencia: la respuesta puede ser perturbadora, pero está protegiendo a su equipo y a la organización.  **Gracias.**
+3. **Documenta Evidencias:** Utiliza tu teléfono móvil para tomar fotografías de tu pantalla, capturando cualquier mensaje sospechoso, archivos que parezcan estar cifrados, y errores del sistema que observes.
 
+4. **Registra Detalles del Incidente:** Aprovecha la grabadora de voz de tu móvil o usa papel y lápiz para anotar todos los detalles relevantes sobre el incidente.
+Esto incluye:
+ * Las irregularidades que notaste.
+ * Razones por las que te pareció un problema.
+ * Actividades que estabas realizando al momento del descubrimiento.
+ * Momento exacto o aproximado del primer indicio y frecuencia de los mismos desde entonces.
+ * Ubicación y red en uso al momento del incidente (por ejemplo, en casa, en la oficina, usando red alámbrica o inalámbrica, con o sin VPN).
+ * Sistemas afectados (por ejemplo, sistema operativo y nombre de host).
+ * Cuenta de usuario afectada.
+ * Tipo de datos a los que comúnmente se accede.
+ * Personas con las que se ha discutido el incidente y los detalles compartidos.
 
+5. **Comunícate con el Soporte Técnico:** Informa al help desk de la situación. Utiliza el enlace provisto para contactar al recurso correspondiente y ofrece toda la información posible para asistir en la resolución del problema.
+
+6. **Paciencia y Colaboración:** La respuesta y solución pueden requerir tiempo y ser complejas. Tu paciencia y cooperación son cruciales para proteger los activos y la seguridad de la organización. Agradecemos tu apoyo.
 
 #### Información adicional
 
