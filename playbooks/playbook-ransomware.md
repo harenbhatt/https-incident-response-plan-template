@@ -64,21 +64,20 @@ Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando s
 
 
 Determinar el tipo de ransomware:
+    - Equipo asignado: Equipo de Análisis de Malware.
+    - Estrategia: Utilizar herramientas avanzadas de análisis de malware para identificar la familia, variante o tipo específico de ransomware involucrado en el incidente. Analizar firmas, comportamiento y características únicas del malware.
 
-Equipo asignado: Equipo de Análisis de Malware.
-Estrategia: Utilizar herramientas avanzadas de análisis de malware para identificar la familia, variante o tipo específico de ransomware involucrado en el incidente. Analizar firmas, comportamiento y características únicas del malware.
 Analizar mensajes relacionados:
+    - Equipo asignado: Equipo de Análisis de Mensajes.
+    - Estrategia: Revisar detenidamente todos los mensajes relacionados con el ransomware, incluyendo interfaces gráficas, archivos de texto/html, mensajes de voz, etc. Identificar patrones de lenguaje, contactos de correo electrónico, instrucciones de rescate y cualquier otra información relevante.
 
-Equipo asignado: Equipo de Análisis de Mensajes.
-Estrategia: Revisar detenidamente todos los mensajes relacionados con el ransomware, incluyendo interfaces gráficas, archivos de texto/html, mensajes de voz, etc. Identificar patrones de lenguaje, contactos de correo electrónico, instrucciones de rescate y cualquier otra información relevante.
 Examinar archivos afectados:
+    - Equipo asignado: Equipo de Análisis de Archivos.
+    - Estrategia: Investigar a fondo los archivos afectados por el ransomware. Analizar el esquema de cambio de nombre de los archivos encriptados, tipos de archivos afectados, iconos de archivos, etc. Determinar la extensión de la encriptación y evaluar la posibilidad de recuperación de datos.
 
-Equipo asignado: Equipo de Análisis de Archivos.
-Estrategia: Investigar a fondo los archivos afectados por el ransomware. Analizar el esquema de cambio de nombre de los archivos encriptados, tipos de archivos afectados, iconos de archivos, etc. Determinar la extensión de la encriptación y evaluar la posibilidad de recuperación de datos.
 Determinar el alcance:
-
-Equipo asignado: Equipo de Investigación de Alcance.
-Estrategia: Identificar el alcance total del incidente de ransomware. Determinar qué sistemas están afectados, identificar indicadores de compromiso (IOC), evaluar la sensibilidad de los datos comprometidos y encontrar el vector de infección utilizado por el atacante.
+    - Equipo asignado: Equipo de Investigación de Alcance.
+    - Estrategia: Identificar el alcance total del incidente de ransomware. Determinar qué sistemas están afectados, identificar indicadores de compromiso (IOC), evaluar la sensibilidad de los datos comprometidos y encontrar el vector de infección utilizado por el atacante.
 
 
 
@@ -88,46 +87,63 @@ Estrategia: Identificar el alcance total del incidente de ransomware. Determinar
 **Planificar eventos de remediación** en los que estos pasos se lancen juntos (o de forma coordinada), con los equipos apropiados listos para responder a cualquier interrupción.
 **Considere el momento y las compensaciones** de las acciones de reparación: su respuesta tiene consecuencias.
 
-#### Contención
+### Contención
 
 Poner en cuarentena sistemas infectados:
+- Equipo asignado: Equipo de Seguridad de Red.
+- Estrategia: Implementar medidas de cuarentena para aislar los sistemas infectados y evitar la propagación del ransomware a través de la red. Desconectar los sistemas comprometidos de la red corporativa y bloquear el tráfico malicioso.
 
-Equipo asignado: Equipo de Seguridad de Red.
-Estrategia: Implementar medidas de cuarentena para aislar los sistemas infectados y evitar la propagación del ransomware a través de la red. Desconectar los sistemas comprometidos de la red corporativa y bloquear el tráfico malicioso.
 Bloquear dominios y direcciones de comando y control:
+- Equipo asignado: Equipo de Seguridad de Red.
+- Estrategia: Utilizar firewalls, sistemas de detección de intrusiones y listas negras de dominios para bloquear el acceso a los servidores de comando y control utilizados por el ransomware. Prevenir cualquier comunicación saliente hacia direcciones maliciosas.
 
-Equipo asignado: Equipo de Seguridad de Red.
-Estrategia: Utilizar firewalls, sistemas de detección de intrusiones y listas negras de dominios para bloquear el acceso a los servidores de comando y control utilizados por el ransomware. Prevenir cualquier comunicación saliente hacia direcciones maliciosas.
 Erradicación:
+- Reconstruir sistemas infectados:
+- Equipo asignado: Equipo de Infraestructura de TI.
+- Estrategia: Restaurar los sistemas afectados desde copias de seguridad verificadas y limpias. Reinstalar sistemas operativos y aplicaciones si es necesario. Implementar medidas de seguridad adicionales para prevenir futuros ataques.
 
-Reconstruir sistemas infectados:
-Equipo asignado: Equipo de Infraestructura de TI.
-Estrategia: Restaurar los sistemas afectados desde copias de seguridad verificadas y limpias. Reinstalar sistemas operativos y aplicaciones si es necesario. Implementar medidas de seguridad adicionales para prevenir futuros ataques.
+### Erradicar
 
-#### Erradicar
+Reconstrucción de Sistemas Infectados:
+- Acción: Reconstruir los sistemas afectados utilizando fuentes confiables y limpias.
+- Responsable: Equipo de Infraestructura de TI.
+- Descripción: Restaurar los sistemas comprometidos utilizando imágenes o medios de instalación confiables y verificados.
 
-`OBJETIVO: Personalizar los pasos de erradicación, tácticos y estratégicos, para el ransomware.`
+Restauración desde Copias de Seguridad:
+- Acción: Restaurar los sistemas desde copias de seguridad conocidas y sin compromisos.
+- Responsable: Equipo de Gestión de Respaldo y Recuperación.
+- Descripción: Utilizar copias de seguridad verificadas y limpias para restaurar los datos y sistemas afectados por el ransomware.
 
-`OBJETIVO: Especificar las herramientas y los procedimientos para cada paso, a continuación.`
+Actualización y Activación de Protección de Puntos Finales:
+- Acción: Confirmar y activar la protección de puntos finales en todos los sistemas.
+- Responsable: Equipo de Seguridad de TI.
+- Descripción: Verificar que las soluciones de seguridad, como antivirus (AV), Next-Generation Antivirus (NGAV), y Detección y Respuesta de Endpoint (EDR), estén actualizadas y activadas en todos los sistemas afectados.
 
-* Reconstruir los sistemas infectados a partir de soportes conocidos como buenos.
-* Restaurar a partir de copias de seguridad conocidas y limpias.
-* Confirmar que la protección de los puntos finales (AV, NGAV, EDR, etc.) está actualizada y activada en todos los sistemas.
-* Confirmar que los parches se despliegan en todos los sistemas (dando prioridad a los sistemas, SO, software, etc.).
-* Despliegue de firmas personalizadas en las herramientas de protección de puntos finales y de seguridad de la red, basándose en los IOC descubiertos.
-* **Vigilar la reinfección:** considerar el aumento de la prioridad de las alarmas/alertas relacionadas con este incidente.
+Despliegue de Parches:
+- Acción: Desplegar parches en todos los sistemas, priorizando según la criticidad.
+- Responsable: Equipo de Gestión de Parches.
+- Descripción: Asegurar que todos los sistemas estén actualizados con los últimos parches de seguridad para cerrar posibles vulnerabilidades explotadas por el ransomware.
+
+Despliegue de Firmas Personalizadas:
+- Acción: Implementar firmas personalizadas en las herramientas de seguridad basadas en IOC descubiertos.
+- Responsable: Equipo de Seguridad de Red y Endpoint.
+- Descripción: Desarrollar y desplegar firmas específicas para detectar y prevenir futuros ataques de ransomware basándose en los indicadores de compromiso (IOC) identificados durante la investigación.
+
+Vigilancia de Reinfección:
+- Acción: Monitorear y aumentar la prioridad de las alarmas relacionadas con posibles reinfecciones.
+- Responsable: Equipo de Monitoreo de Seguridad.
+- Descripción: Mantener una vigilancia continua sobre los sistemas y redes para detectar cualquier signo de actividad maliciosa relacionada con el incidente de ransomware. Incrementar la prioridad de las alertas para una respuesta más rápida ante posibles intentos de reinfección.
 
 
 ### Comunicar
 
 No pagar el rescate y activar un plan de continuidad de negocio:
+- Equipo asignado: Equipo de Gestión de Crisis.
+- Estrategia: Comunicar claramente la política de la organización de no pagar rescates y activar un plan de continuidad de negocio para mitigar el impacto del ransomware en las operaciones comerciales. Informar a todas las partes interesadas sobre los pasos a seguir y las medidas de contingencia implementadas.
 
-Equipo asignado: Equipo de Gestión de Crisis.
-Estrategia: Comunicar claramente la política de la organización de no pagar rescates y activar un plan de continuidad de negocio para mitigar el impacto del ransomware en las operaciones comerciales. Informar a todas las partes interesadas sobre los pasos a seguir y las medidas de contingencia implementadas.
 Recuperación de datos y consideraciones legales:
-
-Equipo asignado: Equipo de Gestión Legal y de Cumplimiento.
-Estrategia: Coordinar la recuperación de datos de las copias de seguridad verificadas y limpias. Evaluar las implicaciones legales, regulatorias y financieras del incidente de ransomware. Colaborar con las autoridades pertinentes y cumplir con los requisitos de notificación de violación de datos según sea necesario.
+- Equipo asignado: Equipo de Gestión Legal y de Cumplimiento.
+- Estrategia: Coordinar la recuperación de datos de las copias de seguridad verificadas y limpias. Evaluar las implicaciones legales, regulatorias y financieras del incidente de ransomware. Colaborar con las autoridades pertinentes y cumplir con los requisitos de notificación de violación de datos según sea necesario.
 
 ### Recursos
 
