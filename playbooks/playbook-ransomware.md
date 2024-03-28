@@ -69,8 +69,8 @@ Para localizar cómo se introdujo el ransomware, consulta las tácticas de "Acce
 - Equipo asignado: Equipo de Seguridad de Red.
 - Estrategia: Utilizar firewalls, sistemas de detección de intrusiones y listas negras de dominios para bloquear el acceso a los servidores de comando y control utilizados por el ransomware. Prevenir cualquier comunicación saliente hacia direcciones maliciosas.
 
-**Erradicación:**
-- Reconstruir sistemas infectados:
+**Erradicación:** 
+- Reconstruir sistemas infectados
 - Equipo asignado: Equipo de Infraestructura de TI.
 - Estrategia: Restaurar los sistemas afectados desde copias de seguridad verificadas y limpias. Reinstalar sistemas operativos y aplicaciones si es necesario. Implementar medidas de seguridad adicionales para prevenir futuros ataques.
 
