@@ -106,7 +106,6 @@ Para localizar cómo se introdujo el ransomware, consulta las tácticas de "Acce
 - Responsable: Equipo de Monitoreo de Seguridad.
 - Descripción: Mantener una vigilancia continua sobre los sistemas y redes para detectar cualquier signo de actividad maliciosa relacionada con el incidente de ransomware. Incrementar la prioridad de las alertas para una respuesta más rápida ante posibles intentos de reinfección.
 
-
 ### Comunicar
 
 **No pagar el rescate y activar un plan de continuidad de negocio:**
