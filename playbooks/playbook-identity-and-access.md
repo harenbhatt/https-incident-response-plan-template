@@ -101,4 +101,4 @@ La remediación de incidentes de seguridad, especialmente en lo que respecta al 
 ## Información adicional
 
 1. <a name="identity-and-access-playbook-ref-1"></a>[Marcos para la gestión de identidad y acceso](https://www.nist.gov/)
-2. 1. <a name="ransomware-playbook-ref-2"></a>[Prácticas recomendadas de gestión de identidad y acceso](https://www.strongdm.com/)
+2. <a name="ransomware-playbook-ref-2"></a>[Prácticas recomendadas de gestión de identidad y acceso](https://www.strongdm.com/)
