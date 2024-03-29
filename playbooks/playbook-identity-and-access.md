@@ -1,38 +1,51 @@
 
-## Playbook: Compromiso de identidad y acceso
+# Playbook: Compromiso de identidad y acceso
 
 
-### Investigar
+## Investigar
 
-1. Identificación de la Brecha o Compromiso
-Equipo: Seguridad de TI y Análisis Forense
-  - Acciones:
-* Revisión de logs y alertas de seguridad.
-* Identificación de cuentas y accesos comprometidos.
-* Documentación de la línea de tiempo del incidente.
+#### Identificación de la Brecha o Compromiso
 
-2. Evaluación del Impacto
-Equipo: Gestión de Riesgos
-  - Acciones:
-* Determinación del alcance del acceso indebido.
-* Evaluación del impacto sobre datos sensibles y sistemas críticos.
-* Clasificación del incidente según severidad y urgencia.
+- **Equipo**: Seguridad de TI y Análisis Forense
+- **Acciones**:
+  - Revisión de logs y alertas de seguridad.
+  - Identificación de cuentas y accesos comprometidos.
+  - Documentación de la línea de tiempo del incidente.
 
+#### Evaluación del Impacto
+
+- **Equipo**: Gestión de Riesgos
+- **Acciones**:
+  - Determinación del alcance del acceso indebido.
+  - Evaluación del impacto sobre datos sensibles y sistemas críticos.
+  - Clasificación del incidente según severidad y urgencia.
+    
 ### Remediar
 
-- Coordinador de Respuesta a Incidentes: Encargado de la planificación y ejecución de la remediación.
-- Acciones:
-* Programar eventos de remediación coordinando equipos de TI, seguridad, y operaciones.
-* Considerar interrupciones de servicio y comunicarlas proactivamente.
-* Priorizar acciones basadas en el impacto y la severidad del compromiso.
+### Planificación de Eventos de Remediación
+
+- **Coordinador de Respuesta a Incidentes**: Encargado de la planificación y ejecución de la remediación.
+- **Acciones**:
+  - Programar eventos de remediación coordinando equipos de TI, seguridad, y operaciones.
+  - Considerar interrupciones de servicio y comunicarlas proactivamente.
+  - Priorizar acciones basadas en el impacto y la severidad del compromiso.
 
 #### Contención
 
+### Pasos y Herramientas
 
+#### Aislamiento de Sistemas y Cuentas Comprometidas
 
-* TODO
+- **Herramientas**: Cortafuegos, sistemas de detección de intrusos, herramientas de gestión de identidad y acceso.
+- **Equipo**: Operaciones de TI
+- **Acciones**: Desconexión de sistemas afectados, revocación de accesos sospechosos.
 
-`TODO: Considerar la automatización de las medidas de contención utilizando herramientas de orquestación.`
+#### Implementación de Controles de Acceso Temporales
+
+- **Herramientas**: Sistemas de gestión de identidades, autenticación multifactor.
+- **Equipo**: Seguridad de TI
+- **Acciones**: Establecimiento de controles de acceso más estrictos, actualización de políticas de seguridad.
+
 
 #### Erradicar
 
