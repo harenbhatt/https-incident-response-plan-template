@@ -1,26 +1,34 @@
 
 ## Playbook: Compromiso de identidad y acceso
 
-**Investigar, remediar (contener, erradicar) y comunicar en paralelo!.**
-
-Asigne pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este libro de jugadas no es puramente secuencial. Utilice su mejor criterio.
 
 ### Investigar
 
-`TODO: Ampliar los pasos de la investigación, incluyendo las preguntas y estrategias clave, para el compromiso de la identidad y el acceso.`
+1. Identificación de la Brecha o Compromiso
+Equipo: Seguridad de TI y Análisis Forense
+  - Acciones:
+* Revisión de logs y alertas de seguridad.
+* Identificación de cuentas y accesos comprometidos.
+* Documentación de la línea de tiempo del incidente.
 
-1. TODO
+2. Evaluación del Impacto
+Equipo: Gestión de Riesgos
+  - Acciones:
+* Determinación del alcance del acceso indebido.
+* Evaluación del impacto sobre datos sensibles y sistemas críticos.
+* Clasificación del incidente según severidad y urgencia.
 
 ### Remediar
 
-* **Planificar eventos de remediación** en los que estos pasos se lancen juntos (o de forma coordinada), con los equipos apropiados listos para responder a cualquier interrupción.
-* **Considere el tiempo y las compensaciones** de las acciones de remediación: su respuesta tiene consecuencias.
+- Coordinador de Respuesta a Incidentes: Encargado de la planificación y ejecución de la remediación.
+- Acciones:
+* Programar eventos de remediación coordinando equipos de TI, seguridad, y operaciones.
+* Considerar interrupciones de servicio y comunicarlas proactivamente.
+* Priorizar acciones basadas en el impacto y la severidad del compromiso.
 
 #### Contención
 
-`TODO: Personalizar los pasos de contención, tácticos y estratégicos, para el compromiso de la identidad y el acceso.`
 
-`TODO: Especificar las herramientas y procedimientos para cada paso, a continuación.`
 
 * TODO
 
