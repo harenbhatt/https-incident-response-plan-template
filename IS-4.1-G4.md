@@ -30,6 +30,9 @@ Se identificaron los activos de nuestra empresa y se listaron en una hoja de cá
 
 ## 1.4 Evaluación y cálculo de riesgo <div id='evaluación-y-cálculo-de-riesgo' />
 
+Realizamos una evaluación de los riesgos asumibles, clasificandolos con una nota dependiendo de la criticidad del riesgo:
+
+![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/d2b8365f-57eb-4103-bc22-71bad28bcbe3)
 
 ## 1.5 Clasificación y priorización de los proyectos <div id='clasificación-y-priorización-de-proyectos' />
 
