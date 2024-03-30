@@ -23,6 +23,10 @@ Se identificaron los activos de nuestra empresa y se listaron en una hoja de cá
 
 ## 1.2 Análisis de las amenazas <div id='análisis-de-amenazas' />
 
+Hemos usado las amenazas que nos facilita INCIBE
+
+![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/7072adce-8676-444e-9ad5-d045771bb818)
+
 
 ## 1.3 Establecimiento de las vulnerabilidades <div id='establecimiento-de-vulnerabilidades' />
 
