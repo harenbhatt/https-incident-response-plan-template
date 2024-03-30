@@ -3,67 +3,67 @@
 # por el dato que queramos. 
 
 # The name of your organization (e.g., Acme, Inc.)
-COMPANY_NAME: '{{COMPANY_NAME}}'
+COMPANY_NAME: 'Netmancer Incorporated'
 
 # Name and email of plan author (e.g., Chris)
-AUTHOR_NAME: '{{AUTHOR_NAME}}''
+AUTHOR_NAME: 'GRUPO 3'
 
 # Email of plan author (e.g., contact@counteractive.net)
-AUTHOR_EMAIL: '{{AUTHOR_EMAIL}}'
+AUTHOR_EMAIL: 'grupo3@g.educaand.es'
 
 # Document control metadata (e.g., 1)
-REVISION_NUMBER: '{{REVISION_NUMBER}}'
+REVISION_NUMBER: '1'
 
 # Document control metadata (e.g., 7 Jan 2021)
-RELEASE_DATE: '{{RELEASE_DATE}}'
+RELEASE_DATE: '31 de Marzo de 2024'
 
 # Date someone last reviewed the plan (e.g., 7 Jan 2021)
-REVIEW_DATE: '{{REVIEW_DATE}}'
+REVIEW_DATE: '31 de Marzo de 2024'
 
 # Date someone last tested the plan (e.g., 7 Jan 2021)
-TEST_DATE: '{{TEST_DATE}}'
+TEST_DATE: '31 de Marzo de 2024'
 
 # URL or reference to IR chat program like Teams, Slack, or Discord (e.g., chat.acme.tld/codename)
-RESPONSE_CHAT: '{{RESPONSE_CHAT}}'
+RESPONSE_CHAT: 'https://discordapp.com/channels/1160937443617411112/1160937444200415276'
 
 # Phone number for response teleconference (e.g., 123-456-7890)
-RESPONSE_PHONE: '{{RESPONSE_PHONE}}'
+RESPONSE_PHONE: '956 24 33 17'
 
 # URL for response video teleconference (VTC) like Zoom or WebEx (e.g., zoom.acme.tld/codename)
-RESPONSE_VTC: '{{RESPONSE_VTC}}'
+RESPONSE_VTC: 'https://discordapp.com/channels/1160937443617411112/1160937444200415276'
 
 # Description/URL for alternate email (e.g., alt 365 tenant at ir.acme.tld/othermail)
-ALTERNATE_EMAIL: '{{ALTERNATE_EMAIL}}'
+ALTERNATE_EMAIL: '11001828.edu@juntadeandalucia.es'
 
 # Domain name for your organization (e.g., acme.tld)
-ORGANIZATION_DOMAIN: '{{ORGANIZATION_DOMAIN}}'
+ORGANIZATION_DOMAIN: 'https://iesrafaelalberti.es'
 
 # Number or URL to page Commander(s) (e.g., 555-PAGE)
-INCIDENT_COMMANDER_PAGER_NUMBER: '{{INCIDENT_COMMANDER_PAGER_NUMBER}}'
+INCIDENT_COMMANDER_PAGER_NUMBER: '555-123'
 
 # Number or URL to page Commander(s) (e.g., ir.acme.tld/ic-page)
-INCIDENT_COMMANDER_PAGER_URL: '{{INCIDENT_COMMANDER_PAGER_URL}}'
+INCIDENT_COMMANDER_PAGER_URL: 'https://iesrafaelalberti.es/te-informamos/'
 
 # URL/path to Commander roster/list (e.g., ir.acme.tld/ic-roster)
-INCIDENT_COMMANDER_ROSTER: '{{INCIDENT_COMMANDER_ROSTER}}'
+INCIDENT_COMMANDER_ROSTER: 'https://iesrafaelalberti.es/te-informamos/'
 
 # As above, for security team (e.g., ir.acme.tld/sec-roster)
-SECURITY_TEAM_ROSTER: '{{SECURITY_TEAM_ROSTER}}'
+SECURITY_TEAM_ROSTER: 'https://iesrafaelalberti.es/te-informamos/'
 
 # As above, for SMEs (e.g., ir.acme.tld/sme-roster)
-TEAM_SME_ROSTER: '{{TEAM_SME_ROSTER}}'
+TEAM_SME_ROSTER: 'https://iesrafaelalberti.es/te-informamos/'
 
 # As above, for executive team (e.g., ir.acme.tld/exec-roster)
-EXECUTIVE_ROSTER: '{{EXECUTIVE_ROSTER}}'
+EXECUTIVE_ROSTER: 'https://iesrafaelalberti.es/te-informamos/'
 
 # Time to wait for on-duty IC on call (e.g., 15 minutes)
 INCIDENT_COMMANDER_RESPONSE_SLA: '{{INCIDENT_COMMANDER_RESPONSE_SLA}}'
 
 # Time between scheduled updates (e.g., 4 hours)
-UPDATE_FREQUENCY: '{{UPDATE_FREQUENCY}}'
+UPDATE_FREQUENCY: '2 Semanas'
 
 # URL/path to incident file (e.g., ir.acme.tld/files/codename)
-INCIDENT_FILE_LOCATION: '{{INCIDENT_FILE_LOCATION}}'
+INCIDENT_FILE_LOCATION: 'https://netmancer.es/src/incidents'
 
 # URL/path to critical information list, data you want to protect (e.g., ir.acme.tld/cil)
 CRITICAL_INFO_LIST_LOCATION: '{{CRITICAL_INFO_LIST_LOCATION}}'
