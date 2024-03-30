@@ -30,7 +30,26 @@ Hemos usado las amenazas que nos facilita INCIBE
 
 ## 1.3 Establecimiento de las vulnerabilidades <div id='establecimiento-de-vulnerabilidades' />
 
+**Copias de seguridad gestionadas por empleados TIC sin procedimiento formal aprobado:**
+- Riesgo: Pérdida de información en caso de incidentes.
+- Recomendación: Establecer un procedimiento formal, concienciar al personal de TIC y
+almacenar las copias de seguridad de manera segura.
 
+**Antivirus gestionado por una subcontrata sin procedimiento aprobado:**
+- Riesgos: carencia de actualizaciones y cuidado adecuado de la seguridad del antivirus.
+- Recomendación: Establecer un procedimiento reconocido para la gestión y actualización
+del software de protección.
+
+**Políticas de seguridad por escrito ausentes:**
+- Riesgo: Vulnerabilidad a riesgos y problemas de comunicación acerca de las expectativas
+de protección.
+- Recomendación: Establecer prácticas de seguridad oficiales que tratan de cuestiones
+fundamentales.
+
+**Falta de control sobre la securización de la página web y tienda online:**
+- Riesgos: Ausencia de control y visibilidad de los datos digitales externalizados.
+- Recomendación: Implementar métodos de observación y medición constantes, y
+asegurarse de que el asesor externo exhiba una conducta segura
 
 ## 1.4 Evaluación y cálculo de riesgo <div id='evaluación-y-cálculo-de-riesgo' />
 
