@@ -41,7 +41,12 @@ Fue revisado por última vez el {{REVIEW_DATE}}. Fue probado por última vez en 
 ## Nombre del incidente
 
 Cree una [frase simple de dos palabras](http://creativityforyou.com/combomaker.html) para referirse al incidente -un nombre en clave- para utilizarlo en el archivo de incidentes y en los canales. 
-## Todo: Personalizar el procedimiento de nomenclatura de incidentes.
+
+El procedimiento de nomenclatura de los incidentes será el siguiente:
+
+Consistirá en un número, que empezará con el 0 siendo el primer incidente que se registre, seguido de un guión y la fecha en el siguiente formato: DDMAAAA, construyendo el mes en base a sus tres primeras letras en español. Por ejemplo, para el 3 incidente, sucedido el 2 de Mayo de 2024 tendríamos el código: 
+
+- **2-02MAY2024**
 
 ## Reunir el equipo de respuesta
 
