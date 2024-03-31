@@ -28,7 +28,7 @@
 #### Erradicar
 
 - Eliminar el proceso de los dispositivos afectados parandolo o eliminandolo directamente.
-- Restaurar el sistema a un punto anterior donde el proceso no haya sido afectado.
+- Restaurar el sistema a un punto anterior donde el proceso no haya sido modificado o creado.
 
 ### Comunicar
 
