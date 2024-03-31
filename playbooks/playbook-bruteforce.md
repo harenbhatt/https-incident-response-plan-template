@@ -138,9 +138,22 @@ Una vez que se ha restablecido la funcionalidad operativa y se han implementado 
 
 2. **Herramientas de Autenticación Reforzada:** Explorar soluciones de autenticación multifactor (MFA) y autenticación de dos factores (2FA) que añadan capas adicionales de seguridad a los sistemas y reduzcan la efectividad de los ataques de fuerza bruta al requerir más que solo una contraseña para el acceso.
 
-**Relacion con matriz de ataque y respuesta**
-1.	**Matriz de Ataque MITRE ATT&CK - Técnica de Impacto (Denegación de Servicio - T1499):** Esta técnica dentro de la matriz de ataque MITRE ATT&CK se enfoca en los ataques de denegación de servicio que pueden formar parte de un ataque DDoS. Proporciona una estructura para comprender cómo los atacantes pueden llevar a cabo estos ataques y qué técnicas específicas pueden emplear para interrumpir los servicios objetivo.
-2.	**Matriz de Respuesta RE&CT - Infraestructura de Resiliencia (T1036):** Esta técnica dentro de la matriz de respuesta RE&CT se centra en la preparación y protección de la infraestructura tecnológica de una organización frente a ataques DDoS. Establece cómo una organización puede desarrollar una infraestructura robusta y resiliente que pueda resistir y recuperarse de tales ataques, asegurando la continuidad de las operaciones críticas.
+## Relacion con matriz de ataque y respuesta
+**Técnica de Ataque: Credential Access > Brute Force (T1110)**
+Esta técnica se enfoca en los métodos que los atacantes pueden utilizar para obtener acceso a las credenciales a través de intentos repetidos de adivinación o fuerza bruta. Incluye sub-técnicas como:
+1. T1110.001: Password Guessing
+2. T1110.002: Password Cracking
+3. T1110.003: Password Spraying
+4. T1110.004: Credential Stuffing
+
+**Mitigación:**
+1. M1032: Multi-factor Authentication (para dificultar el éxito de un ataque de fuerza bruta al requerir más de una forma de verificación).
+2. M1017: User Training (entrenar a los usuarios para que creen contraseñas fuertes y entiendan los riesgos de seguridad relacionados con los ataques de fuerza bruta).
+3. M1037: User Account Management (incluye la implementación de políticas de contraseñas fuertes, bloqueo de cuentas después de intentos fallidos, etc.).
+4. M1052: Expiration (establecer un límite de tiempo para cuánto tiempo una sesión de usuario puede estar activa).
+   
+Además, para la fase de detección y respuesta, el marco MITRE ATT&CK también sugiere diversas técnicas de detección y procedimientos para identificar y mitigar ataques de fuerza bruta, como el monitoreo de intentos de inicio de sesión fallidos y la implementación de alertas para actividades sospechosas.
+
 
 
 
