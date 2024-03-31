@@ -19,6 +19,16 @@ Asigne los pasos a individuos o equipos para trabajar simultáneamente, cuando s
     * ¿Qué daño puede causar este contenido a individuos, empresas o a la sociedad?
     * Considere las repercusiones a corto y largo plazo en la confianza pública y en la integridad de los sistemas informativos.
 
+**Relación de matrices de ataque MITRE ATT&CK**
+- **T1583 - Disseminate Misinformation**: Examinar cómo los atacantes pueden haber utilizado plataformas digitales para difundir desinformación o deepfakes, enfocándose en identificar técnicas específicas empleadas para la creación y distribución.
+- **T1584 - Compromise Public Figures**: Analizar intentos de comprometer la reputación de figuras públicas mediante el uso de deepfakes, destacando la necesidad de investigar posibles vulnerabilidades en la protección de la identidad digital.
+- **T1591 - Manipulate Social Media**: Investigar cómo los atacantes podrían haber manipulado las redes sociales para amplificar la desinformación, incluyendo la creación de cuentas falsas o la explotación de algoritmos para incrementar la visibilidad del contenido falso.
+
+**Relación de matrices de defensa RE&CT**
+- **Identify & Detect**: Implementar soluciones tecnológicas avanzadas para identificar y detectar deepfakes y contenido desinformativo, utilizando IA y aprendizaje automático para analizar patrones de comportamiento y características visuales/auditivas.
+- **Analyze & Assess**: Realizar un análisis detallado del contenido sospechoso para evaluar su autenticidad, trabajando con expertos en verificación de hechos y utilizando bases de datos de hechos verificados y herramientas de análisis de metadatos.
+- **Mitigate & Remediate**: Desarrollar estrategias para mitigar el impacto del contenido falso y remediar los daños causados, incluyendo la colaboración con plataformas de redes sociales y la implementación de campañas de concienciación pública.
+
 ### Contención
 
 1. Comunique con las plataformas de distribución para solicitar la eliminación del contenido falso.
