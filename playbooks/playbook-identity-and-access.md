@@ -1,8 +1,8 @@
 
-# Playbook: Compromiso de identidad y acceso
+## Playbook: Compromiso de identidad y acceso
 
 
-## Investigar
+### Investigar
 
 #### Identificación de la Brecha o Compromiso
 
@@ -28,9 +28,9 @@
 - La acción de analizar logs y alertas de seguridad se alinea perfectamente con Analyse en RE&CT, que implica la revisión detallada de evidencia digital para identificar cómo ocurrió el compromiso, qué cuentas se vieron afectadas y documentar la línea de tiempo de los eventos del incidente.
 
 
-## Remediar
+### Remediar
 
-### Planificación de Eventos de Remediación
+#### Planificación de Eventos de Remediación
 
 - **Coordinador de Respuesta a Incidentes**: Encargado de la planificación y ejecución de la remediación.
 - **Acciones**:
@@ -38,9 +38,9 @@
   - Considerar interrupciones de servicio y comunicarlas proactivamente.
   - Priorizar acciones basadas en el impacto y la severidad del compromiso.
 
-## Contención
+### Contención
 
-### Pasos y Herramientas
+#### Pasos y Herramientas
 
 #### Aislamiento de Sistemas y Cuentas Comprometidas
 
@@ -62,9 +62,9 @@
 - La desconexión de sistemas afectados y la revocación de accesos sospechosos son acciones directas bajo la estrategia Contain en RE&CT. Implementar un aislamiento efectivo es crucial para prevenir la propagación del ataque y la explotación adicional de recursos de la red.
 -El objetivo es reforzar las defensas y mejorar la resiliencia organizacional frente a futuros ataques. La implementación de MFA y la revisión de políticas de acceso son ejemplos de cómo se puede endurecer la seguridad tras un incidente.
 
-## Erradicar
+### Erradicar
 
-### Pasos para Eliminar la Amenaza
+#### Pasos para Eliminar la Amenaza
 
 #### Limpieza y Restauración de Sistemas
 
