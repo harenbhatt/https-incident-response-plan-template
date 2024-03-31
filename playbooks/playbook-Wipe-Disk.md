@@ -24,9 +24,6 @@
 
 - Crear copias de seguridad de los discos duros.
 
-#### Referencia: Recursos de remediación
-
-
 ### Comunicar
 
 1. Notificar sobre el incidente al superior o al equipo de IT.
@@ -35,9 +32,3 @@
 ### Recuperación
 
 - Restaurar la última copia de seguridad de los discos duros afectados.
-
-### Recursos
-
-#### Información adicional
-
-1. <a name="wipe-disk-playbook-ref-1"></a>["Title"](#TODO-url), Author Last Name (Date)
