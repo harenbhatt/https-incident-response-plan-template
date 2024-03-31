@@ -93,6 +93,62 @@ Existen exploits específicamente diseñados para llevar a cabo la escalada de p
 
     4. **Educación y Concienciación sobre Seguridad**:
         - Desarrollar y entregar programas de capacitación y concienciación para educar a los empleados sobre los riesgos de la escalada de privilegios, cómo identificarla y las acciones a tomar en caso de sospecha. Incluir simulaciones de ataques para evaluar y mejorar la respuesta de los empleados.
+### Mitre Ataque y Defensa
+
+#### Matriz de Tácticas y Técnicas de Mitre
+
+- **Táctica: Ejecución**
+  - Técnica: Ejecución de Código en un Proceso Hijacked (T1055)
+    - Descripción: Los atacantes pueden aprovechar procesos legítimos para ejecutar código malicioso con privilegios elevados.
+    - Defensa: Implementar controles de ejecución de aplicaciones para prevenir la ejecución de código no autorizado en procesos legítimos.
+
+- **Táctica: Persistencia**
+  - Técnica: Creación de Tarea Programada (T1053)
+    - Descripción: Los atacantes pueden establecer tareas programadas para ejecutar código malicioso de forma periódica con privilegios elevados.
+    - Defensa: Monitorear y revisar regularmente las tareas programadas en el sistema para detectar actividades maliciosas y eliminarlas.
+
+- **Táctica: Defensa y Evasión**
+  - Técnica: Uso de Lenguajes de Script para Automatización (T1064)
+    - Descripción: Los atacantes pueden utilizar scripts para automatizar el proceso de escalada de privilegios y evadir la detección de seguridad.
+    - Defensa: Implementar restricciones de ejecución de scripts y firmar scripts autorizados para evitar la ejecución de scripts maliciosos.
+
+#### Incorporación de Mitre al Playbook
+
+- **Detección de Técnicas de Mitre:**
+  - Descripción: Integrar la detección de técnicas de Mitre en las herramientas de monitoreo de seguridad para identificar posibles ataques basados en tácticas y técnicas conocidas.
+  - Acción: Configurar reglas y alertas en las soluciones de seguridad para detectar actividades maliciosas que coincidan con las tácticas y técnicas de Mitre.
+  - Responsable: Equipo de Seguridad de la Información, Equipo de Respuesta a Incidentes (ERI).
+
+- **Respuesta a Técnicas de Mitre:**
+  - Descripción: Desarrollar procedimientos de respuesta específicos para abordar las técnicas de Mitre utilizadas por los atacantes en escaladas de privilegios.
+  - Acción: Definir pasos claros y acciones a tomar para mitigar las amenazas identificadas basadas en las tácticas y técnicas de Mitre.
+  - Responsable: Equipo de Respuesta a Incidentes (ERI), Equipo de Seguridad de la Información.
+
+## Ciberresiliencia
+
+### Planificación de Continuidad del Negocio (BCP) y Recuperación de Desastres (DR)
+
+- **Desarrollo de Planes de BCP y DR:**
+  - Descripción: Establecer planes detallados de continuidad del negocio y recuperación de desastres para garantizar la disponibilidad y funcionalidad de los sistemas críticos en caso de una escalada de privilegios exitosa.
+  - Acción: Identificar los procesos y sistemas clave que podrían verse afectados por una escalada de privilegios y desarrollar planes de contingencia para mantener la operatividad.
+  - Responsable: Equipo de Continuidad del Negocio, Equipo de Seguridad de la Información.
+
+- **Simulacros de Incidentes:**
+  - Descripción: Realizar simulacros periódicos de incidentes para poner a prueba la capacidad de respuesta y recuperación ante escaladas de privilegios exitosas.
+  - Acción: Simular diferentes escenarios de escalada de privilegios y evaluar la efectividad de los planes de BCP y DR en mitigar el impacto y restaurar la funcionalidad.
+  - Responsable: Equipo de Respuesta a Incidentes (ERI), Equipo de Continuidad del Negocio.
+
+### Resiliencia Organizacional
+
+- **Cultura de Seguridad:**
+  - Descripción: Fomentar una cultura de seguridad cibernética dentro de la organización para aumentar la conciencia y la preparación ante posibles escaladas de privilegios.
+  - Acción: Proporcionar capacitación y concienciación sobre seguridad cibernética a todos los empleados, destacando la importancia de proteger los sistemas y seguir prácticas de seguridad sólidas.
+  - Responsable: Equipo de Seguridad de la Información, Recursos Humanos.
+
+- **Evaluación de Riesgos Continua:**
+  - Descripción: Realizar evaluaciones periódicas de riesgos para identificar nuevas amenazas y vulnerabilidades en sistemas y aplicaciones y ajustar las estrategias de seguridad en consecuencia.
+  - Acción: Implementar un proceso de evaluación de riesgos continuo que analice los cambios en el panorama de amenazas y las vulnerabilidades emergentes en escaladas de privilegios.
+  - Responsable: Equipo de Gestión de Riesgos, Equipo de Seguridad de la Información.
 
 5. **Mitigación**:
 
