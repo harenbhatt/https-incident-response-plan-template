@@ -1,4 +1,4 @@
-## Playbook: Compromiso de limpieza de disco
+## Playbook: Limpieza de disco
 
 ### Investigar
 
