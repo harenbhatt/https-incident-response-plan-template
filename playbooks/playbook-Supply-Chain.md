@@ -31,7 +31,8 @@
 3. Parchear la vulnerabilidad que ha sido identificada y analizada con actualizaciones más recientes.
 4. Eliminar completamente el malware que haya vulnerado el sistema en el caso de que haya sido el problema.
 5. Restaurar las copias de seguridad a las más recientes.
-
+6. En caso de que haya sido creado un playbook para el tipo de ataque que ha vulnerado el sistema con anterioridad, seguirlo paso a paso.
+   
 #### Referencia: Recursos de remediación
 
 ### Comunicar
