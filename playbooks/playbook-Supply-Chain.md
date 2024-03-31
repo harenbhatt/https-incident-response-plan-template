@@ -35,8 +35,10 @@
 
 ### Comunicar
 
-1. Notificar sobre el incidente al superior o al equipo de IT.
-2. Notificar a los proveedores y clientes si sus datos han sido afectados.
+1. Notificar sobre el incidente al superior.
+2. El superior deberá notificar inmediatamente al equipo de IT.
+3. El equipo de IT deberá inmediatamente notificar a la dirección y a las autoridades competentes en caso de ser necesario.
+4. Notificar a los proveedores y clientes si sus datos han sido afectados.
 
 ### Recuperación
 
