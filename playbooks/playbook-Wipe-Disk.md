@@ -22,7 +22,7 @@
 
 ### Erradicar
 
-- Crear copias de seguridad de los discos duros.
+- Restaurar las copias de seguridad a la más recientes.
 
 ### Comunicar
 
