@@ -10,7 +10,9 @@
 
 # Plan de respuesta
 
-Enlace lleva al a [plan de respuesta](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G3/plan.md) generado.
+Enlace al plan de respuesta:
+
+[Plan de respuesta](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G3/plan.md)
 
 # Playbooks
 
