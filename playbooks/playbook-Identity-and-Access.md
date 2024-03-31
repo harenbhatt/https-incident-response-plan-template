@@ -27,10 +27,11 @@
 
 #### Erradicar
 
-1. Revocar los permisos a los usuarios que hayan sido afectados y restablecer las contraseñas de sus cuentas.
-2. Analizar los logs de acceso para identificar y eliminar cuentas de usuario no autorizadas.
-3. Implementar autenticación multifactor en todos los sistemas y aplicaciones.
-4. Realizar auditorías de seguridad para asegurar que los empleados cumplen las políticas de seguridad referentes a las contraseñas de las cuentas de usuario.
+1. En caso de que haya sido creado un playbook para el tipo de ataque que ha vulnerado el sistema con anterioridad, seguirlo paso a paso.
+2. Revocar los permisos a los usuarios que hayan sido afectados y restablecer las contraseñas de sus cuentas.
+3. Analizar los logs de acceso para identificar y eliminar cuentas de usuario no autorizadas.
+4. Implementar autenticación multifactor en todos los sistemas y aplicaciones.
+5. Realizar auditorías de seguridad para asegurar que los empleados cumplen las políticas de seguridad referentes a las contraseñas de las cuentas de usuario.+
 
 #### Referencia: Recursos de remediación
 
