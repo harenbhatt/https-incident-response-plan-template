@@ -61,6 +61,16 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
     * Consulte la sección "Investigar" para conocer las fuentes comunes de vulnerabilidad.
     * Si esto está fuera de su dominio, simplemente asegúrese de que ha dado al personal apropiado toda la información sobre el ataque que tiene y permita que los expertos hagan su trabajo.
 
+**Relación de matrices de ataque MITRE ATT&CK**
+- **T1190 - Exploit Public-Facing Application**: Identificar cómo los atacantes pueden haber explotado vulnerabilidades en aplicaciones accesibles públicamente para lograr la desfiguración del sitio web.
+- **T1505 - Server Software Component**: Examinar si componentes de software vulnerables en el servidor fueron explotados para modificar el contenido del sitio web.
+- **T1199 - Trusted Relationship**: Investigar si los atacantes se aprovecharon de relaciones de confianza con terceros para acceder y alterar el sitio web.
+
+**Relación de matrices de defensa RE&CT**
+- **Detect**: Implementar herramientas y técnicas para detectar cambios no autorizados en el contenido del sitio web, incluyendo la monitorización de la integridad de los archivos y el análisis de comportamiento anormal en el tráfico web.
+- **Respond**: Desarrollar un protocolo de respuesta rápida para cuando se detecte una desfiguración del sitio web, incluyendo la capacidad de revertir rápidamente los cambios no autorizados.
+- **Recover**: Establecer procesos para restaurar el contenido legítimo del sitio web de manera eficiente a partir de copias de seguridad verificadas y sin comprometer.
+
 
 ### Recuperación
 
