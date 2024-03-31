@@ -32,8 +32,6 @@
 4. Eliminar completamente el malware que haya vulnerado el sistema en el caso de que haya sido el problema.
 5. Restaurar las copias de seguridad a las más recientes.
 6. En caso de que haya sido creado un playbook para el tipo de ataque que ha vulnerado el sistema con anterioridad, seguirlo paso a paso.
-   
-#### Referencia: Recursos de remediación
 
 ### Comunicar
 
@@ -44,7 +42,3 @@
 
 1. Restaruar gradualmente las operaciones de la cadena de suministro.
 2. Implementar medidas de seguridad adicionales.
-
-### Información Adicional
-
-1. <a name="supply-chain-playbook-ref-1"></a>["Title"](#TODO-url), Author Last Name (Date)
