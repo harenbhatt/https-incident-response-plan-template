@@ -20,12 +20,12 @@
 7. Actualizar playbooks con las lecciones aprendidas y nuevos metodos de remediación.
 8. Monitorizar los sitemas afectados para identificar con mayor facilidad los futuros ataques.
 
-#### Contención
+### Contención
 
 1. Separar el sistema o sistemas afectados de la red.
 2. Monitorizar los procesos afectados. 
 
-#### Erradicar
+### Erradicar
 
 - Eliminar el proceso de los dispositivos afectados parandolo o eliminandolo directamente.
 - Restaurar el sistema a un punto anterior donde el proceso no haya sido modificado o creado.
