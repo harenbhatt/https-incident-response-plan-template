@@ -9,7 +9,54 @@ Este plan de respuesta a incidentes está basado en el plan conciso, directivo, 
 
 Fue revisado por última vez el 1 Abr 2024. Fue probado por última vez en 1 Abr 2024.
 
-# Respuesta a las preguntas <div id='respuesta-a-las-preguntas' />
+# Introducción
+
+En el siguiente trabajo haremos una implementación de un plan de respuesta a incidentes, donde tocaremos puntos desde la identificación de activos hasta definición de proyectos. También tocaremos la recuperación y el análisis post-incidente. A través de un análisis de amenazas, evaluación de vulnerabilidades y cálculo de riesgos, se establecen las bases para una preparación robusta frente a posibles incidentes. Con la clasificación y priorización de proyectos, se enfoca la atención en las áreas de mayor riesgo, mientras que la definición de proyectos específicos permite una respuesta activa y dirigida. En el plan de respuesta a incidentes junto con los playbooks, ofreceremos un conjunto de herramientas, condiciones, flujos y tareas que se utilizan para responder a sucesos y amenazas de seguridad. 
+
+# Identificación de activos
+
+Se identificaron los activos de nuestra empresa y se listaron:
+
+![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/f3535ca0-ec36-4b63-90d5-e988b0bba964)
+
+
+# Análisis de las amenazas
+
+Hemos usado las amenazas que nos facilita INCIBE
+
+![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/7072adce-8676-444e-9ad5-d045771bb818)
+
+
+# Establecimiento de las vulnerabilidades
+
+**Copias de seguridad gestionadas por empleados TIC sin procedimiento formal aprobado:**
+- Riesgo: Pérdida de información en caso de incidentes.
+- Recomendación: Establecer un procedimiento formal, concienciar al personal de TIC y
+almacenar las copias de seguridad de manera segura.
+
+**Antivirus gestionado por una subcontrata sin procedimiento aprobado:**
+- Riesgos: carencia de actualizaciones y cuidado adecuado de la seguridad del antivirus.
+- Recomendación: Establecer un procedimiento reconocido para la gestión y actualización
+del software de protección.
+
+**Políticas de seguridad por escrito ausentes:**
+- Riesgo: Vulnerabilidad a riesgos y problemas de comunicación acerca de las expectativas
+de protección.
+- Recomendación: Establecer prácticas de seguridad oficiales que tratan de cuestiones
+fundamentales.
+
+**Falta de control sobre la securización de la página web y tienda online:**
+- Riesgos: Ausencia de control y visibilidad de los datos digitales externalizados.
+- Recomendación: Implementar métodos de observación y medición constantes, y
+asegurarse de que el asesor externo exhiba una conducta segura
+
+# Evaluación y cálculo de riesgo 
+
+Realizamos una evaluación de los riesgos asumibles, clasificandolos con una nota dependiendo de la criticidad del mismo:
+
+![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/d2b8365f-57eb-4103-bc22-71bad28bcbe3)
+
+# Respuesta a las preguntas
 
 **1.a   ¿Que relacción existe entre el trabajo que has hecho con las matrices MITRE ATT&CK y RE&CT y el plan de respuesta que estás planteando? ¿De que manera te ha ayudado el trabajo previo sobre las matrices a la hora de generar el plan? Deja evidencias del trabajo que has realizado sobre le navigator de las matrices, para obtener la información.**
   
@@ -64,9 +111,9 @@ Por otro lado, consideramos que la fase mejor trabajada en nuestro plan es la de
 
 El Flujo de Toma de Decisiones y Escalado en nuestro plan de respuesta a incidentes se basa en una serie de pasos diseñados para evaluar, decidir y actuar frente a posibles incidentes de seguridad. Este proceso está estructurado para asegurar una respuesta rápida y efectiva, minimizando el impacto del incidente en la organización. 
 
-### Resumen del Plan y Protocolos
+#### Resumen del Plan y Protocolos
 
-#### 1. Evaluar
+##### 1. Evaluar
 
 - **Mantener la Calma**: Prioridad máxima para una respuesta considerada y efectiva.
 - **Reunir Información**: 
@@ -76,7 +123,7 @@ El Flujo de Toma de Decisiones y Escalado en nuestro plan de respuesta a inciden
   - Determinar el impacto funcional y de la información.
   - Categorizar la severidad del incidente.
 
-#### 2. Iniciar la Respuesta
+##### 2. Iniciar la Respuesta
 
 - **Nombrar el Incidente**: Asignar un nombre en clave para facilitar la comunicación y el seguimiento.
 - **Reunir el Equipo de Respuesta**:
@@ -86,7 +133,7 @@ El Flujo de Toma de Decisiones y Escalado en nuestro plan de respuesta a inciden
   - Iniciar canales de comunicación seguros.
   - Preferiblemente canales no afectados por el incidente.
 
-#### 3. Comunicación y Protocolos
+##### 3. Comunicación y Protocolos
 
 - **Comunicación Interna y Externa**:
   - Establecer líneas de comunicación claras con todas las partes interesadas.
@@ -95,7 +142,7 @@ El Flujo de Toma de Decisiones y Escalado en nuestro plan de respuesta a inciden
   - Proporcionar actualizaciones periódicas a todas las partes interesadas.
   - Usar los canales de comunicación establecidos.
 
-#### 4. Escalar según sea necesario
+##### 4. Escalar según sea necesario
 
 - Basado en la evaluación continua del incidente.
 - Escalar la respuesta según sea necesario, lo que puede incluir:
@@ -103,9 +150,52 @@ El Flujo de Toma de Decisiones y Escalado en nuestro plan de respuesta a inciden
   - Consultar con expertos externos.
   - Notificar a las autoridades.
 
+#### Diagrama de Flujo
+
+![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/69c1c87b-eeca-4889-99ec-a28fada844e3)
+
+
 **3.a  ¿Como te has asegurado de que tu plan tiene respuestas resilientes? ¿Porque son resilientes y en qué fases se centran?**
 
-Para evaluar la resiliencia del plan ante ataques de phishing, es crucial considerar cómo aborda cada fase del ataque, desde la investigación hasta la recuperación, y cómo se asegura de que la organización pueda adaptarse y recuperarse eficazmente. A continuación, analizaré cómo este playbook aborda la resiliencia en cada fase:
+Para evaluar la resiliencia del plan ante los ataques, es crucial considerar cómo aborda cada fase del ataque, desde la investigación hasta la recuperación, y cómo se asegura de que la organización pueda adaptarse y recuperarse eficazmente. A continuación, se analizará cómo el playbook de phishing aborda la resiliencia en cada fase:
+
+**Investigación:**
+
+-	Ámbito del ataque: La investigación inicial se centra en comprender la extensión y el impacto del ataque de phishing, lo que permite una respuesta más rápida y precisa.
+
+-	Analizar el mensaje: Se emplean herramientas seguras para inspeccionar el correo electrónico de phishing y recopilar datos sin comprometer la seguridad.
+
+- Analizar los enlaces y archivos adjuntos: Se evalúan los enlaces y archivos adjuntos para determinar la naturaleza y el riesgo del contenido sin poner en peligro la seguridad.
+
+
+**Remediar:**
+
+-	Planificación de eventos de remediación: La coordinación de acciones de remediación simultáneas ayuda a minimizar el tiempo de inactividad y limitar la propagación del ataque.
+
+-	Equipo de Gestión de Crisis: Supervisa la remediación para garantizar una respuesta eficiente y efectiva.
+
+
+**Contener:**
+
+-	Aislamiento y Gestión de Cuentas Comprometidas: Se toman medidas inmediatas para identificar y aislar las cuentas afectadas, evitando así la propagación del ataque.
+
+-	Reforzamiento de la Seguridad de Acceso: Se implementan medidas adicionales, como la autenticación multifactor y el control de acceso granular, para evitar accesos no autorizados.
+
+-	Bloqueo y Neutralización de Amenazas: Se implementan bloqueos a nivel de DNS y políticas de filtrado de correos electrónicos para prevenir futuros ataques similares.
+
+
+**Comunicar:**
+
+-	Notificación Interna y Externa: La comunicación transparente y oportuna tanto dentro como fuera de la organización es crucial para coordinar una respuesta eficaz y mantener la confianza de las partes interesadas.
+
+
+**Recuperación:**
+
+-	Restauración de Sistemas y Servicios: Se restauran los sistemas desde copias de seguridad limpias y se refuerzan las defensas para prevenir futuros ataques.
+
+-	Análisis Forense y Eliminación de Malware: Se realiza un análisis forense para comprender cómo ocurrió el ataque y eliminar completamente cualquier presencia maliciosa.
+
+-	Educación y Concienciación sobre Seguridad: Se desarrollan programas de capacitación para educar a los empleados sobre las tácticas de phishing y mejorar la respuesta ante futuros ataques.
 
 
 # Evaluar
