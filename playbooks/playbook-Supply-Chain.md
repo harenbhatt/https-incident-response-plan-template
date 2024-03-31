@@ -13,10 +13,10 @@
 1. Eliminar la amenaza inicial si es posible y depedendiendo el sistema afectado en la cadena de suministro y el tipo de ataque.
 2. Aplicar parches de seguridad a los sistemas afectados en caso de que no se hayan actualizado anteriormente.
 3. Si los datos han sido afectados, restaurar la integridad de los mismos a través de las copias de seguridad.
-4. Reforzar las medidas de control de acceso a los sistemas generando contraseñas más seguras en todos los sitemas de la cadena de suministro.
+4. Reforzar las medidas de control de acceso a los sistemas generando contraseñas más seguras en todos los sistemas de la cadena de suministro.
 5. Actualizar politicas de seguridad.
 6. Actualizar playbooks con las lecciones aprendidas y nuevos metodos de remediación.
-7. Monitorizar los sitemas para identificar con mayor facilidad los futuros ataques.
+7. Monitorizar los sistemas para identificar con mayor facilidad los futuros ataques.
 
 ### Contención
 
