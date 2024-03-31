@@ -110,7 +110,7 @@ La remediación de incidentes de seguridad, especialmente en lo que respecta al 
 - Preparar comunicados internos y externos: Esta acción es esencial para mantener a todas las partes interesadas informadas sobre el estado del incidente, las medidas que se están tomando para mitigar el daño y cualquier impacto potencial.
 - Establecer un canal de comunicación para actualizaciones regulares del incidente: La implementación de un canal dedicado para actualizaciones garantiza que la información sea distribuida de manera consistente y eficiente.
 
-## Recuperación
+### Recuperación
 
 ### Pasos para la Restauración
 
@@ -130,7 +130,7 @@ La remediación de incidentes de seguridad, especialmente en lo que respecta al 
 - **Recover:** Aunque primariamente enfocada en la fase posterior de recuperación, esta acción también se relaciona estrechamente con la restauración de sistemas desde copias de seguridad fiables.
 
 
-## Recursos
+#### Recursos
 
 - **Financieros y de Personal**: Asignación de presupuesto para herramientas de seguridad adicionales, contratación de expertos en seguridad externos si es necesario.
 - **Logísticos**: Planificación de recursos para la restauración de operaciones, incluyendo hardware y software.
