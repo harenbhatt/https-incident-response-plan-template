@@ -32,3 +32,7 @@
 ### Recuperación
 
 - Restaurar la última copia de seguridad de los discos duros afectados.
+
+### Recursos
+
+1. Herramienta para crear copias de seguridad y restaurarlas del servidor llamada Bacula.
