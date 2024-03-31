@@ -5,9 +5,9 @@
 
 Asigna pasos a individuos o equipos para que trabajen simultáneamente, cuando sea posible; este playbook no es meramente secuencial. Utilice su mejor criterio.
 
-## Investigación
+### Investigación
 
-### **Ámbito del ataque** <br>
+#### **Ámbito del ataque** <br>
 Objetivo: Determinar la extensión y el impacto del ataque de phishing para contenerlo y remediarlo de manera eficiente.
 * Notificación Inicial: Registrar cómo se detectó el incidente, quién lo reportó, y la evidencia inicial proporcionada.
 * Usuarios Afectados: Utilizar herramientas de análisis de logs y seguridad de correo electrónico para identificar a todos los usuarios que recibieron el mensaje de phishing.
@@ -15,7 +15,7 @@ Objetivo: Determinar la extensión y el impacto del ataque de phishing para cont
 * Búsqueda de Actividad Relacionada: Revisar redes sociales, correos electrónicos sospechosos, y notificaciones de actividades inusuales que puedan estar relacionadas con el ataque.
 * Clasificación del Ataque: Basándose en la información recopilada, determinar el tipo de phishing (general, spear, whaling, smishing/vishing) y la gravedad.
 
-### **Analizar el mensaje** utilizando un dispositivo seguro. <br>
+#### **Analizar el mensaje** utilizando un dispositivo seguro. <br>
 Objetivo: Inspeccionar el correo electrónico de phishing de manera segura para recopilar datos sin comprometer la seguridad de la red o los datos sensibles.
 
 Herramientas:
@@ -32,7 +32,7 @@ Inspección del Correo Electrónico:
 * Adjuntos: Identificar nombres de archivos, tipos y tamaños sin abrirlos.
 * Enlaces: Copiar los enlaces sin hacer clic en ellos para su análisis posterior.
 
-### **Analizar los enlaces y los archivos adjuntos**
+#### **Analizar los enlaces y los archivos adjuntos**
 Objetivo: Evaluar los enlaces y archivos adjuntos para determinar la naturaleza y el riesgo del contenido sin comprometer la seguridad.
 * VirusTotal: Para análisis de URLs y archivos sospechosos.
 * Sandbox de Malware: Como Cuckoo Sandbox, para observar el comportamiento de los archivos en un entorno controlado.
@@ -49,7 +49,7 @@ Archivos Adjuntos:
    - Usar VirusTotal para escanear los archivos en busca de firmas de malware conocido.
    - Investigar metadatos y propiedades del archivo para pistas sobre su origen y propósito.
     
-### **Tipos de ataque.**
+#### **Tipos de ataque.**
 1.  Phishing General: Ataques no personalizados enviados a gran escala, buscando engañar a los usuarios para obtener información sensible.
 2.  Spear Phishing: Ataques dirigidos a individuos o empresas específicas, a menudo utilizando información personalizada para aumentar la credibilidad.
 3.  Whaling: Una forma de spear phishing dirigida a altos ejecutivos, buscando acceso a información corporativa crítica o transferencias financieras fraudulentas.
@@ -62,13 +62,13 @@ Archivos Adjuntos:
 - Identify: Clasificar el tipo de ataque de phishing ayuda a identificar el nivel de sofisticación y los objetivos posibles del atacante.
 - Protect: Desarrollar estrategias específicas de protección contra los tipos identificados de ataques de phishing.
 
-## Remediar
+### Remediar
 
 * **Planificar eventos de remediación** en los que estos pasos se pongan en marcha juntos (o de forma coordinada), con los equipos adecuados listos para responder a cualquier interrupción.
 * **Equipo de Gestión de Crisis:** Supervisa la coordinación y ejecución de la remediación.
 * **Seguridad TI y Soporte TI:** Implementación de acciones de contención y erradicación.
 
-## Contener
+### Contener
 
 1. **Aislamiento y Gestión de Cuentas Comprometidas:**
 * Acciones Inmediatas:
@@ -110,7 +110,7 @@ Archivos Adjuntos:
 - Investigate: Recopilar y analizar evidencia para entender la extensión del compromiso.
 - Learn: Aplicar lecciones aprendidas para mejorar las respuestas futuras.
 
-## Comunicar
+### Comunicar
 
 1. **Identificación y Notificación Inicial:**
    - Quién Participa: Equipo de Respuesta a Incidentes (ERI), Departamento de Seguridad de la Información, Equipo de TI.
@@ -141,7 +141,7 @@ Archivos Adjuntos:
 - Inform: Comunicar de manera efectiva dentro de la organización sobre el incidente y proporcionar instrucciones claras ayuda a contener la propagación del ataque de phishing y protege a la organización de un mayor compromiso.
 - Coordinate: La colaboración con asesores legales y de seguridad externos asegura que la respuesta al incidente cumpla con las obligaciones legales y de cumplimiento, abordando preocupaciones como el acceso no autorizado a datos (T1530 - Data from Cloud Storage Object).
 
-## Recuperación
+### Recuperación
 
 1. Restauración de Sistemas y Servicios:
    - Procedimiento: Evaluar el daño y determinar los sistemas y servicios afectados. Restaurar los datos desde copias de seguridad limpias y seguras. Asegurar que todos los sistemas restaurados sean sometidos a una exhaustiva revisión de seguridad antes de reintegrarlos a la red.
@@ -167,9 +167,9 @@ Archivos Adjuntos:
 - Recover: Procesos de restauración de sistemas y servicios a estados operativos normales.
 - Learn: Analizar el incidente para extraer lecciones aprendidas y aplicar mejoras continuas en la respuesta a incidentes.
 
-## Recursos
+### Recursos
 
-#### Referencia: Acciones del usuario ante la sospecha de un ataque de phishing
+##### Referencia: Acciones del usuario ante la sospecha de un ataque de phishing
 
 1. Identificación y No Interacción:
    - Reconocer Señales de Alerta: Los correos electrónicos de phishing a menudo contienen señales reveladoras, como solicitudes urgentes, ofertas demasiado buenas para ser verdad, errores ortográficos, y direcciones de correo electrónico que no coinciden con el nombre del remitente o la organización que afirman representar.
