@@ -151,6 +151,10 @@ Nos hemos centrado principalmente en la fase llamada remediar ya que interrumpe 
 
 # Conclusiones
 
+Como conclusión, hemos podido comprobar a lo largo del documento la gran importancia del Plan de Respuesta ante Incidentes (PRI), dado que si es correctamente implementado y seguido, puede lograr proteger los activos y la reputación de nuestra organización frente a las amenazas cibernéticas. Al mantenernos preparados y capacitados para responder a incidentes de seguridad de manera rápida y eficiente, podemos minimizar el impacto de los ataques, reducir los tiempos de inactividad y salvaguardar la confianza de nuestros clientes y socios.
+
+ Además, es crucial reconocer que la efectividad del PRI no se detiene en su implementación inicial. A medida que evolucionan las amenazas cibernéticas y cambian las condiciones del entorno empresarial, es imperativo que revisemos y actualicemos regularmente nuestro PRI para garantizar su relevancia y eficacia continua. Esta adaptación continua nos permite estar preparados para enfrentar no solo las amenazas actuales, sino también aquellas que puedan surgir en el futuro.
+
 # Bibliografía
 
 
