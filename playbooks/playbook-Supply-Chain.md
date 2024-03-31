@@ -20,7 +20,7 @@
 
 ### Contención
 
-1. Aislar el sistema que haya sido comprometido de la red.
+1. Aislar el sistema que haya sido comprometido de la red quitando el cable de red.
 2. Implementar medidas de control de acceso en el sistema de la cadena de suministro que haya sido comprometido restringiendo sus permisos. 
 3. Reforzar los activos críticos no afectados por el ataque a través de actualizaciones del sistema, generando contraseñas más seguras, etc.
 
