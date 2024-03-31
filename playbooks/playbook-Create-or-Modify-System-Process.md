@@ -15,8 +15,8 @@
 2. Aplicar parches de seguridad a los sistemas afectados si el sistema no ha sido actualizado con anterioridad.
 3. Si los datos han sido afectados, restaurar la integridad de los mismos a través de las copias de seguridad.
 4. Comprobar los logs generados por el sistema sobre el acceso al sistema vulnerado.
-5. Reforzar las medidas de control de acceso a los sistemas si es posible.
-6. Actualizar politicas de seguridad.
+5. Reforzar las medidas de control de acceso a los sistemas si es posible a través de contraseñas más seguras y autenticación multifactor.
+6. Actualizar politicas de seguridad que haya sido afectada o crearla en caso de ser necesaria.
 7. Actualizar playbooks con las lecciones aprendidas y nuevos metodos de remediación.
 8. Monitorizar los sitemas afectados para identificar con mayor facilidad los futuros ataques.
 
@@ -40,6 +40,7 @@
 1. Verificar si hay más procesos y que el sistema es funcion al tras la eliminación del proceso.
 2. Si es necesario, restaurar el sistema a un momento anterior a la aparición del proceso.
 
-### Recursos
+### Herramientas
 
-
+1. Para la eliminación del proceso se puede utilizar el mismo administrador de tareas de Windows o el comando kill de Linux.
+2. Para monitorizar los procesos en Windows podemos usar Process Monitor de Systernals.
