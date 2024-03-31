@@ -97,6 +97,7 @@ Por ejemplo, al analizar el playbook de Ransomware, pude relacionar las táctica
 
 La elección de estos playbooks se basa en la evaluación de riesgos, la experiencia pasada y la comprensión de las tendencias actuales de amenazas. Además, la identificación se alinea con prácticas recomendadas en la industria de la ciberseguridad, considerando la frecuencia y el impacto potencial de cada tipo de incidente. Estos playbooks también reflejan áreas donde es probable que se requiera una respuesta rápida y especializada para minimizar el daño.
 
+![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/e8ca4ec8-a0ff-420e-8ebf-6de74c3a19bd)
 
 
 
