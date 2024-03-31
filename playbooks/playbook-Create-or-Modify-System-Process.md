@@ -1,4 +1,4 @@
-## Playbook: Compromiso de creacción o modificación de procesos para escalado.
+## Playbook: Creacción o modificación de procesos para escalado.
 
 ### Investigar
 
