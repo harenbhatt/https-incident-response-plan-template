@@ -946,12 +946,19 @@ La inyección de código es una vulnerabilidad común en aplicaciones web que pe
 
 ### Identificación
 
-- **SQL Injection (Inyección de SQL)**:
-  - Identifique parámetros de entrada de usuario en formularios web, URLs o cookies que se utilicen en consultas SQL.
-  - Busque signos reveladores como errores de sintaxis SQL en respuestas de la aplicación o respuestas inesperadas.
-- **Cross-Site Scripting (XSS)**:
-  - Busque campos de entrada de usuario que se reflejen sin escape en la salida de la aplicación.
-  - Intente inyectar scripts maliciosos en estos campos y observe si se ejecutan en el navegador del usuario.
+- **SQL Injection (Inyección SQL):** Se aprovecha de las vulnerabilidades en la entrada de datos de una aplicación para insertar instrucciones SQL maliciosas en las consultas a la base de datos, lo que permite al atacante manipular o extraer información de la base de datos.
+
+- **Cross-Site Scripting (XSS):** Permite a un atacante inyectar scripts maliciosos en páginas web vistas por otros usuarios, lo que puede conducir a la ejecución de código no autorizado en el navegador de la víctima y al robo de cookies de sesión, entre otros ataques.
+
+- **Command Injection (Inyección de Comandos):** Se aprovecha de entradas no validadas en aplicaciones que ejecutan comandos del sistema operativo para insertar comandos maliciosos, lo que puede permitir al atacante ejecutar comandos arbitrarios en el servidor.
+
+- **LDAP Injection:** Similar a SQL Injection, pero se dirige a aplicaciones que interactúan con servidores LDAP (Protocolo Ligero de Acceso a Directorios), permitiendo al atacante manipular las consultas LDAP para obtener información no autorizada o realizar operaciones no deseadas.
+
+- **XPath Injection:** Ataca aplicaciones que utilizan XPath (XML Path Language) para buscar y filtrar datos en documentos XML, permitiendo al atacante manipular las consultas XPath para obtener información no autorizada o alterar el comportamiento de la aplicación.
+
+- **HTML Injection:** Similar a XSS, pero se centra en la inserción de código HTML malicioso en páginas web para alterar su contenido o ejecutar acciones no autorizadas en el navegador de la víctima.
+
+- **CSS Injection:** Inyecta código malicioso en hojas de estilo en cascada (CSS) para alterar la apariencia o el comportamiento de una página web, a menudo utilizado en combinación con otras formas de ataques, como XSS.
 
 ### Explotación
 
