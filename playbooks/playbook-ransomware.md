@@ -151,7 +151,14 @@ Para localizar cómo se introdujo el ransomware, consulta las tácticas de "Acce
 
 ### Modelo de ciberresiliencia líder
 
+**Objetivos:**
+- Aprender del incidente para mejorar la postura de seguridad y la preparación frente a futuros ataques.
+- Implementar cambios basados en las lecciones aprendidas y los insights obtenidos durante el incidente.
 
+**Estrategias:**
+- Revisión Post-Incidente: Analizar el manejo del incidente, identificar fortalezas y áreas de mejora.
+- Actualización de Políticas y Procedimientos: Refinar los playbooks de respuesta a incidentes, políticas de seguridad y prácticas de formación.
+- Inversión en Tecnología y Capacitación: Aumentar las capacidades de detección, protección y respuesta mediante la adquisición de nuevas herramientas y el entrenamiento del personal.
 
 ### Recursos
 
