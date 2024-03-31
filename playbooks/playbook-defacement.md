@@ -106,7 +106,7 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
 1. Contactar con los proveedores de seguros
     1. Discutir qué recursos pueden poner a disposición, qué herramientas y proveedores apoyan y pagarán, _etc._.
     1. Cumplir con los requisitos de presentación de informes y reclamaciones para proteger la elegibilidad
-1. Considerar la posibilidad de notificar e implicar a las fuerzas del orden. TODO: Vincule las siguientes viñetas con los recursos reales de su organización
+1. Considerar la posibilidad de notificar e implicar a las fuerzas del orden.
     1. [Aplicación de la ley local](#TODO-link-to-actual-resource)
     1. 1. [Aplicación de la ley a nivel estatal o regional](#TODO-link-to-actual-resource)
     1. 1. [Fuerzas de seguridad federales o nacionales](#TODO-link-to-actual-resource)
