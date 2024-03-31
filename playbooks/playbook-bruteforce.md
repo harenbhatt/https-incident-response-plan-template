@@ -1,6 +1,6 @@
-# BRUTEFORCE
+## Playbook: Fuerza Bruta
 
-## Investigación
+### Investigación
 
 **Análisis de Vulnerabilidades**
 
