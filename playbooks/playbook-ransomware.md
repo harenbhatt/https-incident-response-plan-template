@@ -148,6 +148,11 @@ Para localizar cómo se introdujo el ransomware, consulta las tácticas de "Acce
 **Relación de matrices de defensa RE&CT**
 - **RE&CT: Harden (Endurecer):** La coordinación de la recuperación de datos y la evaluación de implicaciones legales también se ven como parte de este proceso. Aquí, el enfoque se amplía para incluir la protección legal y regulatoria de la organización, asegurando que las respuestas al incidente no solo sean técnicamente sólidas sino también legalmente defensibles.
 
+
+### Modelo de ciberresiliencia líder
+
+
+
 ### Recursos
 
 #### Referencia: Acciones de los usuarios ante la sospecha de ransomware
