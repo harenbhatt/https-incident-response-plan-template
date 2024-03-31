@@ -19,20 +19,18 @@
 7. Actualizar playbooks con las lecciones aprendidas y nuevos metodos de remediación.
 8. Monitorizar los sitemas para identificar con mayor facilidad los futuros ataques.
 
-#### Contención
+### Contención
 
 1. Restringir temporalmente los privilegios de usuario para reducir el riesgo.
 2. Bloquear el acceso a recursos compartidos en red al usuario vulnerado y desconectar los dispositivos que hayan sido afectados.
 3. Monitorizar las cuentas y actividades de usuario sospechosas para detectar posibles intrusiones no deseadas.
 
-#### Erradicar
+### Erradicar
 
 1. Revocar los permisos a los usuarios que hayan sido afectados y restablecer las contraseñas de sus cuentas.
 2. Analizar los logs de acceso para identificar y eliminar cuentas de usuario no autorizadas.
 3. Implementar autenticación multifactor en todos los sistemas y aplicaciones.
 4. Realizar auditorías de seguridad para asegurar que los empleados cumplen las políticas de seguridad referentes a las contraseñas de las cuentas de usuario.+
-
-#### Referencia: Recursos de remediación
 
 ### Comunicar
 
