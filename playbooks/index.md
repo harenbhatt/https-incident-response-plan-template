@@ -14,3 +14,4 @@ Los siguientes playbooks capturan los pasos comunes de [investigación](#investi
 10. [playbook-Ransonware](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G3/playbooks/playbook-ransomware.md)
 11. [playbook-Replication-Through-Removable-Media](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G3/playbooks/playbook-replication%20through%20removable%20media.md)
 12. [playbook-Steal-Web-Session-Cookie](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G3/playbooks/playbook-steal-web-session-cookie.md)
+13. [playbook-Brute-Force](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G3/playbooks/playbook-brute%20force.md)
