@@ -368,7 +368,7 @@ Considere la posibilidad de recopilar los siguientes artefactos como evidencia, 
 
 # Remediar
 
-**Investigar](#investigar), [remediar](#remediación) y [comunicar](#comunicar) en paralelo, utilizando equipos separados, si es posible.** El Jefe de incidente coordinará estas actividades.  Notifique al Jefe de incidente si hay pasos que el equipo debe considerar
+**[Investigar](#investigar), [remediar](#remediación) y [comunicar](#comunicar) en paralelo, utilizando equipos separados, si es posible.** El Jefe de incidente coordinará estas actividades.  Notifique al Jefe de incidente si hay pasos que el equipo debe considerar
 
 ## Actualizar el plan de remediación
 
@@ -468,7 +468,7 @@ Determine la estrategia de tiempo -cuando se tomarán las acciones de remediaci�
 
 #Comunicar
 
-**Investigar](#investigar), [remediar](#remediación) y [comunicar](#comunicar) en paralelo, utilizando equipos separados, si es posible.  Notifique al Jefe de incidente si hay pasos que el equipo debe considerar**
+**[Investigar](#investigar), [remediar](#remediación) y [comunicar](#comunicar) en paralelo, utilizando equipos separados, si es posible.  Notifique al Jefe de incidente si hay pasos que el equipo debe considerar**
 
 Toda comunicación debe incluir la información más precisa disponible.  Muestre integridad.  No comunique especulaciones.
 
