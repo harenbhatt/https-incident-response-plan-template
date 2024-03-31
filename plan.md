@@ -9,7 +9,54 @@ Este plan de respuesta a incidentes está basado en el plan conciso, directivo, 
 
 Fue revisado por última vez el 1 Abr 2024. Fue probado por última vez en 1 Abr 2024.
 
-# Respuesta a las preguntas <div id='respuesta-a-las-preguntas' />
+# Introducción
+
+En el siguiente trabajo haremos una implementación de un plan de respuesta a incidentes, donde tocaremos puntos desde la identificación de activos hasta definición de proyectos. También tocaremos la recuperación y el análisis post-incidente. A través de un análisis de amenazas, evaluación de vulnerabilidades y cálculo de riesgos, se establecen las bases para una preparación robusta frente a posibles incidentes. Con la clasificación y priorización de proyectos, se enfoca la atención en las áreas de mayor riesgo, mientras que la definición de proyectos específicos permite una respuesta activa y dirigida. En el plan de respuesta a incidentes junto con los playbooks, ofreceremos un conjunto de herramientas, condiciones, flujos y tareas que se utilizan para responder a sucesos y amenazas de seguridad. 
+
+# Identificación de activos
+
+Se identificaron los activos de nuestra empresa y se listaron:
+
+![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/f3535ca0-ec36-4b63-90d5-e988b0bba964)
+
+
+# Análisis de las amenazas
+
+Hemos usado las amenazas que nos facilita INCIBE
+
+![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/7072adce-8676-444e-9ad5-d045771bb818)
+
+
+# Establecimiento de las vulnerabilidades
+
+**Copias de seguridad gestionadas por empleados TIC sin procedimiento formal aprobado:**
+- Riesgo: Pérdida de información en caso de incidentes.
+- Recomendación: Establecer un procedimiento formal, concienciar al personal de TIC y
+almacenar las copias de seguridad de manera segura.
+
+**Antivirus gestionado por una subcontrata sin procedimiento aprobado:**
+- Riesgos: carencia de actualizaciones y cuidado adecuado de la seguridad del antivirus.
+- Recomendación: Establecer un procedimiento reconocido para la gestión y actualización
+del software de protección.
+
+**Políticas de seguridad por escrito ausentes:**
+- Riesgo: Vulnerabilidad a riesgos y problemas de comunicación acerca de las expectativas
+de protección.
+- Recomendación: Establecer prácticas de seguridad oficiales que tratan de cuestiones
+fundamentales.
+
+**Falta de control sobre la securización de la página web y tienda online:**
+- Riesgos: Ausencia de control y visibilidad de los datos digitales externalizados.
+- Recomendación: Implementar métodos de observación y medición constantes, y
+asegurarse de que el asesor externo exhiba una conducta segura
+
+# Evaluación y cálculo de riesgo 
+
+Realizamos una evaluación de los riesgos asumibles, clasificandolos con una nota dependiendo de la criticidad del mismo:
+
+![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/d2b8365f-57eb-4103-bc22-71bad28bcbe3)
+
+# Respuesta a las preguntas
 
 **1.a   ¿Que relacción existe entre el trabajo que has hecho con las matrices MITRE ATT&CK y RE&CT y el plan de respuesta que estás planteando? ¿De que manera te ha ayudado el trabajo previo sobre las matrices a la hora de generar el plan? Deja evidencias del trabajo que has realizado sobre le navigator de las matrices, para obtener la información.**
   
