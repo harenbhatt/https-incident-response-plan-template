@@ -16,6 +16,7 @@
 **Examinar archivos afectados:**
 - Equipo asignado: Equipo de Análisis de Archivos.
 - Estrategia: Investigar a fondo los archivos afectados por el ransomware. Analizar el esquema de cambio de nombre de los archivos encriptados, tipos de archivos afectados, iconos de archivos, etc. Determinar la extensión de la encriptación y evaluar la posibilidad de recuperación de datos.
+
 - Comprobad:
   * Corrupción de archivos frente a encriptación
   * Tipos de archivos y ubicaciones
@@ -54,6 +55,15 @@ Para localizar cómo se introdujo el ransomware, consulta las tácticas de "Acce
 - Analiza la telemetría del host y los datos del Endpoint Detection and Response (EDR) para rastrear movimientos laterales o signos de auto-propagación.
 - Consulta los registros del sistema y realiza análisis forenses para identificar mecanismos de propagación.
 
+**Relación de matrices de ataque MITRE ATT&CK** <br>
+- MITRE ATT&CK: T1140 - Deobfuscate/Decode Files or Information puede ser relevante para comprender los mensajes codificados o ofuscados por el ransomware, incluyendo las notas de rescate o las instrucciones de pago.
+- Para Adjuntos de Correo Electrónico, T1566 - Spearphishing Attachment es relevante, indicando el uso de correos electrónicos maliciosos como vector de infección.
+- En el caso de RDP Inseguro, T1133 - External Remote Services muestra cómo los servicios remotos expuestos pueden ser explotados para ganar acceso.
+
+**Relación de matrices de defensa RE&CT**
+- Attribution se enfoca en identificar patrones de lenguaje, contactos de correo electrónico y otras pistas dentro de los mensajes relacionados que pueden ayudar a atribuir el ataque a ciertos actores de amenazas o campañas específicas.
+- Detect y Prevent son las acciones correspondientes, centradas en la detección temprana de vectores de infección y la implementación de medidas preventivas como la segmentación de red, la mejora de la seguridad del correo electrónico y la restricción de accesos remotos no seguros.
+
 ### Remediar
 
 **Planificar eventos de remediación** en los que estos pasos se lancen juntos (o de forma coordinada), con los equipos apropiados listos para responder a cualquier interrupción.
@@ -73,6 +83,14 @@ Para localizar cómo se introdujo el ransomware, consulta las tácticas de "Acce
 - Reconstruir sistemas infectados
 - Equipo asignado: Equipo de Infraestructura de TI.
 - Estrategia: Restaurar los sistemas afectados desde copias de seguridad verificadas y limpias. Reinstalar sistemas operativos y aplicaciones si es necesario. Implementar medidas de seguridad adicionales para prevenir futuros ataques.
+
+**Relación de matrices de ataque MITRE ATT&CK** <br>
+- T1562.004 - Impair Defenses: Disable or Modify System Firewall: Los atacantes podrían intentar deshabilitar los firewalls. La contención efectiva puede requerir asegurar y posiblemente modificar la configuración del firewall para aislar sistemas infectados.
+- T1571 - Non-Standard Port: Para la contención, es crucial bloquear el tráfico malicioso, lo que puede incluir el tráfico a través de puertos no estándar utilizados por el ransomware.
+
+**Relación de matrices de defensa RE&CT**
+- Aislar: Implementar medidas de cuarentena para aislar los sistemas infectados es clave para prevenir la propagación. Esto puede incluir desconectar física o lógicamente los sistemas de la red.
+- Bloquear Comunicaciones: Utilizar firewalls y otros dispositivos de seguridad para bloquear el tráfico malicioso hacia y desde los sistemas comprometidos.
 
 ### Erradicar
 
@@ -106,6 +124,14 @@ Para localizar cómo se introdujo el ransomware, consulta las tácticas de "Acce
 - Responsable: Equipo de Monitoreo de Seguridad.
 - Descripción: Mantener una vigilancia continua sobre los sistemas y redes para detectar cualquier signo de actividad maliciosa relacionada con el incidente de ransomware. Incrementar la prioridad de las alertas para una respuesta más rápida ante posibles intentos de reinfección.
 
+**Relación de matrices de ataque MITRE ATT&CK** <br>
+- T1490 - Inhibit System Recovery: La restauración de sistemas desde copias de seguridad es una táctica directa para contrarrestar los intentos de los atacantes de prevenir la recuperación del sistema.
+- T1562.001 - Impair Defenses: Disable or Modify Tools: La actualización y activación de la protección de puntos finales es una medida para contrarrestar esta técnica, asegurando que las defensas estén operativas y actualizadas
+
+**Relación de matrices de defensa RE&CT**
+- Restore (Restaurar): La restauración de sistemas a partir de copias de seguridad se alinea con la acción de Recover en RE&CT, donde el enfoque está en recuperar los sistemas y datos afectados para volver a un estado operativo normal.
+- RE&CT: Harden (Endurecer): La actualización de soluciones de seguridad y la implementación de protecciones adecuadas pueden considerarse como acciones de Harden, donde se refuerzan las defensas para prevenir reinfecciones o nuevos ataques.
+
 ### Comunicar
 
 **No pagar el rescate y activar un plan de continuidad de negocio:**
@@ -115,6 +141,12 @@ Para localizar cómo se introdujo el ransomware, consulta las tácticas de "Acce
 **Recuperación de datos y consideraciones legales:**
 - Equipo asignado: Equipo de Gestión Legal y de Cumplimiento.
 - Estrategia: Coordinar la recuperación de datos de las copias de seguridad verificadas y limpias. Evaluar las implicaciones legales, regulatorias y financieras del incidente de ransomware. Colaborar con las autoridades pertinentes y cumplir con los requisitos de notificación de violación de datos según sea necesario.
+
+**Relación de matrices de ataque MITRE ATT&CK** <br>
+- T1562.001 - **Impair Defenses: Disable or Modify Tools:** Aunque esta técnica se centra en cómo los atacantes pueden intentar deshabilitar las defensas, la acción de evaluar las implicaciones legales y cumplir con los requisitos regulatorios refuerza indirectamente la necesidad de tener defensas robustas y procedimientos de cumplimiento en su lugar.
+
+**Relación de matrices de defensa RE&CT**
+- **RE&CT: Harden (Endurecer):** La coordinación de la recuperación de datos y la evaluación de implicaciones legales también se ven como parte de este proceso. Aquí, el enfoque se amplía para incluir la protección legal y regulatoria de la organización, asegurando que las respuestas al incidente no solo sean técnicamente sólidas sino también legalmente defensibles.
 
 ### Recursos
 
