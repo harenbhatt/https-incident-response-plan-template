@@ -19,6 +19,17 @@ Asigne los pasos a individuos o equipos para trabajar simultáneamente, cuando s
     * Documente detalladamente los indicadores de compromiso (IoCs) y cualquier otra evidencia relevante.
     * Asegúrese de seguir las prácticas recomendadas de cadena de custodia para posibles investigaciones legales futuras.
 
+**Relación de matrices de ataque MITRE ATT&CK**
+- **T1496 - Resource Hijacking**: Identificar métodos utilizados por los atacantes para comprometer recursos de sistemas con el objetivo de minar criptomonedas de manera no autorizada, destacando la necesidad de detectar y mitigar estas actividades.
+- **T1082 - System Information Discovery**: Examinar cómo los atacantes pueden haber recopilado información sobre los sistemas para identificar objetivos vulnerables y maximizar la eficiencia del cryptojacking.
+- **T1562 - Impair Defenses**: Investigar las técnicas empleadas para desactivar o evadir soluciones de seguridad, lo que permite la persistencia del cryptojacking en los sistemas comprometidos.
+
+**Relación de matrices de defensa RE&CT**
+- **Detect & Analyze**: Implementar herramientas y procesos para detectar actividad sospechosa relacionada con el cryptojacking, incluyendo el monitoreo de uso anormal de recursos y tráfico de red inusual.
+- **Contain & Eradicate**: Desarrollar estrategias para contener la infección y erradicar el malware de los sistemas afectados, asegurando la eliminación completa para prevenir la recurrencia.
+- **Recover & Harden**: Restaurar los sistemas afectados a su estado operativo normal mientras se refuerzan las defensas para proteger contra futuros ataques de cryptojacking.
+
+
 ### Contención
 
 1. **Aísle los sistemas afectados.**
