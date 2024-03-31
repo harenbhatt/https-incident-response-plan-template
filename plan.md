@@ -1330,9 +1330,8 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente; este
 
 A continuación se presentan las descripciones, los deberes y la formación para cada uno de los roles definidos en la respuesta a un incidente.
 
-`TODO: Personalizar los roles, las descripciones, las funciones y la formación, si es necesario.`
-
 ## Estructura de los roles
+
 
 * Equipo de Mando
   * [Incident Commander](#rol-incident-commander)
