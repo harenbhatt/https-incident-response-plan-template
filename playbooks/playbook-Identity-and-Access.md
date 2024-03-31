@@ -43,3 +43,7 @@
 ### Recuperación
 
 - En caso de no haber sido recuperada la cuenta del empleado, eliminar la cuenta antigua y crearle una cuenta nueva siguiendo las politicas de seguridad de la empresa.
+
+### Recursos
+
+- Playbooks generados para los diferentes tipos de ataques.
