@@ -1,5 +1,5 @@
 
-## Playbook: Compromiso de creacción o modificación de procesos para escalado
+## Playbook: Compromiso de creacción o modificación de procesos para escalado.
 
 ### Investigar
 
@@ -27,12 +27,8 @@
 
 #### Erradicar
 
-- Eliminar el proceso de los dispositivos afectados.
+- Eliminar el proceso de los dispositivos afectados parandolo o eliminandolo directamente.
 - Restaurar el sistema a un punto anterior donde el proceso no haya sido afectado.
-
-#### Referencia: Recursos de remediación
-
-
 
 ### Comunicar
 
@@ -46,6 +42,4 @@
 
 ### Recursos
 
-#### Información adicional
 
-1. <a name="create-or-modify-system-process-playbook-ref-1"></a>["Title"](#TODO-url), Author Last Name (Date)
