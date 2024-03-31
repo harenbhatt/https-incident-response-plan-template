@@ -110,7 +110,45 @@ El Flujo de Toma de Decisiones y Escalado en nuestro plan de respuesta a inciden
 
 **3.a  ¿Como te has asegurado de que tu plan tiene respuestas resilientes? ¿Porque son resilientes y en qué fases se centran?**
 
-Para evaluar la resiliencia del plan ante ataques de phishing, es crucial considerar cómo aborda cada fase del ataque, desde la investigación hasta la recuperación, y cómo se asegura de que la organización pueda adaptarse y recuperarse eficazmente. A continuación, analizaré cómo este playbook aborda la resiliencia en cada fase:
+Para evaluar la resiliencia del plan ante los ataques, es crucial considerar cómo aborda cada fase del ataque, desde la investigación hasta la recuperación, y cómo se asegura de que la organización pueda adaptarse y recuperarse eficazmente. A continuación, se analizará cómo el playbook de phishing aborda la resiliencia en cada fase:
+
+**Investigación:**
+
+-	Ámbito del ataque: La investigación inicial se centra en comprender la extensión y el impacto del ataque de phishing, lo que permite una respuesta más rápida y precisa.
+
+-	Analizar el mensaje: Se emplean herramientas seguras para inspeccionar el correo electrónico de phishing y recopilar datos sin comprometer la seguridad.
+
+- Analizar los enlaces y archivos adjuntos: Se evalúan los enlaces y archivos adjuntos para determinar la naturaleza y el riesgo del contenido sin poner en peligro la seguridad.
+
+
+**Remediar:**
+
+-	Planificación de eventos de remediación: La coordinación de acciones de remediación simultáneas ayuda a minimizar el tiempo de inactividad y limitar la propagación del ataque.
+
+-	Equipo de Gestión de Crisis: Supervisa la remediación para garantizar una respuesta eficiente y efectiva.
+
+
+**Contener:**
+
+-	Aislamiento y Gestión de Cuentas Comprometidas: Se toman medidas inmediatas para identificar y aislar las cuentas afectadas, evitando así la propagación del ataque.
+
+-	Reforzamiento de la Seguridad de Acceso: Se implementan medidas adicionales, como la autenticación multifactor y el control de acceso granular, para evitar accesos no autorizados.
+
+-	Bloqueo y Neutralización de Amenazas: Se implementan bloqueos a nivel de DNS y políticas de filtrado de correos electrónicos para prevenir futuros ataques similares.
+
+
+**Comunicar:**
+
+-	Notificación Interna y Externa: La comunicación transparente y oportuna tanto dentro como fuera de la organización es crucial para coordinar una respuesta eficaz y mantener la confianza de las partes interesadas.
+
+
+**Recuperación:**
+
+-	Restauración de Sistemas y Servicios: Se restauran los sistemas desde copias de seguridad limpias y se refuerzan las defensas para prevenir futuros ataques.
+
+-	Análisis Forense y Eliminación de Malware: Se realiza un análisis forense para comprender cómo ocurrió el ataque y eliminar completamente cualquier presencia maliciosa.
+
+-	Educación y Concienciación sobre Seguridad: Se desarrollan programas de capacitación para educar a los empleados sobre las tácticas de phishing y mejorar la respuesta ante futuros ataques.
 
 
 # Evaluar
