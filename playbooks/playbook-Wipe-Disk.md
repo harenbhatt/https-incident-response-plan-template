@@ -14,13 +14,13 @@
 2. Actualizar politicas de seguridad.
 3. Actualizar playbooks con las lecciones aprendidas y nuevos metodos de remediación.
 
-#### Contención
+### Contención
 
 1. Detectar que datos se guardaron en el disco duro si el origen del ataque ha sido un malware que haya podido extenderse por la red.
 2. Eliminar el dispositivo afectado que contenía el disco duro de la red en caso de malware.
 3. Prohibir cualquier acceso no autorizado al disco duro.
 
-#### Erradicar
+### Erradicar
 
 - Crear copias de seguridad de los discos duros.
 
