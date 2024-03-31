@@ -55,8 +55,8 @@
 - **Acciones**: Establecimiento de controles de acceso más estrictos, actualización de políticas de seguridad.
 
 **Relación de matrices de ataque MITRE ATT&CK** <br>
-- T1489 - Service Stop: Aunque no mencionado previamente, esta técnica puede ser relevante cuando se considera la desconexión de sistemas afectados o la desactivación de servicios comprometidos como parte del proceso de aislamiento.
-- T1548 - Abuse Elevation Control Mechanism: Aunque no mencionado previamente, esta técnica resalta la importancia de implementar y fortalecer controles como la autenticación multifactor (MFA) para prevenir la elevación indebida de privilegios por parte de atacantes.
+- T1489 - **Service Stop:** Aunque no mencionado previamente, esta técnica puede ser relevante cuando se considera la desconexión de sistemas afectados o la desactivación de servicios comprometidos como parte del proceso de aislamiento.
+- T1548 - **Abuse Elevation Control Mechanism:** Aunque no mencionado previamente, esta técnica resalta la importancia de implementar y fortalecer controles como la autenticación multifactor (MFA) para prevenir la elevación indebida de privilegios por parte de atacantes.
 
 **Relación de matrices de defensa RE&CT**
 - La desconexión de sistemas afectados y la revocación de accesos sospechosos son acciones directas bajo la estrategia Contain en RE&CT. Implementar un aislamiento efectivo es crucial para prevenir la propagación del ataque y la explotación adicional de recursos de la red.
@@ -121,14 +121,23 @@ La remediación de incidentes de seguridad, especialmente en lo que respecta al 
 - **Acciones**: Restauración gradual de sistemas y accesos, monitoreo intensivo para detectar anomalías.
 
 **Relación de matrices de ataque MITRE ATT&CK** <br>
-- T1485 - **Data Destruction:** Aunque el objetivo aquí es la restauración, es importante considerar que los atacantes pueden haber utilizado técnicas para destruir datos. La restauración de sistemas desde copias de seguridad confiables es un contramedida directa a esta técnica.
+-  T1486 - Data Encrypted for Impact, relacionado con ransomware que cifra datos críticos, puede ser relevante aquí, ya que la restauración de datos desde copias de seguridad seguras es una contramedida directa a este tipo de ataque.
+- T1490 - Inhibit System Recovery: Esta técnica refleja los esfuerzos de los atacantes por impedir la recuperación del sistema, ya sea mediante la eliminación de copias de seguridad, la corrupción de sistemas de recuperación, o la modificación de configuraciones del sistema para obstaculizar los esfuerzos de restauración.
   
-- T1490 - **Inhibit System Recovery:** Los atacantes pueden intentar complicar la recuperación del sistema mediante la deshabilitación o eliminación de puntos de restauración o copias de seguridad. La restauración de sistemas desde copias de seguridad externas o no comprometidas es esencial para contrarrestar esta táctica.
-
 **Relación de matrices de defensa RE&CT**
-- La acción de Eradicate en RE&CT abarca la eliminación de malware, herramientas de acceso remoto y cualquier otra presencia maliciosa de los sistemas comprometidos. Esto asegura que la amenaza sea completamente removida del entorno afectado.
-- **Recover:** Aunque primariamente enfocada en la fase posterior de recuperación, esta acción también se relaciona estrechamente con la restauración de sistemas desde copias de seguridad fiables.
+- La acción Recover en RE&CT, que se centra en la recuperación tras un incidente. Esto incluye la restauración gradual de sistemas y accesos, utilizando sistemas de gestión de cambios para implementar la restauración y herramientas de monitorización.
+- RE&CT: Learn es relevante aquí para integrar lecciones aprendidas durante el incidente en prácticas y políticas futuras, asegurando una mejora continua.
 
+### Modelo de ciberresiliencia líder
+
+**Objetivos:**
+- Restaurar completamente las operaciones normales.
+- Aprender del incidente para mejorar la postura de seguridad.
+
+**Estrategias:**
+- Restauración Gradual: Uso de sistemas de gestión de cambios para reestablecer sistemas y accesos de manera controlada.
+- Monitoreo Post-Incidente: Implementación de herramientas de monitorización para detectar anomalías tempranas.
+- Revisión Post-Incidente: Analizar el manejo del incidente para identificar lecciones aprendidas y oportunidades de mejora.
 
 ### Recursos
 
