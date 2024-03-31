@@ -19,7 +19,15 @@
   - Determinación del alcance del acceso indebido.
   - Evaluación del impacto sobre datos sensibles y sistemas críticos.
   - Clasificación del incidente según severidad y urgencia.
-    
+
+**Relación de matrices de ataque MITRE ATT&CK** <br>
+- T1078 - **Valid Accounts:** Esta técnica se centra en el uso indebido de cuentas legítimas para obtener acceso. Es fundamental en incidentes de compromiso de identidad, ya que los atacantes frecuentemente explotan estas cuentas para moverse lateralmente dentro de la red y acceder a sistemas críticos. La identificación de cuentas y accesos comprometidos es crucial para entender la magnitud del compromiso y la metodología del atacante.
+- T1530 - **Data from Cloud Storage Object:** Considerando el acceso indebido a datos sensibles y sistemas críticos, esta técnica refleja cómo los atacantes pueden haber accedido y potencialmente exfiltrado datos importantes almacenados en la nube, lo cual es crítico para evaluar el impacto del compromiso.
+
+**Relación de matrices de defensa RE&CT**
+- La acción de analizar logs y alertas de seguridad se alinea perfectamente con Analyse en RE&CT, que implica la revisión detallada de evidencia digital para identificar cómo ocurrió el compromiso, qué cuentas se vieron afectadas y documentar la línea de tiempo de los eventos del incidente.
+
+
 ## Remediar
 
 ### Planificación de Eventos de Remediación
@@ -46,6 +54,13 @@
 - **Equipo**: Seguridad de TI
 - **Acciones**: Establecimiento de controles de acceso más estrictos, actualización de políticas de seguridad.
 
+**Relación de matrices de ataque MITRE ATT&CK** <br>
+- T1489 - Service Stop: Aunque no mencionado previamente, esta técnica puede ser relevante cuando se considera la desconexión de sistemas afectados o la desactivación de servicios comprometidos como parte del proceso de aislamiento.
+- T1548 - Abuse Elevation Control Mechanism: Aunque no mencionado previamente, esta técnica resalta la importancia de implementar y fortalecer controles como la autenticación multifactor (MFA) para prevenir la elevación indebida de privilegios por parte de atacantes.
+
+**Relación de matrices de defensa RE&CT**
+- La desconexión de sistemas afectados y la revocación de accesos sospechosos son acciones directas bajo la estrategia Contain en RE&CT. Implementar un aislamiento efectivo es crucial para prevenir la propagación del ataque y la explotación adicional de recursos de la red.
+-El objetivo es reforzar las defensas y mejorar la resiliencia organizacional frente a futuros ataques. La implementación de MFA y la revisión de políticas de acceso son ejemplos de cómo se puede endurecer la seguridad tras un incidente.
 
 ## Erradicar
 
@@ -57,6 +72,14 @@
 - **Equipo**: TI y Seguridad de TI
 - **Acciones**: Eliminación de malware o herramientas de acceso remoto instaladas por atacantes, restauración de sistemas desde copias de seguridad fiables.
 
+**Relación de matrices de ataque MITRE ATT&CK** <br>
+- T1485 - **Data Destruction:** Aunque el objetivo aquí es la restauración, es importante considerar que los atacantes pueden haber utilizado técnicas para destruir datos. La restauración de sistemas desde copias de seguridad confiables es un contramedida directa a esta técnica.
+  
+- T1490 - **Inhibit System Recovery:** Los atacantes pueden intentar complicar la recuperación del sistema mediante la deshabilitación o eliminación de puntos de restauración o copias de seguridad. La restauración de sistemas desde copias de seguridad externas o no comprometidas es esencial para contrarrestar esta táctica.
+
+**Relación de matrices de defensa RE&CT**
+- La acción de Eradicate en RE&CT abarca la eliminación de malware, herramientas de acceso remoto y cualquier otra presencia maliciosa de los sistemas comprometidos. Esto asegura que la amenaza sea completamente removida del entorno afectado.
+- **Recover:** Aunque primariamente enfocada en la fase posterior de recuperación, esta acción también se relaciona estrechamente con la restauración de sistemas desde copias de seguridad fiables.
 
 #### Referencia: Recursos de remediación
 
@@ -83,6 +106,10 @@ La remediación de incidentes de seguridad, especialmente en lo que respecta al 
   - Establecer un canal de comunicación para actualizaciones regulares del incidente.
   - Coordinar con asesores legales para cumplir con requisitos de notificación de brechas.
 
+**Relación de matrices de ataque MITRE ATT&CK** <br>
+- Preparar comunicados internos y externos: Esta acción es esencial para mantener a todas las partes interesadas informadas sobre el estado del incidente, las medidas que se están tomando para mitigar el daño y cualquier impacto potencial.
+- Establecer un canal de comunicación para actualizaciones regulares del incidente: La implementación de un canal dedicado para actualizaciones garantiza que la información sea distribuida de manera consistente y eficiente.
+
 ## Recuperación
 
 ### Pasos para la Restauración
@@ -92,6 +119,16 @@ La remediación de incidentes de seguridad, especialmente en lo que respecta al 
 - **Herramientas**: Sistemas de gestión de cambios, herramientas de monitorización.
 - **Equipo**: TI y Operaciones
 - **Acciones**: Restauración gradual de sistemas y accesos, monitoreo intensivo para detectar anomalías.
+
+**Relación de matrices de ataque MITRE ATT&CK** <br>
+- T1485 - **Data Destruction:** Aunque el objetivo aquí es la restauración, es importante considerar que los atacantes pueden haber utilizado técnicas para destruir datos. La restauración de sistemas desde copias de seguridad confiables es un contramedida directa a esta técnica.
+  
+- T1490 - **Inhibit System Recovery:** Los atacantes pueden intentar complicar la recuperación del sistema mediante la deshabilitación o eliminación de puntos de restauración o copias de seguridad. La restauración de sistemas desde copias de seguridad externas o no comprometidas es esencial para contrarrestar esta táctica.
+
+**Relación de matrices de defensa RE&CT**
+- La acción de Eradicate en RE&CT abarca la eliminación de malware, herramientas de acceso remoto y cualquier otra presencia maliciosa de los sistemas comprometidos. Esto asegura que la amenaza sea completamente removida del entorno afectado.
+- **Recover:** Aunque primariamente enfocada en la fase posterior de recuperación, esta acción también se relaciona estrechamente con la restauración de sistemas desde copias de seguridad fiables.
+
 
 ## Recursos
 
