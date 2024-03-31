@@ -12,7 +12,7 @@ Los ataques de fuerza bruta se aprovechan de debilidades en los sistemas de aute
 
 4. **Evaluación de Protecciones Actuales:** Determinar la eficacia de las medidas de protección actuales contra ataques de fuerza bruta, como la implementación de CAPTCHA, la autenticación multifactor (MFA) o la detección de anomalías de comportamiento.
 
-## Preparación
+### Preparación
 
 **Configuración de Seguridad**
 
@@ -26,7 +26,7 @@ Los ataques de fuerza bruta se aprovechan de debilidades en los sistemas de aute
 
 2. **Procedimientos de Gestión de Credenciales:** Implementar procedimientos claros y efectivos para la gestión de credenciales, que abarquen la creación, el almacenamiento seguro, la distribución y la rotación regular de contraseñas. Esto garantiza que las credenciales de acceso se mantengan protegidas y se actualicen periódicamente para reducir el riesgo de compromiso.
 
-## Remediación
+### Remediación
 
 **Restauración de Credenciales Comprometidas**
 
@@ -52,7 +52,7 @@ Aplicar parches de seguridad y actualizaciones en los sistemas afectados es esen
 
 4. **Actualización de Políticas de Seguridad:** Revisar y actualizar las políticas de seguridad de manera proactiva para abordar las lecciones aprendidas del incidente y fortalecer la postura de seguridad general de la organización.
 
-## Contención
+### Contención
 
 **Bloqueo Automático**
 
@@ -74,7 +74,7 @@ Ajustar las reglas de firewall para bloquear o limitar el tráfico asociado con 
 
 3. **Prueba y Ajuste:** Probar las nuevas reglas de firewall en un entorno controlado para asegurar que no afecten negativamente la operación normal de la red. Realizar ajustes según sea necesario para equilibrar la seguridad con la funcionalidad.
 
-## Comunicación
+### Comunicación
 
 **Comunicación Interna:**
 
@@ -92,7 +92,7 @@ Ajustar las reglas de firewall para bloquear o limitar el tráfico asociado con 
 
 3. **Comunicados de Prensa y Comunicación Pública:** Preparar y emitir comunicados de prensa y otras formas de comunicación pública para informar al público en general sobre el incidente de fuerza bruta, las medidas de precaución recomendadas y el compromiso continuo de la organización con la seguridad de los datos y la privacidad de los usuarios.
 
-## Recuperación
+### Recuperación
 
 **Procedimientos de Restauración**
 
@@ -118,7 +118,7 @@ Una vez que se ha restablecido la funcionalidad operativa y se han implementado 
 
 4. **Documentación de Lecciones Aprendidas:** Documentar todas las lecciones aprendidas durante el incidente, incluyendo acciones exitosas y áreas de mejora. Estas lecciones pueden informar futuras estrategias de seguridad y mejorar la preparación y respuesta ante incidentes.
 
-## Recursos y Referencias
+### Recursos y Referencias
 
 **Guías de Seguridad:**
 
@@ -138,7 +138,7 @@ Una vez que se ha restablecido la funcionalidad operativa y se han implementado 
 
 2. **Herramientas de Autenticación Reforzada:** Explorar soluciones de autenticación multifactor (MFA) y autenticación de dos factores (2FA) que añadan capas adicionales de seguridad a los sistemas y reduzcan la efectividad de los ataques de fuerza bruta al requerir más que solo una contraseña para el acceso.
 
-## Relacion con matriz de ataque y respuesta
+### Relacion con matriz de ataque y respuesta
 **Técnica de Ataque: Credential Access > Brute Force (T1110)**
 Esta técnica se enfoca en los métodos que los atacantes pueden utilizar para obtener acceso a las credenciales a través de intentos repetidos de adivinación o fuerza bruta. Incluye sub-técnicas como:
 1. T1110.001: Password Guessing
