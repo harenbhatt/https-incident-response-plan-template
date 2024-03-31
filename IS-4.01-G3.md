@@ -8,6 +8,11 @@
 
 # Introducción
 
+El Plan de Respuesta ante Incidentes (PRI) constituye la espina dorsal de la estrategia de seguridad informática de una organización. Este plan proporciona las herramientas y pautas a seguir en caso de sufrir un incidente cibernético, establece roles y responsabilidades claros, define procesos de comunicación y coordinación, y establece procedimientos detallados para cada fase de respuesta. 
+
+La idea general tras este plan reside en la capacidad de respuesta y recuperación ante cualquier tipo de incidencia informática, otorgando a los empleados de la organización la habilidad de saber identificar posibles amenazas, coordinarse para sobreponerse al incidente y saber recuperarse del mismo lo antes posible, a fin de evitar la interrupción del negocio, o minimizarla en caso de esta producirse. 
+Hay que tener en cuenta que toda empresa puede ser representada como una larga cadena de engranajes, dicho metafóricamente. En el Plan de Respuesta, se deja entrever que cada miembro de esta cadena debe actuar debidamente y según le capacite el rol que éste ocupe en la empresa, de modo que pueda ejercer su función correctamente si se produjera un incidente, colaborando con sus compañeros para poder dar solución al mismo con la mayor brevedad posible.
+
 # Plan de respuesta
 
 Enlace al plan de respuesta:
