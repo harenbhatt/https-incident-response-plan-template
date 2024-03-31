@@ -57,79 +57,79 @@ TEAM_SME_ROSTER: 'https://iesrafaelalberti.es/te-informamos/'
 EXECUTIVE_ROSTER: 'https://iesrafaelalberti.es/te-informamos/'
 
 # Time to wait for on-duty IC on call (e.g., 15 minutes)
-INCIDENT_COMMANDER_RESPONSE_SLA: '{{INCIDENT_COMMANDER_RESPONSE_SLA}}'
+INCIDENT_COMMANDER_RESPONSE_SLA: '60 minutos'
 
 # Time between scheduled updates (e.g., 4 hours)
-UPDATE_FREQUENCY: '2 Semanas'
+UPDATE_FREQUENCY: '3 horas'
 
 # URL/path to incident file (e.g., ir.acme.tld/files/codename)
 INCIDENT_FILE_LOCATION: 'https://netmancer.es/src/incidents'
 
 # URL/path to critical information list, data you want to protect (e.g., ir.acme.tld/cil)
-CRITICAL_INFO_LIST_LOCATION: '{{CRITICAL_INFO_LIST_LOCATION}}'
+CRITICAL_INFO_LIST_LOCATION: 'https://netmancer.es/src/critical_info_list'
 
 # URL/path to critical asset list, systems you want to protect (e.g., ir.acme.tld/cal)
-CRITICAL_ASSET_LIST_LOCATION: '{{CRITICAL_ASSET_LIST_LOCATION}}'
+CRITICAL_ASSET_LIST_LOCATION: 'https://netmancer.es/src/critical_asset_list'
 
 # URL/path to asset management DB (e.g., ir.acme.tld/assets)
-ASSET_MGMT_DB_LOCATION: '{{ASSET_MGMT_DB_LOCATION}}'
+ASSET_MGMT_DB_LOCATION: 'https://netmancer.es/src/assets'
 
 # URL/path to network map (e.g., ir.acme.tld/netmap)
-NETWORK_MAP_LOCATION:  '{NETWORK_MAP_LOCATION{}}'
+NETWORK_MAP_LOCATION:  'https://netmancer.es/network/network_map'
 
 # URL to SIEM (e.g., siem.acme.tld)
-SIEM_CONSOLE_LOCATION: '{{SIEM_CONSOLE_LOCATION}}'
+SIEM_CONSOLE_LOCATION: 'https://netmancer.es/siem/console'
 
 # URL to log aggregator (e.g., elk.acme.tld)
-LOG_AGGREGATOR_CONSOLE: '{{LOG_AGGREGATOR_CONSOLE}}'
+LOG_AGGREGATOR_CONSOLE: 'https://netmancer.es/elk/console_log'
 
 # Name/URL of live response tool (e.g., [velociraptor](https://www.velocidex.com))
-LIVE_RESPONSE_TOOL: '{{LIVE_RESPONSE_TOOL}}'
+LIVE_RESPONSE_TOOL: '[netman](https://netmancer.es/response_tool/netman)'
 
 # Name/URL of memory collection tool (e.g., [winpmem](https://github.com/Velocidex/WinPmem))
-MEMORY_COLLECTION_TOOL: '{{MEMORY_COLLECTION_TOOL}}'
+MEMORY_COLLECTION_TOOL: '[volatility](https://github.com/volatilityfoundation/volatility)'
 
 # Name/URL of disk imaging tool (e.g., [sumuri](https://sumuri.com/software))
-DISK_IMAGE_TOOL: '{{DISK_IMAGE_TOOL}}'
+DISK_IMAGE_TOOL: '[FTK_imager](https://www.exterro.com/digital-forensics-software/ftk-imager)'
 
 # URL/path to IR report template (e.g., ir.acme.tld/report/template)
-INCIDENT_REPORT_TEMPLATE: '{{INCIDENT_REPORT_TEMPLATE}}'
+INCIDENT_REPORT_TEMPLATE: 'https://netmancer.es/reports/template'
 
 # URL/path to report recipient list (e.g., ir.acme.tld/report/recipients)
-INCIDENT_REPORT_RECIPIENTS: '{{INCIDENT_REPORT_RECIPIENTS}}'
+INCIDENT_REPORT_RECIPIENTS: 'https://netmancer.es/reports/recipients'
 
 # Compliance team name and contact info (e.g., the legal team, legal@acme.tld)
-COMPLIANCE_TEAM:  '{COMPLIANCE_TEAM{}}'
+COMPLIANCE_TEAM:  'leaglteam@netmancer.es'
 
 # Communications team name and contact info (e.g., the marketing team, marketing@acme.tld)
-COMMUNICATIONS_TEAM: '{{COMMUNICATIONS_TEAM}}'
+COMMUNICATIONS_TEAM: 'comunications@netmancer.es'
 
 # Executive team name and contact info (e.g., the front office, bosses@acme.tld)
-EXECUTIVE_TEAM: '{{EXECUTIVE_TEAM}}'
+EXECUTIVE_TEAM: 'executive@netmancer.es'
 
 # Legal team name (e.g., the legal team, legal@acme.tld)
-LEGAL_TEAM: '{{LEGAL_TEAM}}'
+LEGAL_TEAM: 'leaglteam@netmancer.es'
 
 # Local law enforcement contact info (e.g., Detective Jane Doe, police@local.gov.tld)
-LOCAL_LE_CONTACT: '{{LOCAL_LE_CONTACT}}'
+LOCAL_LE_CONTACT: 'Detective Ramón García. policia@policialocal.es'
 
 # FBI contact info (e.g., 1-800-CALL-FBI (225-5324), https://www.fbi.gov/contact-us)
-FBI_CONTACT: '{{FBI_CONTACT}}'
+FBI_CONTACT: 'https://www.fbi.gov/contact-us'
 
 # Vendor for IR and infosec support (e.g., [Counteractive Security](https://www.counteractive.net))
-INCIDENT_RESPONSE_VENDOR: '{{INCIDENT_RESPONSE_VENDOR}}'
+INCIDENT_RESPONSE_VENDOR: '[AT&T USM Anywhere]https://cybersecurity.att.com/products/usm-anywhere'
 
 # Vendor for PR support (e.g., public relations llc, pr.firm.tld)
-PUBLIC_RELATIONS_VENDOR: '{{PUBLIC_RELATIONS_VENDOR}}'
+PUBLIC_RELATIONS_VENDOR: 'https://www.softr.io/'
 
 # (Cyber) insurance provider (e.g., AAA insurance co., cyber.insurance.tld)
-INSURANCE_VENDOR: '{{INSURANCE_VENDOR}}'
+INSURANCE_VENDOR: 'https://www.reale.es/'
 
 # Industry ISAC contact info (e.g., FS ISAC, https://en.wikipedia.org/wiki/Information_Sharing_and_Analysis_Center)
-ISAC_CONTACT: '{{ISAC_CONTACT}}'
+ISAC_CONTACT: 'https://isacspain.com/'
 
 # After action review (AAR) service level agreement (time after completion of incident to conduct AAR) (e.g., 5 business days)
-AAR_SLA: '{{AAR_SLA}}'
+AAR_SLA: '5 días laborables'
 
 # AAR attendees (e.g., ir.acme.tld/aar/attendees)
-AAR_ATTENDEES: '{{AAR_ATTENDEES}}'
+AAR_ATTENDEES: 'https://netmancer.es/aar/asistentes'
