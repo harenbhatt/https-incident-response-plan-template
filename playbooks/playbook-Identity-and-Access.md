@@ -44,4 +44,4 @@
 ### Recursos
 
 1. Para eliminar la cuenta de usuario o modificarla podemos usar el administrador de cuentas de Windows llamado "Cuentas".
-2. Para monitorizar cuentas de usuario podemos utilizar el registro de eventos de Windows.
+2. Para monitorizar cuentas de usuario podemos utilizar el propio registro de eventos de Windows.
