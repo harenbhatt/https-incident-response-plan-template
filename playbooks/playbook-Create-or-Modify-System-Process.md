@@ -4,7 +4,7 @@
 
 1. Identificar el origen del ataque.
 2. Identificar la vía del ataque.
-3. Recopilar evidencias forenses.
+3. Recopilar evidencias forenses con las herramientas suministradas por la empresa.
 4. Evaluar el impacto del ataque.
 5. Determinar las vulnerabilidades explotadas y las técnicas usadas.
 
