@@ -130,12 +130,12 @@ La remediación de incidentes de seguridad, especialmente en lo que respecta al 
 - **Recover:** Aunque primariamente enfocada en la fase posterior de recuperación, esta acción también se relaciona estrechamente con la restauración de sistemas desde copias de seguridad fiables.
 
 
-#### Recursos
+### Recursos
 
 - **Financieros y de Personal**: Asignación de presupuesto para herramientas de seguridad adicionales, contratación de expertos en seguridad externos si es necesario.
 - **Logísticos**: Planificación de recursos para la restauración de operaciones, incluyendo hardware y software.
 
-## Información adicional
+#### Información adicional
 
 1. <a name="identity-and-access-playbook-ref-1"></a>[Marcos para la gestión de identidad y acceso](https://www.nist.gov/)
 2. <a name="ransomware-playbook-ref-2"></a>[Prácticas recomendadas de gestión de identidad y acceso](https://www.strongdm.com/)
