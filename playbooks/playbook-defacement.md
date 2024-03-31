@@ -51,7 +51,7 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
 **Planificar eventos de reparación** en los que estos pasos se pongan en marcha juntos (o de forma coordinada), con los equipos adecuados listos para responder a cualquier interrupción.
 * **Considere el momento y las compensaciones** de las acciones de remediación: su respuesta tiene consecuencias.
 
-#### Contención
+### Contención
 
 1. Haga una copia de seguridad de todos los datos almacenados en el servidor web con fines forenses.
 2. Como se ha mencionado anteriormente, asegúrese de que el servidor de la página desfigurada está temporalmente fuera de servicio mientras se lleva a cabo la investigación.
@@ -62,7 +62,7 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
     * Si esto está fuera de su dominio, simplemente asegúrese de que ha dado al personal apropiado toda la información sobre el ataque que tiene y permita que los expertos hagan su trabajo.
 
 
-### Recover
+### Recuperación
 
 1. Elimine el mensaje del ciberdelincuente y reemplácelo por el contenido original y legítimo. Si se han perdido datos en el ataque, consulte las copias de seguridad y restaure la página original en la medida de lo posible.
     * Compruebe las copias de seguridad en busca de indicadores de compromiso
@@ -71,7 +71,7 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
 3. Después de aplicar las medidas para evitar riesgos (como se recomienda a continuación), restaure su servidor mostrando el contenido original de la página. 
 4. Si es necesario y/o aplicable, prepare una disculpa/explicación del ataque ocurrido para los usuarios o cualquier persona que haya presenciado la desfiguración. Asegúrese de que queda claro que el contenido desfigurado no refleja a su organización de ninguna manera. 
 
-#### Evitar riesgos
+### Evitar riesgos
 
 1. Utilice el menor número de plug-ins posible. Los piratas informáticos tienen como objetivo los sitios web que son vulnerables y tienen muchas fuentes de entrada. Puedes limitar estas fuentes de entrada utilizando sólo lo que necesites y eliminando los plug-ins y el software que no utilices o sean antiguos. También es importante actualizarlos lo antes posible. 
 2. Controle de cerca y ordene el acceso a los contenidos administrativos. Permita que las personas accedan sólo a lo que necesitan. Esto reducirá la posibilidad de que un error humano provoque un ciberataque. Hay más métodos de prevención DIY mencionados en [este artículo](https://cirt.gy/index.php/node/116) (pasos 6-12) y en el recurso #4 al final de este playbook.
@@ -80,8 +80,6 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
 5. Defiéndase contra los puntos comunes de explotación, como las inyecciones SQL y los ataques XSS. [Este artículo](https://www.banffcyber.com/knowledge-base/articles/best-practices-address-issue-web-defacement/) incluye las mejores prácticas para defender estos ataques.
 6. Instala programas de detección de desfiguración para que, si volviera a producirse un ataque, estés preparado y respondas rápidamente. Aquí hay un [artículo](https://www.techradar.com/news/best-website-defacement-monitoring-service) que resume algunos de los mejores servicios de monitoreo de 2020. 
 7. Habla con tus empleados de la importancia de mantener el acceso administrativo limitado y confidencial e infórmales de estos pasos para evitar incidentes, incluyendo la formación periódica de concienciación sobre ciberseguridad.
-
-#### Referencia: Recursos de remediación
 
 ### Comunicar
 
@@ -107,8 +105,6 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente, cuan
     1. 2. Notificar y colaborar con [consultores de respuesta a incidentes](#TODO-link-to-actual-resource) por procedimiento
 
 ### Recursos
-
-#### Referencia: Acciones del usuario ante un ataque de sospecha de defacement
 
 1. Mantenga la calma y respire profundamente.
 1. 2. Desconecte su sistema de la red `.
