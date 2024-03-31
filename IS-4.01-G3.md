@@ -12,6 +12,8 @@
 
 # Playbooks
 
+En este punto indicamos con enlaces los playbooks que hemos generado para nuestro plan de respuesta.
+
 1. [playbook-Create-or-Modify-System-Procces](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G3/playbooks/playbook-Create-or-Modify-System-Process.md)
 2. [playbook-DDoS](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G3/playbooks/playbook-DDoS.md)
 3. [playbook-DoS](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G3/playbooks/playbook-DoS.md)
