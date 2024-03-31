@@ -1,6 +1,6 @@
-﻿# DDOS
+﻿## DDOS
 
-## Introducción
+### Introducción
 
 **Objetivo**: Este playbook está diseñado para orientar a los equipos en la identificación rápida y la respuesta efectiva ante ataques DDoS, asegurando que las operaciones críticas continúen con el mínimo impacto posible.
 
@@ -8,7 +8,7 @@
 
 **Audiencia**: Dirigido al equipo de seguridad cibernética y operaciones de red, este documento sirve como una guía práctica para preparar y proteger la infraestructura tecnológica de la organización frente a ataques DDoS.
 
-## Comprensión de los ataques DDoS
+### Comprensión de los ataques DDoS
 
 **Definición y Tipos**: Un ataque de denegación de servicio distribuido (DDoS) es un intento malicioso de interrumpir el tráfico normal de un servidor, servicio o red específicos inundándolos con un flujo abrumador de tráfico de internet. Los ataques DDoS se clasifican en tres categorías principales:
 
@@ -22,7 +22,7 @@
 
 **Indicadores de Compromiso (IoCs)**: Los indicadores de compromiso son señales que pueden sugerir que una red o sistema está bajo ataque DDoS. Incluyen: aumento anormal del tráfico, realentización del servicio o inaccesibilidad, aumento en solicitudes fallidas y alertas de seguridad inusuales.
 
-## Preparación
+### Preparación
 
 **Evaluación de Riesgo**
 
@@ -42,7 +42,7 @@
 
 **Defensas en Capas:** Implementar múltiples capas de seguridad, incluyendo firewalls de aplicación web (WAF), sistemas de prevención de intrusiones (IPS), y soluciones específicas de mitigación de DDoS para filtrar el tráfico malicioso antes de que pueda impactar en los servicios críticos.
 
-## Detección y Análisis
+### Detección y Análisis
 
 **Monitoreo y Alertas**
 
@@ -62,7 +62,7 @@
 
 **Documentación y Comunicación:** Registrar todos los detalles del ataque, incluyendo cómo fue detectado, sus características, y cualquier medida tomada en respuesta inicial. Esta documentación es vital para la comunicación interna y externa, así como para la revisión post-incidente.
 
-## Contención
+### Contención
 
 **Estrategias de Mitigación**
 
@@ -82,7 +82,7 @@
 
 **Pruebas y Actualizaciones Regulares:** Es fundamental probar regularmente las estrategias de mitigación y los controles implementados para asegurar su efectividad contra nuevos y emergentes vectores de ataque. Las pruebas pueden incluir simulacros de ataque y revisiones de configuración.
 
-## Comunicación
+### Comunicación
 
 **Protocolos de Comunicación**
 
@@ -104,7 +104,7 @@
 
 **Compromiso con la Transparencia:** Afirmación del compromiso de la organización con mantener informadas a todas las partes interesadas.
 
-## Remediación
+### Remediación
 
 **Acciones Correctivas**
 
@@ -128,7 +128,7 @@
 
 **Colaboración con Socios Externos:** Establecer o fortalecer las relaciones con socios externos, incluidos los proveedores de servicios de Internet, proveedores de servicios de mitigación de DDoS y otras organizaciones relevantes para una respuesta coordinada a futuros ataques.
 
-## Recuperación
+### Recuperación
 
 **Procedimientos de Recuperación**
 
