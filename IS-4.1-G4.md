@@ -85,13 +85,51 @@ La elección de estos playbooks se basa en la evaluación de riesgos, la experie
 
 
 
-
 **1.c   ¿Como te has asegurado que has cubierto todas las fases del plan de respuesta? ¿Qué fase consideras que está más floja en un plan? ¿Cuál de ellas consideras que está mejor trabajada en tu plan? Asegúrate de hablar de todas las fases y como las cubres.** 
 
 
 **2.a   ¿En que consiste el Flujo de Toma de Decisiones y Escalado de tu plan de respuesta? ¿Existe un plan de comunicación, protocolos, etc? Si la respuesta es correcta, haz un resumen del plan y protocolos. Deja evidencias del flujo, mediante un diagrama.** 
 
+El Flujo de Toma de Decisiones y Escalado en el plan de respuesta a incidentes proporcionado se basa en una serie de pasos diseñados para evaluar, decidir y actuar frente a posibles incidentes de seguridad. Este proceso está estructurado para asegurar una respuesta rápida y efectiva, minimizando el impacto del incidente en la organización. 
 
+### Resumen del Plan y Protocolos
+
+#### 1. Evaluar
+
+- **Mantener la Calma**: Prioridad máxima para una respuesta considerada y efectiva.
+- **Reunir Información**: 
+  - Recopilar datos relevantes sobre el incidente.
+  - Fuentes incluyen alarmas, eventos, y toda información pertinente.
+- **Evaluar el Impacto**:
+  - Determinar el impacto funcional y de la información.
+  - Categorizar la severidad del incidente.
+
+#### 2. Iniciar la Respuesta
+
+- **Nombrar el Incidente**: Asignar un nombre en clave para facilitar la comunicación y el seguimiento.
+- **Reunir el Equipo de Respuesta**:
+  - Convocar al equipo de respuesta, incluyendo al Incident Commander.
+  - Asegurar la participación de todos los stakeholders relevantes.
+- **Establecer Comunicaciones**:
+  - Iniciar canales de comunicación seguros.
+  - Preferiblemente canales no afectados por el incidente.
+
+#### 3. Comunicación y Protocolos
+
+- **Comunicación Interna y Externa**:
+  - Establecer líneas de comunicación claras con todas las partes interesadas.
+  - Incluye reguladores, el público, y posiblemente clientes.
+- **Actualizaciones Regulares**:
+  - Proporcionar actualizaciones periódicas a todas las partes interesadas.
+  - Usar los canales de comunicación establecidos.
+
+#### 4. Escalar según sea necesario
+
+- Basado en la evaluación continua del incidente.
+- Escalar la respuesta según sea necesario, lo que puede incluir:
+  - Añadir más recursos.
+  - Consultar con expertos externos.
+  - Notificar a las autoridades.
 
 **3.a  ¿Como te has asegurado de que tu plan tiene respuestas resilientes? ¿Porque son resilientes y en qué fases se centran?**
 
