@@ -451,7 +451,12 @@ Determine la estrategia de tiempo -cuando se tomarán las acciones de remediaci�
 
 ## Ejecutar la remediación
 
-* Evaluar y explicar los riesgos de las acciones de remediación a las partes interesadas.  `TODO: Personalizar el procedimiento de aprobación de los riesgos de la remediación, si es necesario.`
+* Evaluar y explicar los riesgos de las acciones de remediación a las partes interesadas.
+* Identificar las partes interesadas relevantes que necesitan estar involucradas en el proceso de aprobación de los riesgos de la remediación. Esto puede incluir representantes de seguridad, equipos de TI, gerentes de proyectos y líderes de negocio.
+* Establecer criterios claros para evaluar y clasificar los riesgos asociados con las acciones de remediación propuestas. Esto puede incluir la probabilidad de éxito de la remediación, el impacto potencial en el negocio y la complejidad de implementación.
+* Diseñar un flujo de trabajo para la revisión y aprobación de los riesgos de la remediación. Esto puede implicar la presentación de propuestas de remediación, la evaluación de riesgos por parte de expertos relevantes y la toma de decisiones basada en la evaluación de riesgos.
+* Documentar el proceso de aprobación de los riesgos de la remediación, incluyendo los criterios de evaluación utilizados, los responsables de la toma de decisiones y los pasos a seguir en caso de discrepancias o disputas en la evaluación de riesgos.
+* Revisar y actualizar regularmente el procedimiento de aprobación de los riesgos de la remediación a medida que evolucionen los riesgos y las estrategias de seguridad de la organización.
 * Implementar inmediatamente aquellas acciones de remediación que afecten poco o nada al atacante (a veces llamadas "acciones de postura").  Por ejemplo, muchas de las acciones de [protección](#protect) y [detección](#detect) anteriores son buenas candidatas.
 * Programar y asignar acciones de remediación de acuerdo con la estrategia de tiempo.
 * Ejecute las acciones de corrección en lotes, como eventos, para lograr la máxima eficacia y el mínimo riesgo.
