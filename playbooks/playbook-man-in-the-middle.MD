@@ -1,6 +1,6 @@
-# MAN IN THE MIDDLE
+## Playbook: Man in the Middle
 
-## Investigación
+### Investigación
 
 **Análisis de Vulnerabilidades**
 
@@ -18,7 +18,7 @@
 
 3. **Lecciones Aprendidas:** Extraer lecciones aprendidas de los incidentes pasados de MitM, identificando los errores cometidos y las estrategias efectivas de respuesta y mitigación que pueden aplicarse en futuros incidentes.
 
-## Preparación
+### Preparación
 
 **Evaluación de Riesgos**
 
@@ -40,7 +40,7 @@ Una vez que se han identificado los riesgos, es fundamental implementar medidas 
 
 3. **Monitoreo Continuo:** Implementar sistemas de monitoreo de red para detectar y responder rápidamente a posibles actividades sospechosas que podrían indicar un ataque MitM en curso. Esto podría incluir la detección de cambios en el tráfico de red, anomalías en los patrones de comunicación o intentos de autenticación sospechosos.
 
-## Remediación
+### Remediación
 
 **Análisis Forense**
 
@@ -86,7 +86,7 @@ Aplicar parches de seguridad y actualizaciones de software es una medida fundame
 
 3. **Respuesta Automatizada:** Configurar sistemas de respuesta automatizada que puedan tomar medidas inmediatas, como bloquear direcciones IP sospechosas o desconectar dispositivos comprometidos, en respuesta a alertas de seguridad.
 
-## Comunicación
+### Comunicación
 
 **Notificación Interna:**
 
@@ -104,7 +104,7 @@ En situaciones más graves, puede ser necesario comunicarse con entidades extern
 
 2. **Organizaciones de Seguridad Cibernética:** Comunicarse con otras organizaciones de seguridad cibernética y compartir información sobre el ataque MitM puede ayudar a identificar patrones de amenazas, descubrir nuevas técnicas de ataque y colaborar en la búsqueda de soluciones efectivas de mitigación. Participar en grupos de intercambio de información de amenazas puede ser especialmente beneficioso en este sentido.
 
-## Recuperación
+### Recuperación
 
 **Restablecimiento de la Confianza:**
 
@@ -128,7 +128,7 @@ Para evitar futuros ataques MitM, es importante aprender de la experiencia y rea
 
 La recuperación de un ataque MitM no se trata solo de restaurar la confianza de los clientes y socios, sino también de aprender de la experiencia y fortalecer las defensas de seguridad para prevenir futuros ataques. Un enfoque proactivo hacia la mejora continua es fundamental para garantizar la resiliencia de la organización frente a las amenazas cibernéticas.
 
-## Recursos y Referencias
+### Recursos y Referencias
 
 **Documentación de Procedimientos:**
 
