@@ -2,7 +2,7 @@
 
 ### Investigar
 
-- Monitorear altos volúmenes de fallos de autenticación. Esto implica supervisar los registros de eventos de autenticación en busca de un número inusualmente alto de intentos fallidos de inicio de sesión. Estos intentos pueden indicar diferentes tipos de ataques dirigidos a comprometer las credenciales de usuario.
+- Monitorizar altos volúmenes de fallos de autenticación. Esto implica supervisar los registros de eventos de autenticación en busca de un número inusualmente alto de intentos fallidos de inicio de sesión. Estos intentos pueden indicar diferentes tipos de ataques dirigidos a comprometer las credenciales de usuario.
     - *Password guessing:* Intento de adivinar la contraseña correcta probando diferentes combinaciones de contraseñas comunes o predecibles.
     - *Password Cracking:* Intento de descifrar contraseñas utilizando técnicas como fuerza bruta o ataques de diccionario. Este tipo de ataques suelen producir un número elevado de errores de autenticación.
     - *Password Spraying:* Intenta de inicio de sesión en múltiples cuentas con un conjunto limitado de contraseñas comunes. Este tipo de ataque deja un rastro de múltiples intentos fallidos de inicio de sesión en diversas cuentas.
@@ -13,7 +13,7 @@
 
 ### Remediar
 
-- Restablezca proactivamente las cuentas que se sabe que forman parte de credenciales vulneradas, ya sea inmediatamente o después de detectar intentos de fuerza bruta.
+- Restablecer proactivamente las cuentas que se sabe que forman parte de credenciales vulneradas, ya sea inmediatamente o después de detectar intentos de fuerza bruta.
 - Implementar la autenticación multifactor. Cuando sea posible, habilitar también la autenticación multifactor en servicios externos.
 - Cambiar las contraseñas que hayan sido vulneradas por los atacantes.
     - Consultar las directrices del NIST al crear políticas de contraseñas.
