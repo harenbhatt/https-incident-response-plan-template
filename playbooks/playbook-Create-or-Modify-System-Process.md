@@ -40,7 +40,7 @@
 1. Verificar si hay más procesos y que el sistema es funcion al tras la eliminación del proceso.
 2. Si es necesario, restaurar el sistema a un momento anterior a la aparición del proceso.
 
-### Herramientas
+### Recursos
 
 1. Para la eliminación del proceso se puede utilizar el mismo administrador de tareas de Windows o el comando kill de Linux.
 2. Para monitorizar los procesos en Windows podemos usar Process Monitor de Systernals.
