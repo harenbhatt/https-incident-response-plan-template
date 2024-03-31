@@ -18,13 +18,13 @@
 6. Actualizar playbooks con las lecciones aprendidas y nuevos metodos de remediación.
 7. Monitorizar los sitemas para identificar con mayor facilidad los futuros ataques.
 
-#### Contención
+### Contención
 
 1. Aislar el sistema que haya sido comprometido de la red.
 2. Implementar medidas de control de acceso en el sistema de la cadena de suministro que haya sido comprometido restringiendo sus permisos. 
 3. Reforzar los activos críticos no afectados por el ataque a través de actualizaciones del sistema, generando contraseñas más seguras, etc.
 
-#### Erradicar
+### Erradicar
 
 1. Clasificar el vector de ataque del sistema vulnerado en la cadena de suministro.
 2. Analizar los activos afectados dentro del sistema afectado a través de herramientas de análisis forenses.
