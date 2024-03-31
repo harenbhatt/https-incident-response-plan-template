@@ -42,9 +42,3 @@
 ### Recuperación
 
 - En caso de no haber sido recuperada la cuenta del empleado, eliminar la cuenta antigua y crearle una cuenta nueva siguiendo las politicas de seguridad de la empresa.
-
-### Recursos
-
-#### Información adicional
-
-1. <a name="identity-and-access-playbook-ref-1"></a>["Title"](#TODO-url), Author Last Name (Date)
