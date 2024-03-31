@@ -1,12 +1,10 @@
-## Playbook de Inyección de Código
+## Playbook: Inyección de Código
 
-### Procedimiento
-
-#### Investigación
+### Investigación
 
 La inyección de código es una vulnerabilidad común en aplicaciones web que permite a un atacante ejecutar código arbitrario en un sistema. Es crucial comprender los diferentes tipos de inyección de código, como SQL injection y Cross-Site Scripting (XSS), y cómo se pueden explotar para comprometer la seguridad de una aplicación.
 
-#### Identificación
+### Identificación
 
 - **SQL Injection (Inyección de SQL)**:
   - Identifique parámetros de entrada de usuario en formularios web, URLs o cookies que se utilicen en consultas SQL.
