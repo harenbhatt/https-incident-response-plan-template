@@ -1,17 +1,17 @@
-# Playbook de Privilegio de Elevación
+## Playbook de Privilegio de Elevación
 
-## Introducción
+### Introducción
 
 La escalada de privilegios ocurre cuando un atacante logra obtener acceso y privilegios de administrador en un sistema al explotar vulnerabilidades de seguridad. Al alterar los permisos de usuario para otorgarles más derechos y capacidades de administración, la escalada de privilegios permite a los atacantes realizar acciones maliciosas con niveles más altos de acceso, lo que puede causar daños importantes.
 
-## Tipos de Escalada de Privilegios
-### *Escalada de Privilegios Locales*
+### Tipos de Escalada de Privilegios
+#### *Escalada de Privilegios Locales*
 Este tipo de escalada de privilegios se produce cuando un atacante ya tiene acceso a una cuenta de usuario en el sistema comprometido y utiliza vulnerabilidades del sistema operativo o aplicaciones instaladas para obtener permisos de administrador.
 
-### *Escalada de Privilegios Remotos*
+#### *Escalada de Privilegios Remotos*
 En este caso, un atacante explota una vulnerabilidad de software remoto para ganar acceso y control sobre un sistema remoto. Esto puede incluir el uso de exploits de día cero o vulnerabilidades conocidas en servicios de red accesibles desde el exterior.
 
-### *Métodos Comunes de Escalada de Privilegios*
+#### *Métodos Comunes de Escalada de Privilegios*
 1. **Explotación de Vulnerabilidades del Sistema Operativo**
 Los atacantes pueden aprovechar vulnerabilidades del sistema operativo, como errores de desbordamiento de búfer, condiciones de carrera o privilegios mal configurados, para ejecutar código arbitrario con privilegios elevados.
 
@@ -21,7 +21,7 @@ Las aplicaciones instaladas en el sistema también pueden tener vulnerabilidades
 3. **Uso de Exploits de Escalada de Privilegios**
 Existen exploits específicamente diseñados para llevar a cabo la escalada de privilegios en sistemas operativos y aplicaciones populares. Estos exploits pueden ser utilizados por los atacantes para automatizar el proceso de escalada de privilegios.
 
-## Procedimiento
+### Procedimiento
 
 1. **Identificación de la vulnerabilidad**:
 
@@ -95,7 +95,7 @@ Existen exploits específicamente diseñados para llevar a cabo la escalada de p
         - Desarrollar y entregar programas de capacitación y concienciación para educar a los empleados sobre los riesgos de la escalada de privilegios, cómo identificarla y las acciones a tomar en caso de sospecha. Incluir simulaciones de ataques para evaluar y mejorar la respuesta de los empleados.
 ### Mitre Ataque y Defensa
 
-#### Matriz de Tácticas y Técnicas de Mitre
+### Matriz de Tácticas y Técnicas de Mitre
 
 - **Táctica: Ejecución**
   - Técnica: Ejecución de Código en un Proceso Hijacked (T1055)
@@ -124,9 +124,9 @@ Existen exploits específicamente diseñados para llevar a cabo la escalada de p
   - Acción: Definir pasos claros y acciones a tomar para mitigar las amenazas identificadas basadas en las tácticas y técnicas de Mitre.
   - Responsable: Equipo de Respuesta a Incidentes (ERI), Equipo de Seguridad de la Información.
 
-## Ciberresiliencia
+### Ciberresiliencia
 
-### Planificación de Continuidad del Negocio (BCP) y Recuperación de Desastres (DR)
+#### Planificación de Continuidad del Negocio (BCP) y Recuperación de Desastres (DR)
 
 - **Desarrollo de Planes de BCP y DR:**
   - Descripción: Establecer planes detallados de continuidad del negocio y recuperación de desastres para garantizar la disponibilidad y funcionalidad de los sistemas críticos en caso de una escalada de privilegios exitosa.
@@ -138,7 +138,7 @@ Existen exploits específicamente diseñados para llevar a cabo la escalada de p
   - Acción: Simular diferentes escenarios de escalada de privilegios y evaluar la efectividad de los planes de BCP y DR en mitigar el impacto y restaurar la funcionalidad.
   - Responsable: Equipo de Respuesta a Incidentes (ERI), Equipo de Continuidad del Negocio.
 
-### Resiliencia Organizacional
+#### Resiliencia Organizacional
 
 - **Cultura de Seguridad:**
   - Descripción: Fomentar una cultura de seguridad cibernética dentro de la organización para aumentar la conciencia y la preparación ante posibles escaladas de privilegios.
@@ -169,7 +169,7 @@ Existen exploits específicamente diseñados para llevar a cabo la escalada de p
     3. **Implementación de Principio de Menor Privilegio**:
         - Seguir el principio de menor privilegio asignando a los usuarios solo los privilegios necesarios para realizar sus funciones, lo que reduce el impacto potencial de la elevación de privilegios.
 
-## Herramientas recomendadas
+### Herramientas recomendadas
 
 - Nessus
 - OpenVAS
@@ -177,7 +177,7 @@ Existen exploits específicamente diseñados para llevar a cabo la escalada de p
 - Metasploit
 - Exploit Database (Exploit-DB)
 
-## Referencias
+### Referencias
 
 - [Nessus](https://www.tenable.com/products/nessus)
 - [OpenVAS](https://www.openvas.org/)
