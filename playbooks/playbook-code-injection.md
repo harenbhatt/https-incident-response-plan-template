@@ -97,3 +97,24 @@ La inyección de código es una vulnerabilidad común en aplicaciones web que pe
 - Realice auditorías de seguridad regulares en el código para identificar y corregir vulnerabilidades de inyección de código.
 - Proporcione capacitación y orientación al equipo de desarrollo sobre las mejores prácticas de seguridad en el desarrollo de aplicaciones web.
 - Aplique parches de seguridad y actualizaciones para mitigar nuevas vulnerabilidades y mantener la aplicación protegida.
+
+### Recuperación
+#### Respuesta Inmediata
+
+- **Aislamiento del Sistema Afectado**: Separe el sistema afectado de la red para prevenir la propagación del ataque y evitar daños adicionales.
+    
+- **Desactivación de Funcionalidades Vulnerables**: Desactive temporalmente cualquier funcionalidad o servicio que haya sido comprometido para evitar una mayor explotación.
+    
+
+#### Investigación y Análisis
+
+- **Análisis Forense**: Realice un análisis forense exhaustivo del sistema comprometido para identificar el alcance total del ataque, cómo ocurrió y qué datos se vieron comprometidos.
+    
+- **Recolección de Evidencia**: Recopile evidencia relevante, como registros de auditoría, archivos de registro y copias de seguridad, para apoyar la investigación y el análisis forense.
+    
+
+#### Restauración y Recuperación
+
+- **Restauración desde Copias de Seguridad**: Restaure el sistema afectado desde una copia de seguridad limpia y verificada para garantizar que no queden artefactos maliciosos.
+    
+- **Parcheo y Actualización**: Aplique parches de seguridad y actualizaciones en el sistema restaurado para cerrar las vulnerabilidades explotadas y prevenir futuros ataques similares.

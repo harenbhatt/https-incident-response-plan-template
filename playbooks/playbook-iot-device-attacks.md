@@ -140,3 +140,16 @@ La explotación de dispositivos IoT es una preocupación creciente debido a la p
 - Proporcione capacitación y concienciación sobre seguridad a los usuarios y propietarios de dispositivos IoT para promover prácticas seguras.
 - Establezca un proceso de respuesta a incidentes para manejar de manera efectiva los ataques a dispositivos IoT y minimizar el impacto en la organización.
 
+### Recuperacion
+- **Auditorías de Seguridad Post-Ataque:** Realice auditorías de seguridad exhaustivas en los dispositivos IoT afectados para identificar el alcance completo del ataque, las vulnerabilidades explotadas y las áreas de mejora de seguridad.
+
+- **Restauración de Configuraciones Seguras**: Restablezca las configuraciones de fábrica seguras en los dispositivos afectados para eliminar cualquier configuración maliciosa o comprometida que pueda haber sido implementada durante el ataque.
+
+- **Análisis Forense:** Realice un análisis forense detallado para comprender cómo ocurrió el ataque, qué datos se vieron comprometidos y qué medidas correctivas deben implementarse para evitar futuros incidentes similares.
+
+- **Mejoras en la Seguridad:** Implemente medidas de seguridad adicionales, como parches de seguridad, actualizaciones de firmware y mejoras en la configuración de red, para fortalecer la seguridad de los dispositivos IoT y prevenir futuros ataques.
+
+- **Revisión de Políticas y Procedimientos:** Revise y actualice las políticas y procedimientos de seguridad para garantizar que estén alineados con las lecciones aprendidas del incidente y para mejorar la capacidad de respuesta a futuros ataques.
+
+- **Capacitación del Personal:** Proporcione capacitación adicional al personal sobre prácticas de seguridad actualizadas y procedimientos de respuesta a incidentes para mejorar la preparación y la capacidad de recuperación ante futuros ataques.
+
