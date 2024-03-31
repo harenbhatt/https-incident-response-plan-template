@@ -64,9 +64,9 @@ Por otro lado, consideramos que la fase mejor trabajada en nuestro plan es la de
 
 El Flujo de Toma de Decisiones y Escalado en nuestro plan de respuesta a incidentes se basa en una serie de pasos diseñados para evaluar, decidir y actuar frente a posibles incidentes de seguridad. Este proceso está estructurado para asegurar una respuesta rápida y efectiva, minimizando el impacto del incidente en la organización. 
 
-### Resumen del Plan y Protocolos
+#### Resumen del Plan y Protocolos
 
-#### 1. Evaluar
+##### 1. Evaluar
 
 - **Mantener la Calma**: Prioridad máxima para una respuesta considerada y efectiva.
 - **Reunir Información**: 
@@ -76,7 +76,7 @@ El Flujo de Toma de Decisiones y Escalado en nuestro plan de respuesta a inciden
   - Determinar el impacto funcional y de la información.
   - Categorizar la severidad del incidente.
 
-#### 2. Iniciar la Respuesta
+##### 2. Iniciar la Respuesta
 
 - **Nombrar el Incidente**: Asignar un nombre en clave para facilitar la comunicación y el seguimiento.
 - **Reunir el Equipo de Respuesta**:
@@ -86,7 +86,7 @@ El Flujo de Toma de Decisiones y Escalado en nuestro plan de respuesta a inciden
   - Iniciar canales de comunicación seguros.
   - Preferiblemente canales no afectados por el incidente.
 
-#### 3. Comunicación y Protocolos
+##### 3. Comunicación y Protocolos
 
 - **Comunicación Interna y Externa**:
   - Establecer líneas de comunicación claras con todas las partes interesadas.
@@ -95,13 +95,18 @@ El Flujo de Toma de Decisiones y Escalado en nuestro plan de respuesta a inciden
   - Proporcionar actualizaciones periódicas a todas las partes interesadas.
   - Usar los canales de comunicación establecidos.
 
-#### 4. Escalar según sea necesario
+##### 4. Escalar según sea necesario
 
 - Basado en la evaluación continua del incidente.
 - Escalar la respuesta según sea necesario, lo que puede incluir:
   - Añadir más recursos.
   - Consultar con expertos externos.
   - Notificar a las autoridades.
+
+#### Diagrama de Flujo
+
+![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/69c1c87b-eeca-4889-99ec-a28fada844e3)
+
 
 **3.a  ¿Como te has asegurado de que tu plan tiene respuestas resilientes? ¿Porque son resilientes y en qué fases se centran?**
 
