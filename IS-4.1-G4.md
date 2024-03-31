@@ -14,6 +14,8 @@
 
 ## 1. Introducción <div id='introduccion' />
 
+En el siguiente trabajo harenmos una implementación de un plan de respuesta a incidentes, donde tocaremos puntos desde la identificación de activos hasta definición de proyectos. También tocaremos la recuperación y el análisis post-incidente. A través de un análisis de amenazas, evaluación de vulnerabilidades y cálculo de riesgos, se establecen las bases para una preparación robusta frente a posibles incidentes. Con la clasificación y priorización de proyectos, se enfoca la atención en las áreas de mayor riesgo, mientras que la definición de proyectos específicos permite una respuesta proactiva y bien dirigida. En el plan de respuesta a incidentes junto con los playbooks, ofreceremos un conjunto de herramientas, condiciones, flujos y tareas que se utilizan para responder a sucesos y amenazas de seguridad. 
+
 ## 1.1 Identificación de activos <div id='identificación-de-activos' />
 
 Se identificaron los activos de nuestra empresa y se listaron en una hoja de cálculo:
