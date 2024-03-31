@@ -55,6 +55,12 @@ Archivos Adjuntos:
 3.  Whaling: Una forma de spear phishing dirigida a altos ejecutivos, buscando acceso a información corporativa crítica o transferencias financieras fraudulentas.
 4.  Smishing y Vishing: Phishing realizado a través de SMS (smishing) o llamadas telefónicas (vishing), buscando engañar a las víctimas para que revelen información personal o financiera.
  
+**Relación de matrices de ataque MITRE ATT&CK** <br>
+- T1566.001 - Spear Phishing Attachment y T1566.002 - Spear Phishing Link: Estas técnicas son fundamentales para comprender y clasificar los tipos de ataques de phishing, permitiendo una respuesta más enfocada y eficaz.
+
+**Relación de matrices de defensa RE&CT**
+- Identify: Clasificar el tipo de ataque de phishing ayuda a identificar el nivel de sofisticación y los objetivos posibles del atacante.
+- Protect: Desarrollar estrategias específicas de protección contra los tipos identificados de ataques de phishing.
 
 ## Remediar
 
@@ -96,6 +102,14 @@ Archivos Adjuntos:
 * Asistencia Externa:
    - Considerar el apoyo de expertos en seguridad cibernética para una evaluación más profunda y apoyo en la remediación.
 
+**Relación de matrices de ataque MITRE ATT&CK** <br>
+- T1102 (Web Service): El uso de servicios web para alojar phishing y malware. Capturar y analizar estos correos proporciona inteligencia sobre la infraestructura del atacante.
+- T1070 (Indicator Removal on Host): Entender cómo los atacantes pueden intentar eliminar rastros de su actividad es crucial para la retención forense.
+
+**Relación de matrices de defensa RE&CT**
+- Investigate: Recopilar y analizar evidencia para entender la extensión del compromiso.
+- Learn: Aplicar lecciones aprendidas para mejorar las respuestas futuras.
+
 ## Comunicar
 
 1. **Identificación y Notificación Inicial:**
@@ -119,6 +133,14 @@ Archivos Adjuntos:
    - Herramientas: Herramientas de gestión de relaciones públicas (PR), plataformas de redes sociales, sitio web corporativo.
 
 
+**Relación de matrices de ataque MITRE ATT&CK** <br>
+- T1556 (Modify Authentication Process): Informar a los empleados sobre los cambios en los procesos de autenticación como respuesta al incidente puede ayudar a prevenir el abuso de credenciales modificadas o robadas.
+- T1530 (Data from Cloud Storage Object): Si el ataque de phishing resultó en acceso no autorizado a datos almacenados en la nube, la comunicación externa debe gestionarse cuidadosamente para informar a los afectados de acuerdo con las leyes de protección de datos aplicables, sin comprometer la investigación en curso.
+  
+**Relación de matrices de defensa RE&CT**
+- Inform: Comunicar de manera efectiva dentro de la organización sobre el incidente y proporcionar instrucciones claras ayuda a contener la propagación del ataque de phishing y protege a la organización de un mayor compromiso.
+- Coordinate: La colaboración con asesores legales y de seguridad externos asegura que la respuesta al incidente cumpla con las obligaciones legales y de cumplimiento, abordando preocupaciones como el acceso no autorizado a datos (T1530 - Data from Cloud Storage Object).
+
 ## Recuperación
 
 1. Restauración de Sistemas y Servicios:
@@ -136,6 +158,14 @@ Archivos Adjuntos:
 4. Educación y Concienciación sobre Seguridad:
    - Procedimiento: Desarrollar y entregar programas de capacitación y concienciación para educar a los empleados sobre las tácticas de phishing, cómo identificarlas y las acciones a tomar en caso de sospecha. Incluir simulaciones de phishing para evaluar y mejorar la respuesta de los empleados.
    - Herramientas: Plataformas de entrenamiento en concienciación de seguridad, herramientas de simulación de phishing, materiales educativos y cursos en línea.
+
+**Relación de matrices de ataque MITRE ATT&CK** <br>
+- T1485 (Data Destruction): Vigilar por cualquier intento de borrar o corromper datos como parte del ataque de phishing.
+- T1490 (Inhibit System Recovery): Asegurar que los atacantes no hayan implementado técnicas para prevenir la recuperación del sistema
+
+**Relación de matrices de defensa RE&CT**
+- Recover: Procesos de restauración de sistemas y servicios a estados operativos normales.
+- Learn: Analizar el incidente para extraer lecciones aprendidas y aplicar mejoras continuas en la respuesta a incidentes.
 
 ## Recursos
 
