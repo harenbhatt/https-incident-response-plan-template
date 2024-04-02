@@ -2,7 +2,7 @@
 
 ### Investigar
 
-1. Identificar el origen del ataque en caso de que haya sido un malware.
+1. Identificar el origen del ataque si el problema proviene de un malware.
 2. Identificar la vía del ataque.
 3. Recopilar evidencias forenses si es posible.
 4. Evaluar el impacto del ataque.
