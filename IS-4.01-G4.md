@@ -68,6 +68,7 @@ Realizamos una evaluación de los riesgos asumibles, clasificandolos con una not
 
 ![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/d2b8365f-57eb-4103-bc22-71bad28bcbe3)
 
+
 # Respuesta a las preguntas
 
 **1.a   ¿Que relacción existe entre el trabajo que has hecho con las matrices MITRE ATT&CK y RE&CT y el plan de respuesta que estás planteando? ¿De que manera te ha ayudado el trabajo previo sobre las matrices a la hora de generar el plan? Deja evidencias del trabajo que has realizado sobre le navigator de las matrices, para obtener la información.**
@@ -75,6 +76,7 @@ Realizamos una evaluación de los riesgos asumibles, clasificandolos con una not
 El trabajo realizado con las matrices MITRE ATT&CK y RE&CT ha proporcionado una base sólida para el desarrollo de cada k de respuesta a incidentes. Las tácticas y técnicas identificadas en MITRE ATT&CK nos ayudaron a comprender los posibles vectores de ataque y a desarrollar estrategias de prevención, detección y respuesta específicas para cada tipo de incidente. Por otro lado, las acciones de RE&CT nos permitieron implementar medidas concretas para fortalecer la seguridad de los sistemas, así como desarrollar procedimientos claros para responder de manera efectiva a los incidentes cuando ocurren. En conjunto, el trabajo con estas matrices ha asegurado que nuestros ks estén bien informados y sean efectivos en la gestión de incidentes de seguridad de manera integral y coherente.
 
 ![layer.svg](https://cdn.discordapp.com/attachments/1167391527862022184/1224001856372740126/G4__k.svg?ex=661be78f&is=6609728f&hm=8b595f1a3be6b5930da6f6f379d10b3de6c699f4fc68a2200434d7a8796d7e63&&)
+![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.trellix.com%2Fsecurity-awareness%2Fcybersecurity%2Fwhat-is-mitre-attack-framework%2F&psig=AOvVaw3kpJsMM8FbCYuTh7SO13_M&ust=1712180937301000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPj3ypPBpIUDFQAAAAAdAAAAABAE)
 
 Para respaldar nuestra planificación de respuesta a incidentes, hemos utilizado el navegador MITRE ATT&CK, una herramienta invaluable que ofrece un marco exhaustivo de tácticas y técnicas. Esta herramienta nos ha permitido identificar y comprender las tácticas específicas de cada tipo de ataque, desde ataques de fuerza bruta hasta amenazas como el ransomware y el phishing.
 
