@@ -12,8 +12,8 @@ Fue revisado por última vez el 1 Abr 2024. Fue probado por última vez en 1 Abr
 # Indice
 
 1. [Introducción](#introducción)
-2. [Identificación de activos](#identificacion-de-activos)
-3. [Análisis de las amenazas](#analisis-de-las-amenazas)
+2. [Identificación de activos](#identificación-de-activos)
+3. [Análisis de las amenazas](#análisis-de-las-amenazas)
 4. [Establecimiento de las vulnerabilidades](#establecimiento-de-las-vulnerabilidades)
 5. [Respuesta a las preguntas](#respuesta-a-las-preguntas)
 6. [Resumen del Plan y Protocolos](#resumen-del-plan-y-protocolos)
