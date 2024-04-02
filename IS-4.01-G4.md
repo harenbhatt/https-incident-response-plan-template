@@ -1008,32 +1008,6 @@ La inyección de código es una vulnerabilidad común en aplicaciones web que pe
   - Acción: Definir pasos claros y acciones a tomar para mitigar las amenazas identificadas basadas en las tácticas y técnicas de Mitre.
   - Responsable: Equipo de Desarrollo de Aplicaciones, Equipo de Respuesta a Incidentes (ERI).
 
-### Ciberresiliencia
-
-#### Planificación de Continuidad del Negocio (BCP) y Recuperación de Desastres (DR)
-
-- **Desarrollo de Planes de BCP y DR:**
-  - Descripción: Establecer planes detallados de continuidad del negocio y recuperación de desastres para garantizar la disponibilidad y funcionalidad de las aplicaciones web en caso de inyección de código exitosa.
-  - Acción: Identificar los sistemas y procesos críticos afectados por inyecciones de código y desarrollar planes de contingencia para mantener la operatividad.
-  - Responsable: Equipo de Continuidad del Negocio, Equipo de Desarrollo de Aplicaciones.
-
-- **Simulacros de Incidentes:**
-  - Descripción: Realizar simulacros periódicos de incidentes para poner a prueba la capacidad de respuesta y recuperación ante inyecciones de código exitosas.
-  - Acción: Simular diferentes escenarios de inyección de código y evaluar la efectividad de los planes de BCP y DR en mitigar el impacto y restaurar la funcionalidad.
-  - Responsable: Equipo de Respuesta a Incidentes (ERI), Equipo de Desarrollo de Aplicaciones.
-
-#### Resiliencia Organizacional
-
-- **Cultura de Seguridad:**
-  - Descripción: Fomentar una cultura de seguridad cibernética dentro de la organización para aumentar la conciencia y la preparación ante posibles inyecciones de código.
-  - Acción: Proporcionar capacitación y concienciación sobre seguridad cibernética a todos los empleados, destacando la importancia de proteger las aplicaciones web y seguir prácticas de seguridad sólidas.
-  - Responsable: Equipo de Seguridad de la Información, Recursos Humanos.
-
-- **Evaluación de Riesgos Continua:**
-  - Descripción: Realizar evaluaciones periódicas de riesgos para identificar nuevas amenazas y vulnerabilidades en aplicaciones web y ajustar las estrategias de seguridad en consecuencia.
-  - Acción: Implementar un proceso de evaluación de riesgos continuo que analice los cambios en el panorama de amenazas y las vulnerabilidades emergentes en inyecciones de código.
-  - Responsable: Equipo de Gestión de Riesgos, Equipo de Desarrollo de Aplicaciones.
-
 ### Mitigación
 
 - Implemente medidas de mitigación como la validación estricta de entrada de usuario y el uso de consultas parametrizadas para prevenir la inyección de SQL.
@@ -1567,32 +1541,6 @@ Existen exploits específicamente diseñados para llevar a cabo la escalada de p
   - Acción: Definir pasos claros y acciones a tomar para mitigar las amenazas identificadas basadas en las tácticas y técnicas de Mitre.
   - Responsable: Equipo de Respuesta a Incidentes (ERI), Equipo de Seguridad de la Información.
 
-### Ciberresiliencia
-
-#### Planificación de Continuidad del Negocio (BCP) y Recuperación de Desastres (DR)
-
-- **Desarrollo de Planes de BCP y DR:**
-  - Descripción: Establecer planes detallados de continuidad del negocio y recuperación de desastres para garantizar la disponibilidad y funcionalidad de los sistemas críticos en caso de una escalada de privilegios exitosa.
-  - Acción: Identificar los procesos y sistemas clave que podrían verse afectados por una escalada de privilegios y desarrollar planes de contingencia para mantener la operatividad.
-  - Responsable: Equipo de Continuidad del Negocio, Equipo de Seguridad de la Información.
-
-- **Simulacros de Incidentes:**
-  - Descripción: Realizar simulacros periódicos de incidentes para poner a prueba la capacidad de respuesta y recuperación ante escaladas de privilegios exitosas.
-  - Acción: Simular diferentes escenarios de escalada de privilegios y evaluar la efectividad de los planes de BCP y DR en mitigar el impacto y restaurar la funcionalidad.
-  - Responsable: Equipo de Respuesta a Incidentes (ERI), Equipo de Continuidad del Negocio.
-
-#### Resiliencia Organizacional
-
-- **Cultura de Seguridad:**
-  - Descripción: Fomentar una cultura de seguridad cibernética dentro de la organización para aumentar la conciencia y la preparación ante posibles escaladas de privilegios.
-  - Acción: Proporcionar capacitación y concienciación sobre seguridad cibernética a todos los empleados, destacando la importancia de proteger los sistemas y seguir prácticas de seguridad sólidas.
-  - Responsable: Equipo de Seguridad de la Información, Recursos Humanos.
-
-- **Evaluación de Riesgos Continua:**
-  - Descripción: Realizar evaluaciones periódicas de riesgos para identificar nuevas amenazas y vulnerabilidades en sistemas y aplicaciones y ajustar las estrategias de seguridad en consecuencia.
-  - Acción: Implementar un proceso de evaluación de riesgos continuo que analice los cambios en el panorama de amenazas y las vulnerabilidades emergentes en escaladas de privilegios.
-  - Responsable: Equipo de Gestión de Riesgos, Equipo de Seguridad de la Información.
-
 5. **Mitigación**:
 
    Para mitigar la vulnerabilidad y prevenir futuras elevaciones de privilegios, se deben seguir las mejores prácticas de seguridad, que incluyen:
@@ -1628,6 +1576,23 @@ Existen exploits específicamente diseñados para llevar a cabo la escalada de p
 - [Metasploit](https://www.metasploit.com/)
 - [Exploit Database](https://www.exploit-db.com/)
 
+
+## Ciberresiliencia
+
+### Páginas de Error Personalizadas
+Implementaremos páginas de error personalizadas para comunicar de manera efectiva con nuestros usuarios cuando enfrenten interrupciones en el servicio. Estas páginas mostrarán mensajes claros y amigables, informando a los usuarios que somos conscientes del problema y estamos trabajando activamente para solucionarlo. Además, incluiremos información útil, como enlaces a nuestras redes sociales y formas de contacto, para que los usuarios puedan seguir recibiendo actualizaciones sobre el estado del servicio.
+
+### Chats de Respuesta Alternativos
+Para asegurarnos de que siempre estemos accesibles a nuestros clientes, incluso durante interrupciones del servicio, estableceremos sistemas de chat de respuesta alternativos. Estos sistemas operarán a través de plataformas de terceros confiables, permitiéndonos mantener una comunicación fluida y directa con nuestros usuarios. A través de estos chats, podremos ofrecer soporte en tiempo real, responder preguntas y proporcionar actualizaciones sobre la resolución de incidentes.
+
+### Hosting de Emergencia
+Nos asociaremos con proveedores de hosting de emergencia para garantizar que podamos reactivar rápidamente una versión operativa de nuestro sitio web en caso de un fallo crítico. Este plan de contingencia nos permitirá mantener una presencia en línea y seguir ofreciendo servicios esenciales mientras trabajamos en resolver cualquier problema con nuestra infraestructura principal. Esta solución de hosting de emergencia estará pre-configurada para activarse con mínima intervención manual y máxima rapidez.
+
+### Automatización de Respuestas
+Desarrollaremos y pondremos en práctica scripts de automatización diseñados para ejecutar respuestas rápidas ante fallos detectados. Esto incluirá la activación automática de nuestras páginas de error personalizadas, el despliegue de nuestro sitio en el hosting de emergencia, y la notificación instantánea a nuestro equipo técnico y a nuestros usuarios a través de los canales de comunicación establecidos. La automatización garantizará que podamos reaccionar de manera inmediata y eficiente, reduciendo el tiempo de inactividad y mejorando nuestra capacidad de recuperación.
+
+### Simulacros
+Realizaremos simulacros de fallo regularmente para probar y mejorar nuestra capacidad de respuesta ante incidentes reales. Estos ejercicios nos permitirán evaluar la efectividad de nuestras páginas de error personalizadas, la fiabilidad de nuestro hosting de emergencia, la precisión de nuestros scripts de automatización, y nuestra habilidad para comunicarnos efectivamente con los usuarios a través de chats alternativos. Los simulacros nos ayudarán a identificar áreas de mejora, garantizando que nuestro plan de respuesta sea tan robusto y eficiente como sea posible.
 
 ## Playbook: Compromiso de identidad y acceso
 
@@ -1758,17 +1723,6 @@ La remediación de incidentes de seguridad, especialmente en lo que respecta al 
 - La acción Recover en RE&CT, que se centra en la recuperación tras un incidente. Esto incluye la restauración gradual de sistemas y accesos, utilizando sistemas de gestión de cambios para implementar la restauración y herramientas de monitorización.
 - RE&CT: Learn es relevante aquí para integrar lecciones aprendidas durante el incidente en prácticas y políticas futuras, asegurando una mejora continua.
 
-### Modelo de ciberresiliencia líder
-
-**Objetivos:**
-- Restaurar completamente las operaciones normales.
-- Aprender del incidente para mejorar la postura de seguridad.
-
-**Estrategias:**
-- Restauración Gradual: Uso de sistemas de gestión de cambios para reestablecer sistemas y accesos de manera controlada.
-- Monitoreo Post-Incidente: Implementación de herramientas de monitorización para detectar anomalías tempranas.
-- Revisión Post-Incidente: Analizar el manejo del incidente para identificar lecciones aprendidas y oportunidades de mejora.
-
 ### Recursos
 
 - **Financieros y de Personal**: Asignación de presupuesto para herramientas de seguridad adicionales, contratación de expertos en seguridad externos si es necesario.
@@ -1882,32 +1836,6 @@ La explotación de dispositivos IoT es una preocupación creciente debido a la p
   - Acción: Definir pasos claros y acciones a tomar para mitigar las amenazas identificadas basadas en las tácticas y técnicas de Mitre.
   - Responsable: Equipo de Respuesta a Incidentes (ERI), Equipo de Seguridad de la Información.
 
-### Ciberresiliencia
-
-#### Planificación de Continuidad del Negocio (BCP) y Recuperación de Desastres (DR)
-
-- **Desarrollo de Planes de BCP y DR:**
-  - Descripción: Establecer planes detallados de continuidad del negocio y recuperación de desastres para garantizar la disponibilidad y funcionalidad de los sistemas críticos en caso de un ataque a dispositivos IoT.
-  - Acción: Identificar los procesos y sistemas clave que podrían verse afectados por un ataque a dispositivos IoT y desarrollar planes de contingencia para mantener la operatividad.
-  - Responsable: Equipo de Continuidad del Negocio, Equipo de Seguridad de la Información.
-
-- **Simulacros de Incidentes:**
-  - Descripción: Realizar simulacros periódicos de incidentes para poner a prueba la capacidad de respuesta y recuperación ante ataques a dispositivos IoT.
-  - Acción: Simular diferentes escenarios de ataques y evaluar la efectividad de los planes de BCP y DR en mitigar el impacto y restaurar la funcionalidad.
-  - Responsable: Equipo de Respuesta a Incidentes (ERI), Equipo de Continuidad del Negocio.
-
-### Resiliencia Organizacional
-
-- **Cultura de Seguridad:**
-  - Descripción: Fomentar una cultura de seguridad cibernética dentro de la organización para aumentar la conciencia y la preparación ante posibles ataques a dispositivos IoT.
-  - Acción: Proporcionar capacitación y concienciación sobre seguridad cibernética a todos los empleados, destacando la importancia de proteger los dispositivos IoT y seguir prácticas de seguridad sólidas.
-  - Responsable: Equipo de Seguridad de la Información, Recursos Humanos.
-
-- **Evaluación de Riesgos Continua:**
-  - Descripción: Realizar evaluaciones periódicas de riesgos para identificar nuevas amenazas y vulnerabilidades en dispositivos IoT y ajustar las estrategias de seguridad en consecuencia.
-  - Acción: Implementar un proceso de evaluación de riesgos continuo que analice los cambios en el panorama de amenazas y las vulnerabilidades emergentes en dispositivos IoT.
-  - Responsable: Equipo de Gestión de Riesgos, Equipo de Seguridad de la Información.
-
 ### Mitigación
 
 - Implemente medidas de seguridad como la segmentación de red para aislar dispositivos IoT y proteger la infraestructura crítica.
@@ -1932,24 +1860,6 @@ La explotación de dispositivos IoT es una preocupación creciente debido a la p
 - **Revisión de Políticas y Procedimientos:** Revise y actualice las políticas y procedimientos de seguridad para garantizar que estén alineados con las lecciones aprendidas del incidente y para mejorar la capacidad de respuesta a futuros ataques.
 
 - **Capacitación del Personal:** Proporcione capacitación adicional al personal sobre prácticas de seguridad actualizadas y procedimientos de respuesta a incidentes para mejorar la preparación y la capacidad de recuperación ante futuros ataques.
-
-## CIBERRESILIENCIA
-
-### Páginas de Error Personalizadas
-Implementaremos páginas de error personalizadas para comunicar de manera efectiva con nuestros usuarios cuando enfrenten interrupciones en el servicio. Estas páginas mostrarán mensajes claros y amigables, informando a los usuarios que somos conscientes del problema y estamos trabajando activamente para solucionarlo. Además, incluiremos información útil, como enlaces a nuestras redes sociales y formas de contacto, para que los usuarios puedan seguir recibiendo actualizaciones sobre el estado del servicio.
-
-### Chats de Respuesta Alternativos
-Para asegurarnos de que siempre estemos accesibles a nuestros clientes, incluso durante interrupciones del servicio, estableceremos sistemas de chat de respuesta alternativos. Estos sistemas operarán a través de plataformas de terceros confiables, permitiéndonos mantener una comunicación fluida y directa con nuestros usuarios. A través de estos chats, podremos ofrecer soporte en tiempo real, responder preguntas y proporcionar actualizaciones sobre la resolución de incidentes.
-
-### Hosting de Emergencia
-Nos asociaremos con proveedores de hosting de emergencia para garantizar que podamos reactivar rápidamente una versión operativa de nuestro sitio web en caso de un fallo crítico. Este plan de contingencia nos permitirá mantener una presencia en línea y seguir ofreciendo servicios esenciales mientras trabajamos en resolver cualquier problema con nuestra infraestructura principal. Esta solución de hosting de emergencia estará pre-configurada para activarse con mínima intervención manual y máxima rapidez.
-
-### Automatización de Respuestas
-Desarrollaremos y pondremos en práctica scripts de automatización diseñados para ejecutar respuestas rápidas ante fallos detectados. Esto incluirá la activación automática de nuestras páginas de error personalizadas, el despliegue de nuestro sitio en el hosting de emergencia, y la notificación instantánea a nuestro equipo técnico y a nuestros usuarios a través de los canales de comunicación establecidos. La automatización garantizará que podamos reaccionar de manera inmediata y eficiente, reduciendo el tiempo de inactividad y mejorando nuestra capacidad de recuperación.
-
-### Simulacros
-Realizaremos simulacros de fallo regularmente para probar y mejorar nuestra capacidad de respuesta ante incidentes reales. Estos ejercicios nos permitirán evaluar la efectividad de nuestras páginas de error personalizadas, la fiabilidad de nuestro hosting de emergencia, la precisión de nuestros scripts de automatización, y nuestra habilidad para comunicarnos efectivamente con los usuarios a través de chats alternativos. Los simulacros nos ayudarán a identificar áreas de mejora, garantizando que nuestro plan de respuesta sea tan robusto y eficiente como sea posible.
-
 
 ## Playbook: Phishing
 
@@ -2290,18 +2200,6 @@ Para localizar cómo se introdujo el ransomware, consulta las tácticas de "Acce
 
 **Relación de matrices de defensa RE&CT**
 - **RE&CT: Harden (Endurecer):** La coordinación de la recuperación de datos y la evaluación de implicaciones legales también se ven como parte de este proceso. Aquí, el enfoque se amplía para incluir la protección legal y regulatoria de la organización, asegurando que las respuestas al incidente no solo sean técnicamente sólidas sino también legalmente defensibles.
-
-
-### Modelo de ciberresiliencia líder
-
-**Objetivos:**
-- Aprender del incidente para mejorar la postura de seguridad y la preparación frente a futuros ataques.
-- Implementar cambios basados en las lecciones aprendidas y los insights obtenidos durante el incidente.
-
-**Estrategias:**
-- Revisión Post-Incidente: Analizar el manejo del incidente, identificar fortalezas y áreas de mejora.
-- Actualización de Políticas y Procedimientos: Refinar los playbooks de respuesta a incidentes, políticas de seguridad y prácticas de formación.
-- Inversión en Tecnología y Capacitación: Aumentar las capacidades de detección, protección y respuesta mediante la adquisición de nuevas herramientas y el entrenamiento del personal.
 
 ### Recursos
 
