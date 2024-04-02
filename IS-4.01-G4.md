@@ -701,6 +701,24 @@ Toda comunicación debe incluir la información más precisa disponible.  Muestr
 
 1. Poner en marcha un plan de continuidad de negocio/recuperación de desastres: Por ejemplo, considerar la migración a ubicaciones operativas alternativas, sitios de conmutación por error, sistemas de copia de seguridad.
 2. Integrar las acciones de seguridad con los esfuerzos de recuperación de la organización.
+
+## Ciberresiliencia
+
+### Páginas de Error Personalizadas
+Implementaremos páginas de error personalizadas para comunicar de manera efectiva con nuestros usuarios cuando enfrenten interrupciones en el servicio. Estas páginas mostrarán mensajes claros y amigables, informando a los usuarios que somos conscientes del problema y estamos trabajando activamente para solucionarlo. Además, incluiremos información útil, como enlaces a nuestras redes sociales y formas de contacto, para que los usuarios puedan seguir recibiendo actualizaciones sobre el estado del servicio.
+
+### Chats de Respuesta Alternativos
+Para asegurarnos de que siempre estemos accesibles a nuestros clientes, incluso durante interrupciones del servicio, estableceremos sistemas de chat de respuesta alternativos. Estos sistemas operarán a través de plataformas de terceros confiables, permitiéndonos mantener una comunicación fluida y directa con nuestros usuarios. A través de estos chats, podremos ofrecer soporte en tiempo real, responder preguntas y proporcionar actualizaciones sobre la resolución de incidentes.
+
+### Hosting de Emergencia
+Nos asociaremos con proveedores de hosting de emergencia para garantizar que podamos reactivar rápidamente una versión operativa de nuestro sitio web en caso de un fallo crítico. Este plan de contingencia nos permitirá mantener una presencia en línea y seguir ofreciendo servicios esenciales mientras trabajamos en resolver cualquier problema con nuestra infraestructura principal. Esta solución de hosting de emergencia estará pre-configurada para activarse con mínima intervención manual y máxima rapidez.
+
+### Automatización de Respuestas
+Desarrollaremos y pondremos en práctica scripts de automatización diseñados para ejecutar respuestas rápidas ante fallos detectados. Esto incluirá la activación automática de nuestras páginas de error personalizadas, el despliegue de nuestro sitio en el hosting de emergencia, y la notificación instantánea a nuestro equipo técnico y a nuestros usuarios a través de los canales de comunicación establecidos. La automatización garantizará que podamos reaccionar de manera inmediata y eficiente, reduciendo el tiempo de inactividad y mejorando nuestra capacidad de recuperación.
+
+### Simulacros
+Realizaremos simulacros de fallo regularmente para probar y mejorar nuestra capacidad de respuesta ante incidentes reales. Estos ejercicios nos permitirán evaluar la efectividad de nuestras páginas de error personalizadas, la fiabilidad de nuestro hosting de emergencia, la precisión de nuestros scripts de automatización, y nuestra habilidad para comunicarnos efectivamente con los usuarios a través de chats alternativos. Los simulacros nos ayudarán a identificar áreas de mejora, garantizando que nuestro plan de respuesta sea tan robusto y eficiente como sea posible.
+
 # Playbook
 
 Los siguientes playbooks capturan los pasos comunes de [investigación](#investigate), [remediación](#remediate) y [comunicación](#communicate) para determinados tipos de incidentes.
@@ -1107,7 +1125,8 @@ Asigne los pasos a individuos o equipos para trabajar simultáneamente, cuando s
 
 2. **Guías de mejores prácticas de seguridad:**
     * [Consejos de seguridad para prevenir el cryptojacking](https://www.cisecurity.org/): El Centro de Seguridad de Internet ofrece recomendaciones para proteger los sistemas contra el cryptojacking y otras amenazas cibernéticas.
-﻿## Playbook: DDOS
+
+## Playbook: DDOS
 
 ### Introducción
 
@@ -1575,24 +1594,6 @@ Existen exploits específicamente diseñados para llevar a cabo la escalada de p
 - [Nmap](https://nmap.org/)
 - [Metasploit](https://www.metasploit.com/)
 - [Exploit Database](https://www.exploit-db.com/)
-
-
-## Ciberresiliencia
-
-### Páginas de Error Personalizadas
-Implementaremos páginas de error personalizadas para comunicar de manera efectiva con nuestros usuarios cuando enfrenten interrupciones en el servicio. Estas páginas mostrarán mensajes claros y amigables, informando a los usuarios que somos conscientes del problema y estamos trabajando activamente para solucionarlo. Además, incluiremos información útil, como enlaces a nuestras redes sociales y formas de contacto, para que los usuarios puedan seguir recibiendo actualizaciones sobre el estado del servicio.
-
-### Chats de Respuesta Alternativos
-Para asegurarnos de que siempre estemos accesibles a nuestros clientes, incluso durante interrupciones del servicio, estableceremos sistemas de chat de respuesta alternativos. Estos sistemas operarán a través de plataformas de terceros confiables, permitiéndonos mantener una comunicación fluida y directa con nuestros usuarios. A través de estos chats, podremos ofrecer soporte en tiempo real, responder preguntas y proporcionar actualizaciones sobre la resolución de incidentes.
-
-### Hosting de Emergencia
-Nos asociaremos con proveedores de hosting de emergencia para garantizar que podamos reactivar rápidamente una versión operativa de nuestro sitio web en caso de un fallo crítico. Este plan de contingencia nos permitirá mantener una presencia en línea y seguir ofreciendo servicios esenciales mientras trabajamos en resolver cualquier problema con nuestra infraestructura principal. Esta solución de hosting de emergencia estará pre-configurada para activarse con mínima intervención manual y máxima rapidez.
-
-### Automatización de Respuestas
-Desarrollaremos y pondremos en práctica scripts de automatización diseñados para ejecutar respuestas rápidas ante fallos detectados. Esto incluirá la activación automática de nuestras páginas de error personalizadas, el despliegue de nuestro sitio en el hosting de emergencia, y la notificación instantánea a nuestro equipo técnico y a nuestros usuarios a través de los canales de comunicación establecidos. La automatización garantizará que podamos reaccionar de manera inmediata y eficiente, reduciendo el tiempo de inactividad y mejorando nuestra capacidad de recuperación.
-
-### Simulacros
-Realizaremos simulacros de fallo regularmente para probar y mejorar nuestra capacidad de respuesta ante incidentes reales. Estos ejercicios nos permitirán evaluar la efectividad de nuestras páginas de error personalizadas, la fiabilidad de nuestro hosting de emergencia, la precisión de nuestros scripts de automatización, y nuestra habilidad para comunicarnos efectivamente con los usuarios a través de chats alternativos. Los simulacros nos ayudarán a identificar áreas de mejora, garantizando que nuestro plan de respuesta sea tan robusto y eficiente como sea posible.
 
 ## Playbook: Compromiso de identidad y acceso
 
