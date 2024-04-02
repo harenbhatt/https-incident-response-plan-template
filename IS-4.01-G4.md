@@ -9,6 +9,18 @@ Este plan de respuesta a incidentes está basado en el plan conciso, directivo, 
 
 Fue revisado por última vez el 1 Abr 2024. Fue probado por última vez en 1 Abr 2024.
 
+# Indice
+
+1. [Introducción](#introducción)
+2. [Identificación de activos](#identificacion-de-activos)
+3. [Análisis de las amenazas](#análisis-de-las-amenazas)
+4. [Establecimiento de las vulnerabilidades](#establecimiento-de-las-vulnerabilidades)
+5. [Respuesta a las preguntas](#respuesta-a-las-preguntas)
+6. [Resumen del Plan y Protocolos](#resumen-del-plan-y-protocolos)
+7. [Playbook](#playbook)
+8. [Roles](#roles)
+
+
 # Introducción
 
 En el siguiente trabajo haremos una implementación de un plan de respuesta a incidentes, donde tocaremos puntos desde la identificación de activos hasta definición de proyectos. También tocaremos la recuperación y el análisis post-incidente. A través de un análisis de amenazas, evaluación de vulnerabilidades y cálculo de riesgos, se establecen las bases para una preparación robusta frente a posibles incidentes. Con la clasificación y priorización de proyectos, se enfoca la atención en las áreas de mayor riesgo, mientras que la definición de proyectos específicos permite una respuesta activa y dirigida. En el plan de respuesta a incidentes junto con los playbooks, ofreceremos un conjunto de herramientas, condiciones, flujos y tareas que se utilizan para responder a sucesos y amenazas de seguridad. 
@@ -60,9 +72,9 @@ Realizamos una evaluación de los riesgos asumibles, clasificandolos con una not
 
 **1.a   ¿Que relacción existe entre el trabajo que has hecho con las matrices MITRE ATT&CK y RE&CT y el plan de respuesta que estás planteando? ¿De que manera te ha ayudado el trabajo previo sobre las matrices a la hora de generar el plan? Deja evidencias del trabajo que has realizado sobre le navigator de las matrices, para obtener la información.**
   
-El trabajo realizado con las matrices MITRE ATT&CK y RE&CT ha proporcionado una base sólida para el desarrollo de cada playbook de respuesta a incidentes. Las tácticas y técnicas identificadas en MITRE ATT&CK nos ayudaron a comprender los posibles vectores de ataque y a desarrollar estrategias de prevención, detección y respuesta específicas para cada tipo de incidente. Por otro lado, las acciones de RE&CT nos permitieron implementar medidas concretas para fortalecer la seguridad de los sistemas, así como desarrollar procedimientos claros para responder de manera efectiva a los incidentes cuando ocurren. En conjunto, el trabajo con estas matrices ha asegurado que nuestros playbooks estén bien informados y sean efectivos en la gestión de incidentes de seguridad de manera integral y coherente.
+El trabajo realizado con las matrices MITRE ATT&CK y RE&CT ha proporcionado una base sólida para el desarrollo de cada k de respuesta a incidentes. Las tácticas y técnicas identificadas en MITRE ATT&CK nos ayudaron a comprender los posibles vectores de ataque y a desarrollar estrategias de prevención, detección y respuesta específicas para cada tipo de incidente. Por otro lado, las acciones de RE&CT nos permitieron implementar medidas concretas para fortalecer la seguridad de los sistemas, así como desarrollar procedimientos claros para responder de manera efectiva a los incidentes cuando ocurren. En conjunto, el trabajo con estas matrices ha asegurado que nuestros ks estén bien informados y sean efectivos en la gestión de incidentes de seguridad de manera integral y coherente.
 
-![layer.svg](https://cdn.discordapp.com/attachments/1167391527862022184/1224001856372740126/G4__Playbook.svg?ex=661be78f&is=6609728f&hm=8b595f1a3be6b5930da6f6f379d10b3de6c699f4fc68a2200434d7a8796d7e63&&)
+![layer.svg](https://cdn.discordapp.com/attachments/1167391527862022184/1224001856372740126/G4__k.svg?ex=661be78f&is=6609728f&hm=8b595f1a3be6b5930da6f6f379d10b3de6c699f4fc68a2200434d7a8796d7e63&&)
 
 Para respaldar nuestra planificación de respuesta a incidentes, hemos utilizado el navegador MITRE ATT&CK, una herramienta invaluable que ofrece un marco exhaustivo de tácticas y técnicas. Esta herramienta nos ha permitido identificar y comprender las tácticas específicas de cada tipo de ataque, desde ataques de fuerza bruta hasta amenazas como el ransomware y el phishing.
 
@@ -72,12 +84,12 @@ Utilizando el navegador de MITRE ATT&CK, hemos examinado las tácticas y técnic
   
 El trabajo previo sobre las matrices MITRE ATT&CK y RE&CT me ayudó a identificar tácticas y técnicas de ataque, desarrollar estrategias de prevención y detección, crear procedimientos de respuesta detallados y alinearnos con mejores prácticas de seguridad. Esto facilitó la generación de un plan de respuesta integral y efectivo para abordar una variedad de incidentes de seguridad de manera proactiva.
 
-Por ejemplo, al analizar el playbook de Ransomware, pude relacionar las tácticas y técnicas de MITRE ATT&CK (como T1566 - Spearphishing Attachment, T1133 - External Remote Services) con medidas de contención, erradicación y recuperación específicas en el plan de respuesta. De manera similar, las acciones de bloqueo de comunicaciones maliciosas y la restauración desde copias de seguridad se alinean con las tácticas de MITRE ATT&CK y RE&CT para mitigar y recuperarse de un ataque de ransomware.
+Por ejemplo, al analizar el k de Ransomware, pude relacionar las tácticas y técnicas de MITRE ATT&CK (como T1566 - Spearphishing Attachment, T1133 - External Remote Services) con medidas de contención, erradicación y recuperación específicas en el plan de respuesta. De manera similar, las acciones de bloqueo de comunicaciones maliciosas y la restauración desde copias de seguridad se alinean con las tácticas de MITRE ATT&CK y RE&CT para mitigar y recuperarse de un ataque de ransomware.
 
 
-**1.b   ¿Qué playbooks has identificado como necesarios en este plan de respuesta y en que te has basado para identificar esos playbooks y saber que son los necesarios? Deja algún diagrama que describa el flujo de un playbook.** 
+**1.b   ¿Qué ks has identificado como necesarios en este plan de respuesta y en que te has basado para identificar esos ks y saber que son los necesarios? Deja algún diagrama que describa el flujo de un k.** 
 
-La elección de estos playbooks se basa en el estudio previo de nuestra empresa, la evaluación de riesgos y la comprensión de las tendencias actuales de amenazas. Hemos optado por seleccionar playbooks relaccionados con los ataques de Phishing, Ransomware, Inyección de codigo etc. Es decir, áreas donde se require una respuesta rápida y especializada para minimizar el daño.
+La elección de estos ks se basa en el estudio previo de nuestra empresa, la evaluación de riesgos y la comprensión de las tendencias actuales de amenazas. Hemos optado por seleccionar ks relaccionados con los ataques de Phishing, Ransomware, Inyección de codigo etc. Es decir, áreas donde se require una respuesta rápida y especializada para minimizar el daño.
 
 ![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/e8ca4ec8-a0ff-420e-8ebf-6de74c3a19bd)
 
@@ -332,7 +344,7 @@ Lista de ejecutivos                 | Iván Sales Cisneros
 * IC: Esta llamada y el chat permanecerán activos y disponibles hasta el cierre del incidente, por favor, utilícelos para todas las comunicaciones relacionadas con el incidente.  Si es posible, proporcione actualizaciones del estado en tiempo real en el chat.  ¿Hay alguna pregunta o aportación restante? [responde a las preguntas]
 * IC: Líderes de equipo, por favor procedan.  Nos reuniremos de nuevo en [] para discutir el estado. Gracias.
 
-## Supervisar el alcance
+ Supervisar el alcance
 
 * Supervisar el alcance de la respuesta para asegurarse de que no excede el ámbito de control del Incident Commander.
 * Si un incidente es lo suficientemente complejo y hay suficientes intervinientes, considere la posibilidad de crear subequipos.
