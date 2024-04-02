@@ -2,7 +2,7 @@
 
 ### Investigar
 
-1. Identificar el origen del ataque si el problema proviene de un malware.
+1. Identificar el origen del ataque.
 2. Identificar la vía del ataque.
 3. Recopilar evidencias forenses si es posible.
 4. Evaluar el impacto del ataque.
@@ -10,7 +10,7 @@
 
 ### Remediar
 
-1. En caso de no hacerse, planificar copias de seguridad.  
+1. En caso de no hacerse, planificar copias de seguridad. 
 2. Actualizar politicas de seguridad.
 3. Actualizar playbooks con las lecciones aprendidas y nuevos metodos de remediación.
 
