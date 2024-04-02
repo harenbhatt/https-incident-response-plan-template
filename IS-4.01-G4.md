@@ -77,7 +77,7 @@ Por ejemplo, al analizar el playbook de Ransomware, pude relacionar las táctica
 
 **1.b   ¿Qué playbooks has identificado como necesarios en este plan de respuesta y en que te has basado para identificar esos playbooks y saber que son los necesarios? Deja algún diagrama que describa el flujo de un playbook.** 
 
-La elección de estos playbooks se basa en la evaluación de riesgos, la experiencia pasada y la comprensión de las tendencias actuales de amenazas. Además, la identificación se alinea con prácticas recomendadas en la industria de la ciberseguridad, considerando la frecuencia y el impacto potencial de cada tipo de incidente. Estos playbooks también reflejan áreas donde es probable que se requiera una respuesta rápida y especializada para minimizar el daño.
+La elección de estos playbooks se basa en el estudio previo de nuestra empresa, la evaluación de riesgos y la comprensión de las tendencias actuales de amenazas. Hemos optado por seleccionar playbooks relaccionados con los ataques de Phishing, Ransomware, Inyección de codigo etc. Es decir, áreas donde se require una respuesta rápida y especializada para minimizar el daño.
 
 ![image](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/assets/86500067/e8ca4ec8-a0ff-420e-8ebf-6de74c3a19bd)
 
@@ -1932,6 +1932,23 @@ La explotación de dispositivos IoT es una preocupación creciente debido a la p
 - **Revisión de Políticas y Procedimientos:** Revise y actualice las políticas y procedimientos de seguridad para garantizar que estén alineados con las lecciones aprendidas del incidente y para mejorar la capacidad de respuesta a futuros ataques.
 
 - **Capacitación del Personal:** Proporcione capacitación adicional al personal sobre prácticas de seguridad actualizadas y procedimientos de respuesta a incidentes para mejorar la preparación y la capacidad de recuperación ante futuros ataques.
+
+## CIBERRESILIENCIA
+
+### Páginas de Error Personalizadas
+Implementaremos páginas de error personalizadas para comunicar de manera efectiva con nuestros usuarios cuando enfrenten interrupciones en el servicio. Estas páginas mostrarán mensajes claros y amigables, informando a los usuarios que somos conscientes del problema y estamos trabajando activamente para solucionarlo. Además, incluiremos información útil, como enlaces a nuestras redes sociales y formas de contacto, para que los usuarios puedan seguir recibiendo actualizaciones sobre el estado del servicio.
+
+### Chats de Respuesta Alternativos
+Para asegurarnos de que siempre estemos accesibles a nuestros clientes, incluso durante interrupciones del servicio, estableceremos sistemas de chat de respuesta alternativos. Estos sistemas operarán a través de plataformas de terceros confiables, permitiéndonos mantener una comunicación fluida y directa con nuestros usuarios. A través de estos chats, podremos ofrecer soporte en tiempo real, responder preguntas y proporcionar actualizaciones sobre la resolución de incidentes.
+
+### Hosting de Emergencia
+Nos asociaremos con proveedores de hosting de emergencia para garantizar que podamos reactivar rápidamente una versión operativa de nuestro sitio web en caso de un fallo crítico. Este plan de contingencia nos permitirá mantener una presencia en línea y seguir ofreciendo servicios esenciales mientras trabajamos en resolver cualquier problema con nuestra infraestructura principal. Esta solución de hosting de emergencia estará pre-configurada para activarse con mínima intervención manual y máxima rapidez.
+
+### Automatización de Respuestas
+Desarrollaremos y pondremos en práctica scripts de automatización diseñados para ejecutar respuestas rápidas ante fallos detectados. Esto incluirá la activación automática de nuestras páginas de error personalizadas, el despliegue de nuestro sitio en el hosting de emergencia, y la notificación instantánea a nuestro equipo técnico y a nuestros usuarios a través de los canales de comunicación establecidos. La automatización garantizará que podamos reaccionar de manera inmediata y eficiente, reduciendo el tiempo de inactividad y mejorando nuestra capacidad de recuperación.
+
+### Simulacros
+Realizaremos simulacros de fallo regularmente para probar y mejorar nuestra capacidad de respuesta ante incidentes reales. Estos ejercicios nos permitirán evaluar la efectividad de nuestras páginas de error personalizadas, la fiabilidad de nuestro hosting de emergencia, la precisión de nuestros scripts de automatización, y nuestra habilidad para comunicarnos efectivamente con los usuarios a través de chats alternativos. Los simulacros nos ayudarán a identificar áreas de mejora, garantizando que nuestro plan de respuesta sea tan robusto y eficiente como sea posible.
 
 
 ## Playbook: Phishing
