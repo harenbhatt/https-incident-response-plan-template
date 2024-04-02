@@ -99,10 +99,9 @@ Para asegurarnos de cubrir todas las fases del plan de respuesta, como grupo hem
     
 6.	**Recuperación:** Después de que se haya resuelto el incidente, nos enfocamos en la recuperación y en restaurar nuestros sistemas a un estado operativo normal. Esto implica restablecer servicios, fortalecer la seguridad de nuestra infraestructura y aprender de la experiencia para mejorar nuestra preparación para futuros incidentes.
    
- 
 En nuestro plan de respuesta, consideramos que la fase que está más floja es la de comunicación. Aunque tenemos protocolos establecidos y canales de comunicación definidos, a veces la transmisión de información durante un incidente puede no ser tan efectiva como debería ser. Esto puede deberse a la falta de coordinación entre los equipos involucrados, la falta de claridad en los mensajes o la demora en la entrega de actualizaciones importantes.
-En nuestro plan de respuesta, identificamos que la fase más débil podría ser la de remedición. Esta fase implica la capacidad de los equipos para responder efectivamente a un ataque específico, como el cryptojacking, incluso si no tienen experiencia previa en enfrentar ese tipo de amenaza. La falta de experiencia directa puede dificultar la respuesta adecuada, ya que los equipos pueden no estar completamente familiarizados con las tácticas y técnicas utilizadas en ese tipo de ataque. Además, puede llevar más tiempo desarrollar e implementar soluciones efectivas cuando se enfrentan a una amenaza desconocida.
 
+En nuestro plan de respuesta, identificamos que la fase más débil podría ser la de remedición. Esta fase implica la capacidad de los equipos para responder efectivamente a un ataque específico, como el cryptojacking, incluso si no tienen experiencia previa en enfrentar ese tipo de amenaza. La falta de experiencia directa puede dificultar la respuesta adecuada, ya que los equipos pueden no estar completamente familiarizados con las tácticas y técnicas utilizadas en ese tipo de ataque. Además, puede llevar más tiempo desarrollar e implementar soluciones efectivas cuando se enfrentan a una amenaza desconocida.
 
 Por otro lado, consideramos que la fase mejor trabajada en nuestro plan es la de preparación. Hemos dedicado tiempo y recursos significativos a la evaluación de riesgos, la identificación de vulnerabilidades y la implementación de controles de seguridad. Además, hemos proporcionado capacitación adecuada a nuestro personal y hemos establecido procedimientos claros para responder a diferentes escenarios de amenazas. Esta preparación nos brinda una base sólida para enfrentar cualquier incidente de seguridad que pueda surgir.
 
@@ -157,7 +156,7 @@ El Flujo de Toma de Decisiones y Escalado en nuestro plan de respuesta a inciden
 
 **3.a  ¿Como te has asegurado de que tu plan tiene respuestas resilientes? ¿Porque son resilientes y en qué fases se centran?**
 
-Para evaluar la resiliencia del plan ante los ataques, es crucial considerar cómo aborda cada fase del ataque, desde la investigación hasta la recuperación, y cómo se asegura de que la organización pueda adaptarse y recuperarse eficazmente. A continuación, se analizará cómo el playbook de phishing aborda la resiliencia en cada fase:
+Para evaluar la resiliencia del plan ante los ataques, es crucial considerar cómo aborda cada fase del ataque, desde la investigación hasta la recuperación, y cómo se asegura de que la organización pueda adaptarse y recuperarse eficazmente, para ello hemos elaborado un apartado de Ciberresiliencia con los pasos más detallados por si ocurre algún incidente. A continuación, se analizará cómo el playbook de phishing donde también se aborda la resiliencia en cada fase:
 
 **Investigación:**
 
@@ -955,7 +954,6 @@ Además, para la fase de detección y respuesta, el marco MITRE ATT&CK también 
 
 
 
-
 ## Playbook: Inyección de Código
 
 ### Investigación
@@ -1279,7 +1277,6 @@ Asigne los pasos a individuos o equipos para trabajar simultáneamente, cuando s
 **Relacion con matriz de ataque y respuesta**
 1.	**Matriz de Ataque MITRE ATT&CK - Técnica de Impacto (Denegación de Servicio - T1499):** Esta técnica dentro de la matriz de ataque MITRE ATT&CK se enfoca en los ataques de denegación de servicio que pueden formar parte de un ataque DDoS. Proporciona una estructura para comprender cómo los atacantes pueden llevar a cabo estos ataques y qué técnicas específicas pueden emplear para interrumpir los servicios objetivo.
 2.	**Matriz de Respuesta RE&CT - Infraestructura de Resiliencia (T1036):** Esta técnica dentro de la matriz de respuesta RE&CT se centra en la preparación y protección de la infraestructura tecnológica de una organización frente a ataques DDoS. Establece cómo una organización puede desarrollar una infraestructura robusta y resiliente que pueda resistir y recuperarse de tales ataques, asegurando la continuidad de las operaciones críticas.
-
 
 
 
@@ -2374,7 +2371,7 @@ El Incident Commander utiliza métodos y lenguajes adicionales:
 * _OPCIONAL:_ facilitar las prácticas
 * _OPCIONAL:_ recurre a [Incident Responders as Facilitators (and Therapists)](#FIX) y al [PagerDuty Incident Commander training](https://response.pagerduty.com/training/incident_commander/) para mas ideas y discussiones.
 
-#### pre-requisitos
+#### Pre-requisitos
 
 No hay requisitos previos de antigüedad o unidad de negocios para convertirse en Incident Commander, es un rol abierto a cualquier persona con la capacitación y la capacidad. Antes de que pueda ser un Incident Commander, se espera que cumpla con los siguientes criterios:
 
