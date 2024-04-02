@@ -4,10 +4,13 @@ Autor: {{AUTHOR_NAME}}, {{AUTHOR_EMAIL}}
 
 Revisión {{REVISION_NUMBER}}, Publicado {{RELEASE_DATE}}
 
-Este plan de respuesta a incidentes está basado en el plan conciso, directivo, específico, flexible y gratuito disponible en [Github](https://github.com/counteractive/incident-response-plan-template) de Counteractive Security y discutido en [www.counteractive.net](https://www.counteractive.net/blog/an-ir-plan-you-will-use/)
+Este plan de respuesta a incidentes está basado en el plan conciso, directivo, específico, flexible y gratuito disponible en [Github](https://github.com/counteractive/incident-response-plan-template) de Counteractive Security y discutido en [www.counteractive.net](https://www.counteractive.net/blog/an-ir-plan-you-will-use/).
 
+El plan de respuesta está elaborado en base a la matrices MITRE ATT&CK y RE&CT. Debe considerarse unos cimientos sobre los que trabajar y tenerse como guía general, documentación de consulta o apoyo. Debido a que la realidad no se guía por paUP ARROWutas y reglas inamovibles, es responsabilidad final del personal utilizar su mejor criterio a la hora de actuar frente a un incidente de seguridad y adaptar este plan a sus necesidades o reforzar su actuación con las medidas y procedimientos que se indican aquí.
 
 Fue revisado por última vez el {{REVIEW_DATE}}. Fue probado por última vez en {{TEST_DATE}}.
+
+# Bloques generales de la Respuesta a Incidentes
 
 # Evaluar
 
@@ -41,6 +44,19 @@ El procedimiento de nomenclatura de los incidentes será el siguiente:
 Consistirá en un número, que empezará con el 0 siendo el primer incidente que se registre, seguido de un guión y la fecha en el siguiente formato: DDMAAAA, construyendo el mes en base a sus tres primeras letras en español. Por ejemplo, para el 3 incidente, sucedido el 2 de Mayo de 2024 tendríamos el código: 
 
 - **2-02MAY2024**
+
+## Establecer el  nivel de alarma
+
+Se aporta el siguiente cuadro sobre los niveles de alarma y su descripción:
+
+| NETCOM | Descripción |
+|--------|-------------|
+| 5      | **Normal**: No se detectan amenazas significativas. Mantenga las operaciones normales y monitoree de manera rutinaria la seguridad de la red. |
+| 4      | **Anómalo**: Existen una serie de alteraciones en el estado habitual de la monitorización. El equipo de respuesta debe comenzar a trabajar para desarrollar la información sobre los incidentes. |
+| 3      | **Amenazado**: Se ha detectado una amenaza directa, pero su impacto es limitado. Es necesario tomar medidas para contrarrestar la amenaza. El equipo de respuesta notifica a los departamentos afectados |
+| 2      | **Amenaza grave**: Se ha detectado una amenaza significativa. Es necesario tomar medidas inmediatas para proteger los sistemas y los datos. El equipo de respuesta notifica a todo el personal. |
+| 1      | **Crítico**: Se ha detectado una amenaza crítica que puede causar daños graves. Es necesario tomar medidas de emergencia para proteger los sistemas y los datos. El equipo de respuesta crea un enlace externo para apoyarse en autoridades y servicios externos que ayuden a la respuesta. Todo el personal está alertado. |
+
 
 ## Reunir el equipo de respuesta
 

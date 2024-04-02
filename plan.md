@@ -1,13 +1,16 @@
-# Plan de respuesta a incidentes para Netmancer Incorporated
+# Plan de Respuesta a Incidentes para Netmancer Incorporated
 
 Autor: GRUPO 3, grupo3@g.educaand.es
 
 Revisión 1, Publicado 31 de Marzo de 2024
 
-Este plan de respuesta a incidentes está basado en el plan conciso, directivo, específico, flexible y gratuito disponible en [Github](https://github.com/counteractive/incident-response-plan-template) de Counteractive Security y discutido en [www.counteractive.net](https://www.counteractive.net/blog/an-ir-plan-you-will-use/)
+Este plan de respuesta a incidentes está basado en el plan conciso, directivo, específico, flexible y gratuito disponible en [Github](https://github.com/counteractive/incident-response-plan-template) de Counteractive Security y discutido en [www.counteractive.net](https://www.counteractive.net/blog/an-ir-plan-you-will-use/).
 
+El plan de respuesta está elaborado en base a la matrices MITRE ATT&CK y RE&CT. Debe considerarse unos cimientos sobre los que trabajar y tenerse como guía general, documentación de consulta o apoyo. Debido a que la realidad no se guía por paUP ARROWutas y reglas inamovibles, es responsabilidad final del personal utilizar su mejor criterio a la hora de actuar frente a un incidente de seguridad y adaptar este plan a sus necesidades o reforzar su actuación con las medidas y procedimientos que se indican aquí.
 
 Fue revisado por última vez el 31 de Marzo de 2024. Fue probado por última vez en 31 de Marzo de 2024.
+
+# Bloques generales de la Respuesta a Incidentes
 
 # Evaluar
 
@@ -41,6 +44,19 @@ El procedimiento de nomenclatura de los incidentes será el siguiente:
 Consistirá en un número, que empezará con el 0 siendo el primer incidente que se registre, seguido de un guión y la fecha en el siguiente formato: DDMAAAA, construyendo el mes en base a sus tres primeras letras en español. Por ejemplo, para el 3 incidente, sucedido el 2 de Mayo de 2024 tendríamos el código: 
 
 - **2-02MAY2024**
+
+## Establecer el  nivel de alarma
+
+Se aporta el siguiente cuadro sobre los niveles de alarma y su descripción:
+
+| NETCOM | Descripción |
+|--------|-------------|
+| 5      | **Normal**: No se detectan amenazas significativas. Mantenga las operaciones normales y monitoree de manera rutinaria la seguridad de la red. |
+| 4      | **Anómalo**: Existen una serie de alteraciones en el estado habitual de la monitorización. El equipo de respuesta debe comenzar a trabajar para desarrollar la información sobre los incidentes. |
+| 3      | **Amenazado**: Se ha detectado una amenaza directa, pero su impacto es limitado. Es necesario tomar medidas para contrarrestar la amenaza. El equipo de respuesta notifica a los departamentos afectados |
+| 2      | **Amenaza grave**: Se ha detectado una amenaza significativa. Es necesario tomar medidas inmediatas para proteger los sistemas y los datos. El equipo de respuesta notifica a todo el personal. |
+| 1      | **Crítico**: Se ha detectado una amenaza crítica que puede causar daños graves. Es necesario tomar medidas de emergencia para proteger los sistemas y los datos. El equipo de respuesta crea un enlace externo para apoyarse en autoridades y servicios externos que ayuden a la respuesta. Todo el personal está alertado. |
+
 
 ## Reunir el equipo de respuesta
 
@@ -568,7 +584,7 @@ Los siguientes playbooks capturan los pasos comunes de [investigación](#investi
 11. [playbook-Replication-Through-Removable-Media](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G3/playbooks/playbook-replication%20through%20removable%20media.md)
 12. [playbook-Steal-Web-Session-Cookie](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G3/playbooks/playbook-steal-web-session-cookie.md)
 13. [playbook-Brute-Force](https://github.com/IES-Rafael-Alberti/incident-response-plan-plantilla/blob/2024-4.1-G3/playbooks/playbook-brute%20force.md)
-## Playbook: Creacción o modificación de procesos para escalado.
+## Playbook: Creación o modificación de procesos para escalado.
 
 ### Investigar
 
@@ -817,7 +833,7 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente; este
 
 ### Investigar
 
-1. Identificar el origen del ataque al sistema afectado.
+1. Identificar el origen del ataque al sistema afectados. 
 2. Identificar la vía del ataque.
 3. Recopilar evidencias forenses a través de herramientas forenses.
 4. Evaluar el impacto del ataque.
@@ -825,7 +841,7 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente; este
 
 ### Remediar
 
-1. Eliminar la amenaza inicial si es posible y depedendiendo el sistema afectado en la cadena de suministro y el tipo de ataque.
+1. Eliminar la amenaza inicial si es posible depedendiendo del sistema afectado en la cadena de suministro y el tipo de ataque.
 2. Aplicar parches de seguridad a los sistemas afectados en caso de que no se hayan actualizado anteriormente.
 3. Si los datos han sido afectados, restaurar la integridad de los mismos a través de las copias de seguridad.
 4. Reforzar las medidas de control de acceso a los sistemas generando contraseñas más seguras en todos los sistemas de la cadena de suministro.
@@ -841,12 +857,11 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente; este
 
 ### Erradicar
 
-1. Clasificar el vector de ataque del sistema vulnerado en la cadena de suministro.
-2. Analizar los activos afectados dentro del sistema afectado a través de herramientas de análisis forenses.
-3. Parchear la vulnerabilidad que ha sido identificada y analizada con actualizaciones más recientes.
-4. Eliminar completamente el malware que haya vulnerado el sistema en el caso de que haya sido el problema.
-5. Restaurar las copias de seguridad a las más recientes.
-6. En caso de que haya sido creado un playbook para el tipo de ataque que ha vulnerado el sistema con anterioridad, seguirlo paso a paso.
+1. Analizar los activos afectados dentro del sistema afectado a través de herramientas de análisis forenses.
+2. Parchear la vulnerabilidad que ha sido identificada y analizada con actualizaciones más recientes.
+3. Eliminar completamente el malware que haya vulnerado el sistema en el caso de que haya sido el problema.
+4. Restaurar las copias de seguridad a las más recientes.
+5. En caso de que haya sido creado un playbook para el tipo de ataque que ha vulnerado el sistema con anterioridad, seguirlo paso a paso.
 
 ### Comunicar
 
@@ -863,7 +878,7 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente; este
 
 ### Investigar
 
-1. Identificar el origen del ataque en caso de que haya sido un malware.
+1. Identificar el origen del ataque.
 2. Identificar la vía del ataque.
 3. Recopilar evidencias forenses si es posible.
 4. Evaluar el impacto del ataque.
@@ -871,7 +886,7 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente; este
 
 ### Remediar
 
-1. En caso de no hacerse, planificar copias de seguridad.  
+1. En caso de no hacerse, planificar copias de seguridad. 
 2. Actualizar politicas de seguridad.
 3. Actualizar playbooks con las lecciones aprendidas y nuevos metodos de remediación.
 
@@ -1331,7 +1346,6 @@ Asigne los pasos a individuos o equipos para que trabajen simultáneamente; este
 A continuación se presentan las descripciones, los deberes y la formación para cada uno de los roles definidos en la respuesta a un incidente.
 
 ## Estructura de los roles
-
 
 * Equipo de Mando
   * [Incident Commander](#rol-incident-commander)
