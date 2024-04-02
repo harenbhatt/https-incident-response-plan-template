@@ -68,32 +68,6 @@ La inyección de código es una vulnerabilidad común en aplicaciones web que pe
   - Acción: Definir pasos claros y acciones a tomar para mitigar las amenazas identificadas basadas en las tácticas y técnicas de Mitre.
   - Responsable: Equipo de Desarrollo de Aplicaciones, Equipo de Respuesta a Incidentes (ERI).
 
-### Ciberresiliencia
-
-#### Planificación de Continuidad del Negocio (BCP) y Recuperación de Desastres (DR)
-
-- **Desarrollo de Planes de BCP y DR:**
-  - Descripción: Establecer planes detallados de continuidad del negocio y recuperación de desastres para garantizar la disponibilidad y funcionalidad de las aplicaciones web en caso de inyección de código exitosa.
-  - Acción: Identificar los sistemas y procesos críticos afectados por inyecciones de código y desarrollar planes de contingencia para mantener la operatividad.
-  - Responsable: Equipo de Continuidad del Negocio, Equipo de Desarrollo de Aplicaciones.
-
-- **Simulacros de Incidentes:**
-  - Descripción: Realizar simulacros periódicos de incidentes para poner a prueba la capacidad de respuesta y recuperación ante inyecciones de código exitosas.
-  - Acción: Simular diferentes escenarios de inyección de código y evaluar la efectividad de los planes de BCP y DR en mitigar el impacto y restaurar la funcionalidad.
-  - Responsable: Equipo de Respuesta a Incidentes (ERI), Equipo de Desarrollo de Aplicaciones.
-
-#### Resiliencia Organizacional
-
-- **Cultura de Seguridad:**
-  - Descripción: Fomentar una cultura de seguridad cibernética dentro de la organización para aumentar la conciencia y la preparación ante posibles inyecciones de código.
-  - Acción: Proporcionar capacitación y concienciación sobre seguridad cibernética a todos los empleados, destacando la importancia de proteger las aplicaciones web y seguir prácticas de seguridad sólidas.
-  - Responsable: Equipo de Seguridad de la Información, Recursos Humanos.
-
-- **Evaluación de Riesgos Continua:**
-  - Descripción: Realizar evaluaciones periódicas de riesgos para identificar nuevas amenazas y vulnerabilidades en aplicaciones web y ajustar las estrategias de seguridad en consecuencia.
-  - Acción: Implementar un proceso de evaluación de riesgos continuo que analice los cambios en el panorama de amenazas y las vulnerabilidades emergentes en inyecciones de código.
-  - Responsable: Equipo de Gestión de Riesgos, Equipo de Desarrollo de Aplicaciones.
-
 ### Mitigación
 
 - Implemente medidas de mitigación como la validación estricta de entrada de usuario y el uso de consultas parametrizadas para prevenir la inyección de SQL.
