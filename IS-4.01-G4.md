@@ -263,7 +263,7 @@ Rol del equipo de respuesta         | Información de contacto
 Localizador del Incident Commander  | {INCIDENT_COMMANDER_PAGER_NUMBER}}
 Url del Incident Commander          | grupo4.org/ic-page
 Lista del Incident Commander        | grupo4.org/ic-roster
-Lista del equipo de seguridad       | Plácido Díaz Garrido
+Lista del equipo de seguridad       | Naim Cheddi Elkhattabi
 Lista del equipo SME                | Álvaro Bueno Ortiz
 Lista de ejecutivos                 | Iván Sales Cisneros
 
