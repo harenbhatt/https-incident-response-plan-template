@@ -1,3 +1,8 @@
+
+# IS - 4.01 - Plan de Respuesta
+
+> *1 De Abril de 2024*
+
 # Indice
 1. [Introducción](#introducción)
 2. [Plan de respuesta](#plan-de-respuesta)
@@ -179,4 +184,14 @@ Como conclusión, hemos podido comprobar a lo largo del documento la gran import
 * [Informed's NIMS Incident Command System Field Guide](https://www.amazon.com/gp/product/1284038408) (Michael J. Ward)
 * [Advanced PostMortem Fu and Human Error 101 (Velocity 2011)](http://www.slideshare.net/jallspaw/advanced-postmortem-fu-and-human-error-101-velocity-2011)
 * [Blame. Language. Sharing.](http://fractio.nl/2015/10/30/blame-language-sharing/)
+
+## Grupo 3
+
+- **Sergio Guerrero Merlo**
+- **Juan Manuel Cumbrera López**
+- **Christian Romero Oliva**
+
+*Hacking Ético - Curso de Especialización de Ciberseguridad en las TI*
+
+*IES Rafael Alberti*
 
