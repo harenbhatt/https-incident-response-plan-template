@@ -21,15 +21,15 @@ Ransomware
 
 ### Clasificación según taxonomía
 
-Hacerrr
+Acceso no autorizado
 
 ### Criticidad
 
-8.8 Alta
+Alta
 
 ### Descripción del incidente
 
-Esta alerta es sobre CVE-2023–46214. La vulnerabilidad se debe a que las versiones de Splunk Enterprise inferiores a 9.0.7 y 9.1.2 no desinfectan de forma segura las transformaciones de lenguaje de hojas de estilos extensibles (XSLT) proporcionadas por el usuario.
+Se detectó una carga XSLT maliciosa en Splunk Enterprise con el potencial de desencadenar la ejecución remota de código.
 
 ### Acciones tomadas para su resolución
 
@@ -91,6 +91,7 @@ Y ya habríamos terminado el playbook.
 
 ### ¿Es necesario realizar alguna acción específica para el restablecimiento de los servicios afectados?
 
+No, no es necesario.
 
 ### Documentar acciones y proponer mejoras para futuras respuestas.
 
