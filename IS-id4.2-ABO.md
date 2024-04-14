@@ -19,6 +19,8 @@ Ransomware
 
 ## Incidente 1: SOC239 - Remote Code Execution Detected in Splunk Enterprise
 
+1.a Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
+
 ### Clasificación según taxonomía
 
 Acceso no autorizado
@@ -30,6 +32,8 @@ Alta
 ### Descripción del incidente
 
 Se detectó una carga XSLT maliciosa en Splunk Enterprise con el potencial de desencadenar la ejecución remota de código.
+
+1.b ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente?
 
 ### Acciones tomadas para su resolución
 
@@ -101,11 +105,10 @@ No, no es necesario.
 
 ## Preguntas
 
-1.a Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
-
-1.b ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente? 
 
 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+
+No, no he tenido que hacer ninguna acción para el restablecimiento de los servicios afectados.
 
 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
 
@@ -115,17 +118,19 @@ No, no es necesario.
 
 
 
-## Incidente 2
+## Incidente 2: 	SOC176 - RDP Brute Force Detected
 
 ### Clasificación según taxonomía
 
+Fuerza Bruta
 
 ### Criticidad
 
-
+Media
 
 ### Descripción del incidente
 
+Error de inicio de sesión desde una única fuente con diferentes cuentas no existentes
 
 ### Acciones tomadas para su resolución
 
