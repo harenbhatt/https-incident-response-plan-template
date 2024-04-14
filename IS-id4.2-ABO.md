@@ -17,20 +17,77 @@ Ransomware
 
 ## Índice
 
-## Incidente 1
+## Incidente 1: SOC239 - Remote Code Execution Detected in Splunk Enterprise
 
 ### Clasificación según taxonomía
 
+Hacerrr
 
 ### Criticidad
 
-
+8.8 Alta
 
 ### Descripción del incidente
 
+Esta alerta es sobre CVE-2023–46214. La vulnerabilidad se debe a que las versiones de Splunk Enterprise inferiores a 9.0.7 y 9.1.2 no desinfectan de forma segura las transformaciones de lenguaje de hojas de estilos extensibles (XSLT) proporcionadas por el usuario.
 
 ### Acciones tomadas para su resolución
 
+Lo primero que haremos será crear el playbook y examinar el nombre de la regla, donde veremos que esta relacionada con el CVE-2023-46213, el cual es una ejecución remota de código.
+Tendremos que ver entre que dos dispositivos se está produciendo el tráfico.
+
+En la siguiente ventana de Collect Data tenemos que recopilar información sobre direcciones ip, nombre de host...
+
+Y podemos recopilar la siguiente información:
+
+Dirección IP de origen: 180.101.88.240
+
+Dirección IP de destino: 172.16.20.13
+
+Puerto de origen: 54321
+
+Puerto de destino: 8000
+
+Si nos vamos a Virustotal e introducimos la ip 180.101.88.240 nos da que es malicioso
+
+IMG01
+
+A continuación nos vamos a la página abuseipdb y aquí vemos que la dirección IP pertenece a una empresa China llamada Telecom.
+
+IMG02
+
+A continuación Lets defend nos pregunta si el trafico es malicioso y le decimos que si, ya que con Virustotal y abuseipdb vemos que efectivamente eran maliciosos.
+
+
+IMG03
+
+Ahora nos pregunta el tipo de ataque que es, si investigamos encontraremos un archivo shell.zip si lo descomprimimos hay dos archivos un .sh (script) y un archivo .xsl, podemos analizar el contenido de estos para ver realmente el código que se está ejecutando y parece que quiere crear un documento y abrir una reverse shell, por lo tanto deducimos que el tipo de ataque es un XML Injection.
+
+Si buscamos en la parte de la bandeja de entrafa e intentamos buscar la ip de origen o destino no vemos nada relevante por lo tanto deducimos que el ataque no esta planeado.
+
+IMG04
+
+Ante esta pregunta hemos ivenstigado y la dirección de origen 180.101.88.240 de la alerta pertenece a la red externa de la empresa china, pero la dirección de destino que es esta: 172.16.20.13  pertenece a la empresa Splunk. Por eso seleccionaremos la opción de Internet → Red de empresa.
+
+IMG05
+
+Nos preguntan si el ataque fue exitoso, y si lo fue porque la acción del dispositivo está permitida.
+
+La siguiente parte es el apartado de contención, Como se muestra aquí abajo debemos aislar el dispositivo así restringimos al atacante y contenemos el dispositivo:
+
+IMG06
+
+Como se muestra aquí abajo Debemos aislar el dispositivo así restringimos al atacante y contenemos el dispositivo:
+
+A cotinuación ponemos los artifacts que veamos importantes y nos quedaría así:
+
+IMG07
+
+Por ultimo nos pregutan si hay que escalarlo al nivel 2 y diremos que si:
+
+IMG08
+
+Y ya habríamos terminado el playbook.
 
 ### ¿Es necesario realizar alguna acción específica para el restablecimiento de los servicios afectados?
 
