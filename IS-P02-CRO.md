@@ -15,15 +15,15 @@
 
 En primer lugar se debe determinar si la IP es externa o interna, para ello buscamos en "**Endpoint security**" si existen instancias de esa IP en nuestra red. Comprobamos que no, por lo que deberá ser externa.
 
-![](Pasted%20image%2020240413203245.png)
+![](./img/Pasted%20image%2020240413203245.png)
 
 Tras ello, se comprueba si la IP es sospechosa o no. Utilizamos herramientas como *VirusTotal, AbuseIPDB* o la herramienta de la plataforma *Threat Intel*. 
 
-![](Pasted%20image%2020240413203501.png)
+![](./img/Pasted%20image%2020240413203501.png)
 
-![](Pasted%20image%2020240413204016.png)
+![](./img/Pasted%20image%2020240413204016.png)
 
-![](Pasted%20image%2020240413204033.png)
+![](./img/Pasted%20image%2020240413204033.png)
 
 De las 3, solamente *AbuseIPDB* nos marca como reportada la IP un total de **23** veces. En *VirusTotal* solo tenemos un proveedor que nos indica que es maliciosa y en nuestra base de datos de inteligencia (*Threat Intel*) no tenemos nada referente a ella.
 
@@ -31,16 +31,16 @@ Aunque *VirusTotal* y *Threat Intel* no nos dan indicios de que sea peligrosa, l
 
 Determinamos luego si la IP sospechosa hacia peticiones a los puertos de SSH o RDP, y vemos en los logs que no.
 
-![](Pasted%20image%2020240413205121.png)
+![](./img/Pasted%20image%2020240413205121.png)
 
 Después, el playbook nos sugiere revisar logs de SSH/RDP, pero en este caso sabemos que todos los intentos de autenticación por parte de esa IP van dirigidos al puerto 443 de SSL. 
 
 Se nos pregunta si el ataque de fuerza bruta fue exitoso, y creemos **que efectivamente sí lo fue**, por que se ha detectado un inicio de sesión válido, pero no a través de **SSH o RDP**.
 
-![](Pasted%20image%2020240413205403.png)
+![](./img/Pasted%20image%2020240413205403.png)
 Tenemos un evento en el log de eventos que indica que el usuario ha conseguido acceder:
 
-![](Pasted%20image%2020240413211227.png)
+![](./img/Pasted%20image%2020240413211227.png)
 
 Investigando los logs, se puede comprobar como esta IP ha intentado autenticarse con varios usuarios:
 
@@ -88,7 +88,7 @@ Para evitar que una situación similar se repita, se podrían implementar las si
 
 En primer lugar se nos pide analizar los logs relevantes para el caso. Comprobando el registro de logs con la herramienta "*Log Management*" encontramos el siguiente que parece contener la info necesaria:
 
-![](Pasted%20image%2020240413232809.png)
+![](./img/Pasted%20image%2020240413232809.png)
 
 Además se revisa el correo y se encuentra el código QR malicioso. Se escanea y encontramos la siguiente URL:
 
@@ -98,34 +98,34 @@ https://ipfs.io/ipfs/Qmbr8wmr41C35c3K2GfiP2F8YGzLhYpKpb4K66KU6mLmL4#
 
 Esta URL pertenece a la aplicación **InterPlanetary File System**, lo que parece una especie de protocolo de transferencia de archivos. Esto es un claro indicador de riesgo debido a la naturaleza de esta aplicación, es probable que la intención del atacante fuera acceder a los archivos de este ordenador. 
 
-![](Pasted%20image%2020240413233453.png)
+![](./img/Pasted%20image%2020240413233453.png)
 
 De entre las opciones que se nos plantean, la aparentemente más correcta es la opción de recolectar información del host víctima.
 
-![](Pasted%20image%2020240413233607.png)
+![](./img/Pasted%20image%2020240413233607.png)
 
 Luego se nos pregunta si la IP es externa o interna, nuevamente vamos a comprobar las IP locales para ver si coincide con la que hemos encontrado en los logs.
 
-![](Pasted%20image%2020240413233900.png)
+![](./img/Pasted%20image%2020240413233900.png)
 
 Y parece que es externa.
 
 Comprobamos también la IP en nuestras herramientas habituales para testear la fiabilidad de las mismas: VirusTotal, AbuseIPDB y Threat Intel.
 
-![](Pasted%20image%2020240413234312.png)
-![](Pasted%20image%2020240413234539.png)
+![](./img/Pasted%20image%2020240413234312.png)
+![](./img/Pasted%20image%2020240413234539.png)
 
 
 Comprobamos que efectivamente esta IP es sospechosa de concretamente *phising* según las herramientas. 
 
 Comprobamos también la cantidad de dispositivos afectados en este incidente, revisamos los logs en busca de la misma IP o de la IP de la máquina afectada:
 
-![](Pasted%20image%2020240413234821.png)
+![](./img/Pasted%20image%2020240413234821.png)
 Y se revisa que la IP de la máquina afectada no haya realizado conexiones extrañas o haya enviado otros emails de phising.
 Finalmente se comprueba que parece ser que es la única máquina afectada.
 
 Se comprueba también el historial de búsqueda web del ordenador afectado y existen muchas URLs visitadas no relacionadas con el trabajo. Quizá esas búsquedas hayan causado su filtración de email y el consecutivo ataque de phishing.
- ![](Pasted%20image%2020240413235451.png)
+ ![](./img/Pasted%20image%2020240413235451.png)
 
 Finalmente se determina el **Verdadero positivo** que el equipo debe quedar en contención.
 
@@ -185,16 +185,16 @@ En un primer reconocimiento del incidente, vamos al ordenador afectado utilizand
 
 Es llamativo que su historial de terminal está vacío y que en su actividad de red se observa que a las **13:02:47** realizó conexiones a lo que parece una IP pública (**52.76.101.124**) y otras dos más. De las cuales se descarta **172.217.17.142** debido a que existen otros dos equipos que han realizado conexiones a esta IP, sin embargo,  el equipo de samuel es el único que ha realizado conexion a **18.140.6.45**.
 
-![](Pasted%20image%2020240414025456.png)
+![](./img/Pasted%20image%2020240414025456.png)
 
 Tras revisar los logs y el endpoint afectado (equipo de *Samuel*), se determina que el malware **no** está puesto en cuarentena.
 
 Ingresamos la URL en VirusTotal, HybridAnálisis, URLhaus y urlscan, y la única que determina que es malware es VirusTotal
-![](Pasted%20image%2020240414030156.png)
+![](./img/Pasted%20image%2020240414030156.png)
 
 Buscamos también la extensión en chrome-stats 
 
-![](Pasted%20image%2020240414030302.png)
+![](./img/Pasted%20image%2020240414030302.png)
 
 Y esta web determina que la extensión fue eliminada de la store de chrome debido a que contenía malware.
 
@@ -202,7 +202,7 @@ Se nos pregunta si existen indicios de un C2 (*Command and control*) al haber ac
 
 Por ello se determina aislar la máquina de la red inmediatamente desde "**Endpoint Security**":
 
-![](Pasted%20image%2020240414031510.png)
+![](./img/Pasted%20image%2020240414031510.png)
 ## Preguntas
 
 - **1.b  ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente?**
@@ -255,7 +255,7 @@ Que es claramente un intento malicioso de conseguir el archivo `/etc/passwd` de 
 
 Revisando los logs, se comprueba que la respuesta del servidor fue un código 500 (error interno del servidor), por lo que es posible que este ataque fallara:
 
-![](Pasted%20image%2020240414033327.png)
+![](./img/Pasted%20image%2020240414033327.png)
 
 Además, es de notar el tamaño de la respuesta HTTP, el cual es 0, por lo que es muy probable que efectivamente el ataque no se efectuara con éxito.
 
@@ -263,19 +263,19 @@ La cuestión aquí igualmente es determinar si se trata de un falso positivo o n
 
 Buscamos emails que involucren el nombre del servidor atacado o algo referente a pruebas de penetración y no encontramos nada.
 
-![](Pasted%20image%2020240414033611.png)
+![](./img/Pasted%20image%2020240414033611.png)
 
 También debemos comprobar para verificar si es un falso positivo o no que el host contenga el nombre de alguno de los simuladores de ataque (*Verodin, AttackIQ, Picus*), sin embargo no hay rastro de ellos, por lo que se verifica como **positiva** la incidencia.
 
 Se nos pide determinar la dirección del tráfico, y entre las tres opciones posibles la correcta es **Internet → Company Network** ya que la IP **106.55.45.162** no se encuentra en nuestra Red:
 
-![](Pasted%20image%2020240414034206.png)
+![](./img/Pasted%20image%2020240414034206.png)
 
 Se nos pregunta si el ataque fue exitoso, pero previamente mediante el análisis de la respuesta HTTP vemos que con casi total seguridad no fue exitoso.
 
 Se nos pregunta también si necesitamos escalar al **Tier 2**, lo cual sucede en caso de que un ataque tenga éxito o si el atacante ha llegado a comprometer una máquina (en caso de ataque con tráfico interno). Ninguno de los dos casos es cierto, por lo que **NO** escalamos.
 
-![](Pasted%20image%2020240414034510.png)
+![](./img/Pasted%20image%2020240414034510.png)
 
 ## Preguntas
 
@@ -326,20 +326,20 @@ Se ha recibido varias peticiones sospechosas con la URL aparentemente maliciosa 
 
 El equipo afectado por este incidente es el **WebServer1005** con IP **172.16.17.15**, la petición proviene de una IP **134.209.118.137** identificada como externa al no pertencer a la red local:
 
-![](Pasted%20image%2020240414041918.png)
+![](./img/Pasted%20image%2020240414041918.png)
 
 Se pasa a comprobar esta IP con herramientas como VirusTotal, AbuseIPDB y Cisco Talos
-![](Pasted%20image%2020240414042314.png)
+![](./img/Pasted%20image%2020240414042314.png)
 
-![](Pasted%20image%2020240414042322.png)
-![](Pasted%20image%2020240414042405.png)
+![](./img/Pasted%20image%2020240414042322.png)
+![](./img/Pasted%20image%2020240414042405.png)
 
 En este caso, el único que categoriza la IP como "*Poor*" es *Cisco Talos*, tanto VirusTotal como AbuseIPDB la verifican como una IP sin peligro. 
 
 Para terminar de asegurarnos vamos a revisar los logs para ver en detenimiento las peticiones que se han realizado y revisandolas descubrimos que en el cuerpo de la petición POST se indica el parámetro `?user_id=1`, al revisar las demás vemos que efectivamente se observa un patrón de ataque en el que se está probando usuarios.
 
-![](Pasted%20image%2020240414043131.png)
-![](Pasted%20image%2020240414043151.png)
+![](./img/Pasted%20image%2020240414043131.png)
+![](./img/Pasted%20image%2020240414043151.png)
 
 Con estos indicadores de compromiso creo que es suficiente para identificar la IP como maliciosa y confirmar el ataque IDOR. 
 
@@ -347,11 +347,11 @@ Además podemos confirmar también que el atacante tuvo éxito en varios intento
 
 Se determina pues poner en contención al equipo desde **Endpoint Security**.
 
-![](Pasted%20image%2020240414043456.png)
+![](./img/Pasted%20image%2020240414043456.png)
 
 Además se nos pregunta si es necesario ascender a **Tier 2** el nivel de alerta. Efectivamente, esta vez es necesario porque estamos en un escenario donde el atacante ha conseguido éxito en su intento de explotación, lo cual es suficiente para elevar el nivel de alarma.
 
-![](Pasted%20image%2020240414043628.png)
+![](./img/Pasted%20image%2020240414043628.png)
 ## Preguntas
 
 - **1.b  ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente?**
@@ -411,21 +411,21 @@ Esto es un intento de activar una powershell de manera remota en la máquina. Ad
 
 Sin duda la URL es maliciosa por sus características, vamos a buscarla en los logs:
 
-![](Pasted%20image%2020240414050548.png)
+![](./img/Pasted%20image%2020240414050548.png)
 
 Vemos 3 instancias de peticiones de esta IP a una de nuestras máquinas, con fecha del 30 de Septiembre de 2022 además lo que cuadra con el incidente. Si nos paramos a revisar, vemos como en las solicitudes GET parece que ha comprobado si existe "`/autodiscover/autodiscover.json`" y luego ha intentado dos veces utilizar la URL maliciosa con la powershell incorporada:
-![](Pasted%20image%2020240414050806.png)
-![](Pasted%20image%2020240414050828.png)
+![](./img/Pasted%20image%2020240414050806.png)
+![](./img/Pasted%20image%2020240414050828.png)
 
 En estos logs además puede verse como las peticiones han sido bloquedas, por lo que es muy probable que el atacante no haya tenido éxito en sus intentos. 
 
 Se nos pregunta si la URL es maliciosa, y con seguridad podemos afirmar que efectivamente lo es. Luego también se nos pregunta que tipo de ataque es. Como en la lista no está SSRF,  el correcto debe ser "Other". 
 
-![](Pasted%20image%2020240414051130.png)
+![](./img/Pasted%20image%2020240414051130.png)
 
 Debemos comprobar si este incidente puede deberse a un test de penetración planeado. Nuevamente buscamos emails que incluyan el nombre del servidor afectado, palabra clave como "penetration test" o "test" a secas, y no tenemos rastro de nada de eso.
-![](Pasted%20image%2020240414051413.png)
-![](Pasted%20image%2020240414051441.png)
+![](./img/Pasted%20image%2020240414051413.png)
+![](./img/Pasted%20image%2020240414051441.png)
 
 Determinamos que el ataque no ha sido exitoso ya que las peticiones han sido bloqueadas y que tampoco ha sido un test planeado, por lo que no estamos ante un **falso positivo**.
 
@@ -479,7 +479,7 @@ También determinar el flujo del tráfico es importante y no lo estamos haciendo
 
 En este caso tenemos una solicitud HTTP a la URL `/_api/web/siteusers` de la máquina **MS-SharePointServer** hecho con un *user-agent* de Python, por lo que ya es bastante sospechoso. Vamos a comprobar en primer lugar como siempre de donde viene y si existen logs relativos a la URL de origen. En primer lugar vamos a mirar los logs:
 
-![](Pasted%20image%2020240414053048.png)
+![](./img/Pasted%20image%2020240414053048.png)
 
 Vemos que existen 3 logs de solicitudes de este tipo, cada una posee un código 200 de éxito y además cada una hace una petición a un endpoint distinto, para literalmente enumerarla. Por el tamaño de la respuesta y los códigos de éxito, podemos determinar que esto es un atacante y que de hecho ha tenido éxito. 
 
@@ -487,23 +487,23 @@ Es muy probable que se tenga que aislar rápidamente esta máquina para prevenir
 
 Aunque nuestras sospechas ya son grandes, no está de más revisar la URL en VirusTotal y AbuseIPDB:
 
-![](Pasted%20image%2020240414053425.png)
+![](./img/Pasted%20image%2020240414053425.png)
 
-![](Pasted%20image%2020240414053438.png)
+![](./img/Pasted%20image%2020240414053438.png)
 
 Y efectivamente vemos que VirusTotal nos la marca como peligrosa, en AbuseIPDB ha sido reportada múltiples veces, pero no está marcada como de abuso. Igualmente, junto a los logs, que VirusTotal tenga registros de phishing de esta IP es suficiente para marcarla como maliciosa.
 
 Buscando información en internet acerca del CVE-2023-29357 comprobamos que existen pruebas de concepto de este exploit con python, y el user-agent que teníamos en nuestro incidente era efectivamente python.
 
-![](Pasted%20image%2020240414053744.png)
+![](./img/Pasted%20image%2020240414053744.png)
 
 Consiste en una cadena de vulnerabilidades, primero *bypasear* JWT y luego aprovechar una vulnerabilidad para hacer una RCE (*Remote Code Execution*). En el playbook se nos pregunta por el tipo de ataque, la opción que me parece más lógica es command injection debido a que todo desemboca en ello y que no hay una opción concreta para bypass.
 
-![](Pasted%20image%2020240414054005.png)
+![](./img/Pasted%20image%2020240414054005.png)
 
 Debemos descartar que esté planeado, una vez más vamos a buscar en emails si existe algo relacionado con esta máquina (ya que con tests de penetración hemos comprobado en los otros incidentes que no hay nada):
 
-![](Pasted%20image%2020240414054124.png)
+![](./img/Pasted%20image%2020240414054124.png)
 
 Y vemos que no hay nada, por lo que lo clasificamos como **No planeado**.
 
@@ -512,7 +512,7 @@ Finalmente pondremos el equipo comprometido en contención ya que se trata de un
 
 > [!NOTE] Nota
 > En este incidente se ha dado por erróneo el "Command Injection" como tipo de ataque, para la próxima marcaré "Otro cuando tenga dudas"
-> ![](Pasted%20image%2020240414054623.png)
+> ![](./img/Pasted%20image%2020240414054623.png)
 
 ## Preguntas
 
@@ -564,25 +564,25 @@ En este incidente tenemos una URL probablemente maliciosa proveniente de la IP *
 
 Vamos a comprobar en primer lugar y como es habitual en este tipo de incidentes los logs que involucren a esta IP externa:
 
-![](Pasted%20image%2020240414060910.png)
+![](./img/Pasted%20image%2020240414060910.png)
 
 Encontramos tres logs que contienen peticiones altamente sospechosas y críticas, siendo una de ellas a un recurso de administrador, aunque con un código 302 (Recurso movido temporalmente). Las otras dos poseen un código 200 por lo que probablemente el atacante haya tenido éxito al explotarla. El user. El user-agent es curl, por lo que podría ser un indicador de compromiso de que efectivamente es un atacante intentando explotar el CVE-2023-22515.
 
-![](Pasted%20image%2020240414061200.png)
+![](./img/Pasted%20image%2020240414061200.png)
 
 Sí buscamos en google además, encontramos que un indicador de compromiso es efectivamente la presencia de `setup/setupadministrator.action` en los logs de atlassian-confluence:
 
-![](Pasted%20image%2020240414061351.png)
+![](./img/Pasted%20image%2020240414061351.png)
 
 Y ese es de hecho nuestro caso:
 
-![](Pasted%20image%2020240414061431.png)
+![](./img/Pasted%20image%2020240414061431.png)
 
 Por lo que efectivamente este ataque es **positivo** y además se ha realizado con éxito comprometiendo el servidor de confluencia servido con Atlassian.
 
 Esta vez en el tipo de ataque marcaremos **Other** debido a que es un CVE específico:
 
-![](Pasted%20image%2020240414061555.png)
+![](./img/Pasted%20image%2020240414061555.png)
 
 Indicaremos que el ataque se ha realizado con éxito, que se debe elevar el nivel de alerta a Tier 2 y pondremos la máquina vulnerada en contención para evitar daños mayores.
 ## Preguntas
@@ -634,16 +634,16 @@ Es mucha información con tan solo un detalle, y en nuestros playbooks solo se m
 Tenemos una supuesta ejecución de archivo malicioso tras abrir un documento de Microsoft Office, es la información que nos aporta la incidencia. Lo primero que deberíamos comprobar es qué ha detectado el malware, si internet, el empleado mediante la observación de comportamiento o conexiones sospechosas.. etc, pero antes me interesa conocer el CVE-2022-30190 ya que en los incidentes anteriores me ha ayudado mucho conocer de qué se trata para actuar más rápidamente.
 
 De inmediato encontramos esta información:
-![](Pasted%20image%2020240414193034.png)
+![](./img/Pasted%20image%2020240414193034.png)
 
 Que nos indica efectivamente que el CVE está relacionado con abrir un documento de office y que consiste en un archivo que de primeras sale en blanco, pero por detrás está realizando conexiones a URLs maliciosas. La incidencia se reporta en 2 de Junio de 2022 a las 03:22 PM, y al revisar las conexiones de la máquina afectada (JonasPRD) vemos que no hay conexiones a esa hora exacta o, al menos, en esa ventana de tiempo:
 
-![](Pasted%20image%2020240414193540.png)
+![](./img/Pasted%20image%2020240414193540.png)
 
 Se han revisado todas las IPs con herramientas como VirusTotal, AbuseIPDB y Cisco Talos, y dos de ellas reportan como maliciosa o al menos sospechosa la IP **99.83.154.118**, 
 
-![](Pasted%20image%2020240414193821.png)
-![](Pasted%20image%2020240414194142.png)
+![](./img/Pasted%20image%2020240414193821.png)
+![](./img/Pasted%20image%2020240414194142.png)
 
 Esto ya podría ser sospechoso de intrusión. Revisamos la terminal de la máquina ya que estamos aquí y vemos que hay comandos que podemos afirmar prácticamente ya que son maliciosos.
 
@@ -655,27 +655,27 @@ Este comando está abriendo una cmd, yéndose a la carpeta users/public del disc
 
 Revisando los servicios, no vemos antivirus ni otros servicios extraños realmente, solo un cmd que podría estar relacionado con el comando anterior, por lo que la primera pregunta del playbook vamos a contestar que el indicador de la amenaza es "Other", concretamente desde mi punto de vista el indicador de la amenaza es el comportamiento extraño al abrir el documento, el cual de hecho está asociado con el CVE-2022- 30190.
 
-![](Pasted%20image%2020240414195219.png)
+![](./img/Pasted%20image%2020240414195219.png)
 
 Vamos a revisar los logs ahora para ver si el malware ha sido puesto en cuarentena:
-![](Pasted%20image%2020240414195431.png)
-![](Pasted%20image%2020240414195452.png)
-![](Pasted%20image%2020240414195514.png)
+![](./img/Pasted%20image%2020240414195431.png)
+![](./img/Pasted%20image%2020240414195452.png)
+![](./img/Pasted%20image%2020240414195514.png)
 
 Pero parece que no hay rastro de que se haya puesto ninguno de los supuestos archivos en cuarentena ni que ni siquiera se hayan manipulado por el antivirus u otro software de seguridad. Se nos pide analizar el malware en busca de C2, cosa que previamente hicimos con la URL acotada en la ventana de tiempo del incidente, además de ver el comportamiento claramente relacionado con el CVE-2022-30190, por lo que marcamos maliciosa.
-![](Pasted%20image%2020240414195631.png)
+![](./img/Pasted%20image%2020240414195631.png)
 
 Debemos comprobar si la URL que detectamos como maliciosa ha sido accedida por alguno de nuestros equipos para ver si ha existido C2 a través de los logs:
 
-![](Pasted%20image%2020240414195830.png)
-![](Pasted%20image%2020240414195903.png)
+![](./img/Pasted%20image%2020240414195830.png)
+![](./img/Pasted%20image%2020240414195903.png)
 
 Parece que no hay registros de que haya sido accedida. Determinamos pues que es un **positivo** y que efectivamente estamos frente a malware, considero que es necesario igual que en los otros incidentes elevar a Tier 2, pero no se nos menciona en el playbook actual.
 
 
 > [!WARNING] Error
 > Parece que en este caso, sí que habían intentado un command and control, debería haber investigado más el funcionamiento del CVE y revisar conexiones a la máquina local, y no únicamente relacionadas con la URL maliciosa. Allí podía comprobarse una conexión desde un dominio xmlformats.com, el cual de hecho se produce a la hora del incidente. También, existía un correo malicioso que nos proporcionaba hasta el archivo en sí que contenia el malware para poder analizarlo. Los hashes no lo hemos comprobado tampoco. Este incidente... regular.
-> ![](Pasted%20image%2020240414201605.png)
+> ![](./img/Pasted%20image%2020240414201605.png)
 
 
 
@@ -727,47 +727,47 @@ En esta incidencia tenemos un patrón anómalo sospechoso de ser malicioso encon
 
 Si comprobamos el hash adjunto en el incidente comprobamos que efectivamente este hash es altamente malicioso, pero no es de extrañar porque ha sido ésto lo que ha causado la alerta:
 
-![](Pasted%20image%2020240414205551.png)
+![](./img/Pasted%20image%2020240414205551.png)
 
 El playbook nos indica que recabemos la información suficiente para comprobar si esta incidencia se ha escalado correctamente al Tier 2, y que comprobamos logs para ver si existen actividades de reconocimiento en nuestros servicios. Comprobamos los logs y encontramos tres de ellos que son realmente sospechosos, uno de ellos relacionado con la descarga de emails, por supuesto potencialmente relacionado con la herramienta de *Hyperscrape*:
 
-![](Pasted%20image%2020240414204241.png)
-![](Pasted%20image%2020240414204254.png)
-![](Pasted%20image%2020240414204310.png)
+![](./img/Pasted%20image%2020240414204241.png)
+![](./img/Pasted%20image%2020240414204254.png)
+![](./img/Pasted%20image%2020240414204310.png)
 También un evento de que éxito de autenticación en una cuenta, debemos tenerlo en cuenta. 
 
 Vamos a revisar ahora los emails de Arthur para ver si existen siquiera o el tipo de información que podrían contener. 
 
-![](Pasted%20image%2020240414204850.png)
-![](Pasted%20image%2020240414205907.png)
+![](./img/Pasted%20image%2020240414204850.png)
+![](./img/Pasted%20image%2020240414205907.png)
 
 Pero parece que no hay emails, comprobemos la máquina, sus conexiones externas e internas. Concretamente vamos a revisar la de los logs. 
 
 Parece que la IP que ha realizado la operación de descarga de archivos es una de nuestra propia red, y correponde con la máquina **Exchange Server** con IP **172.16.20.3**, además se nos indica que ha tenido éxito en la operación, por lo que el posible ataque se ha completado. ¿Podría significar esto que una de nuestras máquinas está infectada y está atacando a las demás en red interna? 
 
-![](Pasted%20image%2020240414205947.png)
+![](./img/Pasted%20image%2020240414205947.png)
 
 Después de comprobar esto, vamos a seguir con el playbook, que nos hace la siguiente pregunta:
 
-![](Pasted%20image%2020240414210033.png)
+![](./img/Pasted%20image%2020240414210033.png)
 
 Para la cual no estoy muy seguro, por que podría entenderse como *host information* algunos emails por tener adjuntos por ejemplo. Descartando lo anterior, que en realidad puede ser algo ambigüo, lo más lógico me parece  "**Gather Victim Identity Information**", ya que en los correos es muy probable que haya información personal principalmente. Que hubiera habido correos electrónicos almacenados del usuario habría sido bastante útil. 
 
 Tenemos que contestar ahora si la IP del atacante era externa o interna, en los logs hemos visto que era del Exchange Server, el cual pertenece a nuestra Red Interna, pero justo para asegurar se comprueba el famoso log que nos indica un intento de autenticación exitoso y vemos que la IP que lo realiza en la máquina de Arthur **es externa**. Lo que habrá ocurrido aquí probablemente es que el servidor de intercambio esté relacionado con el flujo del correo electrónico, y que tenga que pasar por ahí, pero no quiere decir que esté infectado. Aún así, sería recomendable investigarlo y tenerlo controlado.
 
-![](Pasted%20image%2020240414211607.png)
+![](./img/Pasted%20image%2020240414211607.png)
 
 Determinamos que es externa.
 
-![](Pasted%20image%2020240414210311.png)
+![](./img/Pasted%20image%2020240414210311.png)
 
 Comprobamos la IP encontrada en los logs y vemos que existe una conexión al puerto 3389, frecuente para Escritorio Remoto, y hacia el ordenador de Arthur. Esto nos confirma que efectivamente ha sido vulnerado.
 
-![](Pasted%20image%2020240414211854.png)
+![](./img/Pasted%20image%2020240414211854.png)
 
 A continuación tenemos que determinar el alcance, y efectivamente tal y como dudábamos antes, considero que el alcance es al menos dos máquinas, la de Arhur y el servidor de intercambio, el cual realiza la petición. Aunque no esté implicada, creo que debería formar parte del alcance del incidente y merece investigación. No hay indicios de que haya más máquinas implicadas.
 
-![](Pasted%20image%2020240414210416.png)
+![](./img/Pasted%20image%2020240414210416.png)
 
 Se nos pregunta si deben poner se en contención las máquinas, a lo que respondemos afirmativamente, ya que están claramente vulneradas.
 
