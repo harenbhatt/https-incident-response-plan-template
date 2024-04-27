@@ -54,42 +54,42 @@ Puerto de destino: 8000
 
 Si nos vamos a Virustotal e introducimos la ip 180.101.88.240 nos da que es malicioso
 
-IMG01
+![img01](img/img01.png)
 
 A continuación nos vamos a la página abuseipdb y aquí vemos que la dirección IP pertenece a una empresa China llamada Telecom.
 
-IMG02
+![img02](img/img02.png)
 
 A continuación Lets defend nos pregunta si el trafico es malicioso y le decimos que si, ya que con Virustotal y abuseipdb vemos que efectivamente eran maliciosos.
 
 
-IMG03
+![img03](img/img03.png)
 
 Ahora nos pregunta el tipo de ataque que es, si investigamos encontraremos un archivo shell.zip si lo descomprimimos hay dos archivos un .sh (script) y un archivo .xsl, podemos analizar el contenido de estos para ver realmente el código que se está ejecutando y parece que quiere crear un documento y abrir una reverse shell, por lo tanto deducimos que el tipo de ataque es un XML Injection.
 
 Si buscamos en la parte de la bandeja de entrafa e intentamos buscar la ip de origen o destino no vemos nada relevante por lo tanto deducimos que el ataque no esta planeado.
 
-IMG04
+![img04](img/img04.png)
 
 Ante esta pregunta hemos ivenstigado y la dirección de origen 180.101.88.240 de la alerta pertenece a la red externa de la empresa china, pero la dirección de destino que es esta: 172.16.20.13  pertenece a la empresa Splunk. Por eso seleccionaremos la opción de Internet → Red de empresa.
 
-IMG05
+![img05](img/img05.png)
 
 Nos preguntan si el ataque fue exitoso, y si lo fue porque la acción del dispositivo está permitida.
 
 La siguiente parte es el apartado de contención, Como se muestra aquí abajo debemos aislar el dispositivo así restringimos al atacante y contenemos el dispositivo:
 
-IMG06
+![img06](img/img06.png)
 
 Como se muestra aquí abajo Debemos aislar el dispositivo así restringimos al atacante y contenemos el dispositivo:
 
 A cotinuación ponemos los artifacts que veamos importantes y nos quedaría así:
 
-IMG07
+![img07](img/img07.png)
 
 Por ultimo nos pregutan si hay que escalarlo al nivel 2 y diremos que si:
 
-IMG08
+![img08](img/img08.png)
 
 Y ya habríamos terminado el playbook.
 
@@ -152,44 +152,44 @@ Nombre de host: Matthew
 
 Protocolo: RDP
 
-IMG09
+![img09](img/img09.png)
 
 Aquí elegiremos la opción de ip de origen externa, ya que si la ponemos en virustotal y AbuseIPDB nos darán información de que la ip es maliciosa y externa:
 
-IMG10
+![img10](img/img10.png)
 
 Seleccionamos maliciosa también ya que hemos visto que es maliciosa
 
-IMG11
+![img11](img/img11.png)
 
 Si nos vamos a los logs y filtramos por esta dirección ip maliciosa, podemos ver que se realizó un ataque de fuerza bruta en el servicio RDP de este host Matthew.
 
-IMG12
+![img12](img/img12.png)
 
 Seleccionamos que si hay una respuesta de la ip del atacante a un puerto SSH o RDP porque el puerto que vemos en la imagen de arriba corresponde a rdp (3389)
 
-IMG13
+![img13](img/img13.png)
 
 En la siguiente opción marcamos no, ya que si vemos los registros, todos los registros de la ip del atacante solo val al host de Matthew.
 
-IMG14
+![img14](img/img14.png)
 
 Si miramos los logs, vemos que el ataque de fuerza bruta fue exitosos y el atacante obtuvo acceso al sistema:
 
-IMG15
+![img15](img/img15.png)
 
 
 Así que seleccionamos que sí:
 
-IMG16
+![img16](img/img16.png)
 
 Deberiamos aislar el equipo de Matthew, para ello nos vamos a Endpoint Security y le damos a la opción de contener/aislar:
 
-IMG17
+![img17](img/img17.png)
 
 A contunuación seleccionamos los artifacts más importantes:
 
-IMG18
+![img18](img/img18.png)
 
 Y ya hemos terminado el playbook.
 
@@ -254,37 +254,37 @@ URL: /_api/web/siteusers
 
 Lo primero que haremos como siempre meter la ip de origen en Virustotal y abuselPDB y nos dará que la ip es maliciosa:
 
-IMG19
+![img19](img/img19.png)
 
 Ahora nos preguntan si el trafico es malicioso y por lo que hemos visto en Virustotal, los logs y abuselPDB decimos que si es maliciosa:
 
-IMG20
+![img20](img/img20.png)
 
 Aún no estamos seguros del tipo de ataque, así que seleccionamos other (otro) en la siguiente pestaña.
 
 Para saber si el incidente fue creado por un test de penetración nos iremos a buscar en la parte de correos y bandeja de entradas y vemos que nada coincide con las ips e información que tenemos, así que no es planeado.
 
-IMG21
+![img21](img/img21.png)
 
 La dirección de origen de la alerta pertenece a la red externa de la empresa, pero la dirección de destino pertenece a MS-SharePointServer. Así que el flujo que seleccionamos es Internet → Red de empresa.
 
-IMG22
+![img22](img/img22.png)
 
 Para ver si el ataque fue exitoso o no, tendremos que ver los logs y los raw y veremos que el atacante accedió a las urls de /currentuser y /siteusers:
 
-IMG23
+![img23](img/img23.png)
 
 Para la parte de contención nos iremos a la ip 172.16.17.233 y lo contendremos:
 
-IMG24
+![img24](img/img24.png)
 
 Ahora añadimos los artifacts más importantes:
 
-IMG25
+![img25](img/img25.png)
 
 Y por ultimo si necesitamos escalar a nivel 2 para alguien más especializado.
 
-IMG26
+![img26](img/img26.png)
 
 ### ¿Es necesario realizar alguna acción específica para el restablecimiento de los servicios afectados?
 
@@ -336,47 +336,47 @@ Dirección de destinos : Claire@letsdefend.io
 
 Luego tendremos que irnos a virustotal e introducir la ip 158.69.201.47 y vemos que es maliciosa y que saltan varios antivirus:
 
-IMG27
+![img27](img/img27.png)
 
 Ahora haremos una busqueda por el correo security@microsecmfa.com y nos saldrá un mensaje con un qr de microsoft:
 
-IMG28
+![img28](img/img28.png)
 
 A continuación nos descargamos la imagen del QR y lo metemos en cyberchef y nos dará la siguiente dirección: https://ipfs.io/ipfs/Qmbr8wmr41C35c3K2GfiP2F8YGzLhYpKpb4K66KU6mLmL4#
 
 Si buscamos esa url en virustotal nos sale que es maliciosa y que lo más probable es que sea phishing.
 
-IMG29
+![img29](img/img29.png)
 
 Ahora que sabemos que es malicioso ese correo, lo eliminamos en Let's Defend.
 
 Ahora tenemos que verificar si el usuario accedió a esa URL del QR, para ello nos vamos a Endpoint Security y vemos la ip de Claire y activamos la contención:
 
-IMG30
+![img30](img/img30.png)
 
 Aquí elegiremos la opción de Phishing for Information.
 
-IMG31
+![img31](img/img31.png)
 
 Vemos que el remitente de correo electronico y la URL del código QR es externa, por lo tanto la opción correcta es externa.
 
-IMG32
+![img32](img/img32.png)
 
 En virustotal hemos visto que la ip es maliciosa, así que la ip del atacante si es sospechosa:
 
-IMG33
+![img33](img/img33.png)
 
 Comprobamos si alguien más recibió el correo electronico con el phishing, pero vemos que solo lo recibió Claire, así que no hay mas de un usuario afectado.
 
-IMG34
+![img34](img/img34.png)
 
 Ya hemos contenido al host, haremos esto para evitar más amenazas, ya que no podemos comprobar al 100% si el usuario llegó a acceder a la URL maliciosa.
 
-IMG35
+![img35](img/img35.png)
 
 Y estos serían los artifacts a poner:
 
-IMG36
+![img36](img/img36.png)
 
 Y ya habriamos terminado el playbook.
 
