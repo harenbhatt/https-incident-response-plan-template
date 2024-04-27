@@ -11,7 +11,7 @@ Elevation-privilege -- listo
 Identity and access
 Iot device attacks
 Man in the middle
-Phishing
+Phishing -- listo
 Ransomware
 
 
@@ -404,7 +404,80 @@ Y ya habriamos terminado el playbook.
 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
 
-## Incidente 5
+## Incidente 5 -- Passwd Found in Requested URL - Possible LFI Attack
+
+1.a Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
+
+### Clasificación según taxonomía
+
+Analista de seguridad 
+
+### Criticidad
+
+Alta
+
+### Descripción del incidente
+
+La URL contiene contraseña.
+
+1.b ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente? 
+
+### Acciones tomadas para su resolución
+
+Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
+
+Direccion IP Destino: 172.16.17.13
+
+Dirección IP Origen: 106.55.45.162
+
+Url solicitada: `https://172.16.17.13/?file=../../../../etc/passwd`
+
+Si nos vamos al apartado de los y buscamos esta url en los logs, veremos más información sobre esta url y si nos fijamos el servidor dió un código de error 500, lo que significa que dió un error interno del servidor y por lo tanto el ataque falló.
+
+![img38](img/img37.png)
+
+Ahora metemos en virustotal la ip del atacante y veremos que varios detalles sobre que la ip es maliciosa y que viene de China:
+
+![img39](img/img38.png)
+
+Si miramos en el apartado de correos y en el de comandos, tampoco vemos nada sospechoso por lo que podemos concluir que fue un falso positivo.
+
+Por  lo tanto deducimos que:
+
+- El ataque falló
+- La dirección del tráfico es de: Internet a la red empresarial
+- No es una prueba planificada
+- Inclusión de archivos locales
+- Tráfico malicioso
+- No es necesario escalar al Nivel 2 ya que hemos comprobado que el ataque falló y fue un falso positivo.
+
+Y ya habriamos terminado el playbook.
+
+
+### ¿Es necesario realizar alguna acción específica para el restablecimiento de los servicios afectados?
+
+No no es necesario ya que no ha afectado a ninguna caída o error de los servicios o servidores.
+
+### Documentar acciones y proponer mejoras para futuras respuestas.
+
+HACERRRRRR
+### Desarrollar estrategias preventivas para evitar la repetición de incidentes similares
+HACERRRRRRRRR
+
+
+
+## Preguntas
+
+2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+
+HACERR
+3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+
+HACERRR
+3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+
+HACERRR 
+4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
 
 ## Incidente 6
@@ -423,4 +496,3 @@ Y ya habriamos terminado el playbook.
 ## Incidente 10
 
 
-## Incidente 11
