@@ -835,9 +835,92 @@ No no es necesario ya que no ha afectado a ninguna caída o error de los servici
 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
 
-## Incidente 10
+## Incidente 10: SOC235 - Atlassian Confluence Broken Access Control 0-Day CVE-2023-22515
+
+1.a Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
+
+### Clasificación según taxonomía
+
+Analista de seguridad 
+
+### Criticidad
+
+Alta
+
+### Descripción del incidente
+
+Esta actividad puede ser indicativa de un intento de explotar la vulnerabilidad CVE-2023-22515, lo que podría conducir a la creación de un nuevo usuario administrador.
+
+1.b ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente? 
+
+### Acciones tomadas para su resolución
+
+Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
+
+Dirección IP destino: 172.16.17.234
+
+Dirección IP origen:  43.130.1.222
+
+Nombre de Host: Confluence Data Center
+
+URL solicitada: /server-info.action?bootstrapStatusProvider.applicationConfig.setupComplete=false
+
+Si nos vamos al apartado de Log Management podremos vervarios logs intenresantes y en Threat Intel veremos que tiene marcado como TAG que es malicoso.
+
+![img72](img/img72.png)
+
+Por lo tanto marcamos que el tráfico es malicioso, también si lo miramos en Virustotal vemos que es malicioso:
+
+![img73](img/img73.png)
+
+En el tipo de ataque ponemos Otro, ya que de lo que hemos investigado no pertenece a ninguno de los otros ataques.
+
+![img74](img/img74.png)
+
+La dirección de origen 43.130.1.222 de la alerta pertenece a la red externa de la empresa. Pero 172.16.17.234 es la dirección de destino interna, por lo tanto el flujo va de Internet a la red de la compañía.
+
+![img75](img/img75.png)
+
+Aquí en el RAW Log vemos que el código de respuesta es un 200.
+
+![img76](img/img77.png)
+
+Por lo tanto el ataque fue exitoso.
+
+![img76](img/img76.png)
+
+Tendremos que aislar el host:
+
+![img78](img/img78.png)
+
+Ahora pondremos los siguientes artifacts:
 
 
+
+
+Y ya habriamos terminado el playbook.
+
+### ¿Es necesario realizar alguna acción específica para el restablecimiento de los servicios afectados?
+
+No no es necesario ya que no ha afectado a ninguna caída o error de los servicios o servidores, basta con contener el host.
+
+### Documentar acciones y proponer mejoras para futuras respuestas.
+
+### Desarrollar estrategias preventivas para evitar la repetición de incidentes similares
+
+
+## Preguntas
+
+2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+
+
+3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+
+
+3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+
+
+4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
 
 
