@@ -1,27 +1,10 @@
 # Atención y Seguimiento de Incidentes Usando Let's Defend
 
-Nuestros playbooks de referencia:
-Deepfakes
-Bruteforce -- listo
-Code-injection  -- listo
-Cryptojacking
-Ddos
-Defacement
-Elevation-privilege -- listo
-Identity and access
-Iot device attacks
-Man in the middle
-Phishing -- listo
-Ransomware
-
-
 ## Índice
 
 ## Incidente 1: SOC239 - Remote Code Execution Detected in Splunk Enterprise
 
-1.a Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
-
-### Clasificación según taxonomía
+### 1.a Clasificación según taxonomía
 
 Acceso no autorizado
 
@@ -62,7 +45,6 @@ A continuación nos vamos a la página abuseipdb y aquí vemos que la dirección
 
 A continuación Lets defend nos pregunta si el trafico es malicioso y le decimos que si, ya que con Virustotal y abuseipdb vemos que efectivamente eran maliciosos.
 
-
 ![img03](img/img03.png)
 
 Ahora nos pregunta el tipo de ataque que es, si investigamos encontraremos un archivo shell.zip si lo descomprimimos hay dos archivos un .sh (script) y un archivo .xsl, podemos analizar el contenido de estos para ver realmente el código que se está ejecutando y parece que quiere crear un documento y abrir una reverse shell, por lo tanto deducimos que el tipo de ataque es un XML Injection.
@@ -93,40 +75,27 @@ Por ultimo nos pregutan si hay que escalarlo al nivel 2 y diremos que si:
 
 Y ya habríamos terminado el playbook.
 
-### ¿Es necesario realizar alguna acción específica para el restablecimiento de los servicios afectados?
-
-No, no es necesario.
-
-### Documentar acciones y proponer mejoras para futuras respuestas.
-
-
-### Desarrollar estrategias preventivas para evitar la repetición de incidentes similares
-
-
 ## Preguntas
 
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
-2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+No fue necesario realizar ninguna acción específica para el restablecimiento de los servicios afectados, ya que el foco estaba en contener y analizar el incidente.
 
-No, no he tenido que hacer ninguna acción para el restablecimiento de los servicios afectados.
+### 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
 
-3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+Las acciones destacadas durante la resolución del incidente incluyen la recopilación de datos críticos como las direcciones IP y puertos involucrados, la confirmación de la malicia del tráfico usando herramientas como Virustotal y abuseipdb, y el análisis detallado del código malicioso encontrado en los archivos decomprimidos.
 
-Hacerrr
+### 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
-3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+El análisis de las actuaciones llevadas a cabo mostró que es fundamental mejorar la monitorización y respuesta automática ante indicadores de compromiso. Se pueden integrar mejoras en el playbook como la automatización de algunas respuestas a indicadores conocidos y la revisión periódica de las reglas de seguridad.
 
-Hacerrr
+### 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
-4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
-
-Hacerrr
+Para prevenir futuros incidentes similares, se decidió mejorar la configuración de seguridad de los dispositivos y aplicaciones implicadas, aumentar la vigilancia de las comunicaciones de red con IPs de alto riesgo, y realizar auditorías de seguridad más frecuentes.
 
 ## Incidente 2: 	SOC176 - RDP Brute Force Detected
 
-1.a Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
-
-### Clasificación según taxonomía
+### 1.a Clasificación según taxonomía
 
 Fuerza Bruta
 
@@ -178,7 +147,6 @@ Si miramos los logs, vemos que el ataque de fuerza bruta fue exitosos y el ataca
 
 ![img15](img/img15.png)
 
-
 Así que seleccionamos que sí:
 
 ![img16](img/img16.png)
@@ -193,40 +161,28 @@ A contunuación seleccionamos los artifacts más importantes:
 
 Y ya hemos terminado el playbook.
 
-
-### ¿Es necesario realizar alguna acción específica para el restablecimiento de los servicios afectados?
-
-
-### Documentar acciones y proponer mejoras para futuras respuestas.
-
-
-### Desarrollar estrategias preventivas para evitar la repetición de incidentes similares
-
-
 ## Preguntas
 
-2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
-HACER
+No fue necesario realizar acciones específicas para el restablecimiento de los servicios, ya que el enfoque estaba en la contención del ataque
 
-3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+### 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
 
-HACER
+Las principales acciones realizadas incluyeron la identificación y análisis de la IP de origen maliciosa, utilizando herramientas como Virustotal y AbuseIPDB, y la revisión de los registros para confirmar un ataque de fuerza bruta.
 
-3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+### 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
-HACER
+El análisis reveló la importancia de mejorar las configuraciones de seguridad en los servicios expuestos, como RDP. Posibles mejoras para el playbook podrían incluir el fortalecimiento de las políticas de contraseñas y la implementación de la autenticación de dos factores.
 
-4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+### 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
-HACER
+Para prevenir incidentes similares, se decidió mejorar la monitorización de intentos de inicio de sesión fallidos y configurar alertas automáticas para patrones sospechosos, además de reforzar el uso de VPN para accesos remotos y la segmentación de la red.
 
 
 ## Incidente 3: SOC227 - Microsoft SharePoint Server Elevation of Privilege
 
-1.a Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
-
-### Clasificación según taxonomía
+### 1.a Clasificación según taxonomía
 
 Ataque Web
 
@@ -286,24 +242,16 @@ Y por ultimo si necesitamos escalar a nivel 2 para alguien más especializado.
 
 ![img26](img/img26.png)
 
-### ¿Es necesario realizar alguna acción específica para el restablecimiento de los servicios afectados?
-
-
-### Documentar acciones y proponer mejoras para futuras respuestas.
-
-
-### Desarrollar estrategias preventivas para evitar la repetición de incidentes similares
-
 
 ## Preguntas
 
-2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
-3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+### 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
 
-3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+### 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
-4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+### 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
 
 ## Incidente 4: SOC251 - Quishing Detected (QR Code Phishing)
@@ -380,35 +328,20 @@ Y estos serían los artifacts a poner:
 
 Y ya habriamos terminado el playbook.
 
-
-
-### ¿Es necesario realizar alguna acción específica para el restablecimiento de los servicios afectados?
-
-
-### Documentar acciones y proponer mejoras para futuras respuestas.
-
-
-### Desarrollar estrategias preventivas para evitar la repetición de incidentes similares
-
-
-
-
 ## Preguntas
 
-2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
-3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+### 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
 
-3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+### 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
-4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+### 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
 
 ## Incidente 5: Passwd Found in Requested URL - Possible LFI Attack
 
-1.a Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
-
-### Clasificación según taxonomía
+### 1.a Clasificación según taxonomía
 
 Analista de seguridad 
 
@@ -453,38 +386,20 @@ Por  lo tanto deducimos que:
 
 Y ya habriamos terminado el playbook.
 
-
-### ¿Es necesario realizar alguna acción específica para el restablecimiento de los servicios afectados?
-
-No no es necesario ya que no ha afectado a ninguna caída o error de los servicios o servidores.
-
-### Documentar acciones y proponer mejoras para futuras respuestas.
-
-HACERRRRRR
-### Desarrollar estrategias preventivas para evitar la repetición de incidentes similares
-HACERRRRRRRRR
-
-
-
 ## Preguntas
 
-2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
-HACERR
-3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+### 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
 
-HACERRR
-3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+### 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
-HACERRR 
-4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+### 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
 
 ## Incidente 6: SOC250 - APT35 HyperScrape Data Exfiltration Tool Detected
 
-1.a Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
-
-### Clasificación según taxonomía
+### 1.a Clasificación según taxonomía
 
 Analista de seguridad 
 
@@ -511,7 +426,6 @@ Nombre del proceso : EmailDownloader.exe
 Si nos vamos a los logs y miramos la ip 172.16.17.72 veremos que hay varios logs que nos interesan:
 
 ![img41](img/img41.png)
-
 
 Ahora nos vamos al apartado de Endpoint y páginas de seguridad de correo electrónico.
 
@@ -543,37 +457,20 @@ Y por último aquí elegimos que sí, que tenemos que contenerlo:
 
 Y ya habriamos terminado el playbook.
 
-
-### ¿Es necesario realizar alguna acción específica para el restablecimiento de los servicios afectados?
-
-No no es necesario ya que no ha afectado a ninguna caída o error de los servicios o servidores.
-
-### Documentar acciones y proponer mejoras para futuras respuestas.
-
-
-### Desarrollar estrategias preventivas para evitar la repetición de incidentes similares
-
-
-
 ## Preguntas
 
-2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+### 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
 
-3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+### 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
-
-3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
-
-
-4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+### 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
 
 ## Incidente 7: SOC164 - Suspicious Mshta Behavior
 
-1.a Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
-
-### Clasificación según taxonomía
+### 1.a Clasificación según taxonomía
 
 Analista de seguridad 
 
@@ -633,38 +530,19 @@ Ahora vamos a contener el host:
 
 Y ya habriamos terminado el playbook.
 
-
-### ¿Es necesario realizar alguna acción específica para el restablecimiento de los servicios afectados?
-
-No no es necesario ya que no ha afectado a ninguna caída o error de los servicios o servidores, basta con contener el host.
-
-### Documentar acciones y proponer mejoras para futuras respuestas.
-
-
-### Desarrollar estrategias preventivas para evitar la repetición de incidentes similares
-
-
-
 ## Preguntas
 
-2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+### 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
 
-3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+### 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
-
-3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
-
-
-4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
-
-
+### 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
 ## Incidente 8: SOC166 - Javascript Code Detected in Requested URL
 
-1.a Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
-
-### Clasificación según taxonomía
+### 1.a Clasificación según taxonomía
 
 Analista de seguridad 
 
@@ -718,35 +596,19 @@ Por lo que dijimos antes, esta alerta no necesita una escalada al siguiente nive
 
 Y ya habriamos terminado el playbook.
 
-
-### ¿Es necesario realizar alguna acción específica para el restablecimiento de los servicios afectados?
-
-No no es necesario ya que no ha afectado a ninguna caída o error de los servicios o servidores, basta con contener el host.
-
-### Documentar acciones y proponer mejoras para futuras respuestas.
-
-### Desarrollar estrategias preventivas para evitar la repetición de incidentes similares
-
-
 ## Preguntas
 
-2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+### 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
 
-3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+### 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
-
-3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
-
-
-4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
-
+### 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
 ## Incidente 9: SOC169 - Possible IDOR Attack Detected
 
-1.a Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
-
-### Clasificación según taxonomía
+### 1.a Clasificación según taxonomía
 
 Analista de seguridad 
 
@@ -812,34 +674,19 @@ Como vemos que el ataque fue exitoso, la vulnerabilidad IDOR debe derivarse al e
 
 Y ya habriamos terminado el playbook.
 
-### ¿Es necesario realizar alguna acción específica para el restablecimiento de los servicios afectados?
-
-No no es necesario ya que no ha afectado a ninguna caída o error de los servicios o servidores, basta con contener el host.
-
-### Documentar acciones y proponer mejoras para futuras respuestas.
-
-### Desarrollar estrategias preventivas para evitar la repetición de incidentes similares
-
-
 ## Preguntas
 
-2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+### 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
 
-3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+### 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
-
-3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
-
-
-4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
-
+### 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
 ## Incidente 10: SOC235 - Atlassian Confluence Broken Access Control 0-Day CVE-2023-22515
 
-1.a Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
-
-### Clasificación según taxonomía
+### 1.a Clasificación según taxonomía
 
 Analista de seguridad 
 
@@ -895,29 +742,24 @@ Tendremos que aislar el host:
 
 Ahora pondremos los siguientes artifacts:
 
+![img79](img/img79.png)
 
+Y por último escalamos a nivel 2 el caso, ya que ha sido exitoso y requiere un análisis de mayor nivel para su resolución.
 
+![img80](img/img80.png)
 
-Y ya habriamos terminado el playbook.
-
-### ¿Es necesario realizar alguna acción específica para el restablecimiento de los servicios afectados?
-
-No no es necesario ya que no ha afectado a ninguna caída o error de los servicios o servidores, basta con contener el host.
-
-### Documentar acciones y proponer mejoras para futuras respuestas.
-
-### Desarrollar estrategias preventivas para evitar la repetición de incidentes similares
-
+Y ya habríamos terminado el playbook.
 
 ## Preguntas
 
-2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+### 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
 
-3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+### 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
+### 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
-3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
 
 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
