@@ -12,28 +12,51 @@ Un atacante ha generado varios intentos de conexión a distintos usuarios de la 
 ### Memoria Possible Brute Force Detected on VPN
 
 La primera pregunta a la que me he enfrentado en este playbook es si la dirección IP de origen es a una dirección externa o interna. La dirección es la 37.19.221.229 y la dirección IP es la 33.33.33.33. 
+
 ![diripvpn](./img/ipvruteforcevpn.png)
+
 Comprobando el endpoint security vemos que la dirección IP no aparece como una de la LAN.
+
 ![LANIPBrute](./img/LANIPbrute.png)
+
 He seleccionado que es externa.
+
 ![externaip](./img/externabruteforce.png)
+
 Lo siguiente que se nos pide comprobar la dirección IP en virtustotal por ejemplo. Solo un uno la ha encontrado como sospechosa.
+
 ![virustotalbrute](./img/virustotalbruteforce.png)
+
 Por lo tanto si la he considerado sospechosa.
+
 ![suspiciousbruteforce](./img/yesbruteforcevirus.png)
+
 El siguiente paso del playbook es comprobar en los logs el tipo de objetivo si es un SSH o un RDP. He buscado la dirección IP para comprobar el puerto de destino y el puerto es 443.
+
 ![port443](./img/destinationportbruteforce.png)
+
 Así que la respuesta es no.
+
 ![nosshordpbrutevpn](./img/nosshordpbrutevpn.png)
+
 Puesto que el puerto de destino siempre es 443 la siguiente pregunta también se responde como no.
+
 ![variosservidoresno](./img/bruteforcevariosservers.png)
+
 La siguiente pregunta del playbook es si el brute force a la VPN fue exitosa. Investigando los logs se puede ver que si lo es.
+
 ![bruteforcesuccess](./img/loginbruteforcesucess.png)
+
 Por lo tanto la respuesta es que si lo fue.
+
 ![askyes](./img/bruteforcesuccessloginaskyes.png)
+
 La siguiente pregunta es si deberíamos aislar el dispositivo de la red y en mi opinión debería ser así ya que puede acabar landeando a otros dispositivos.
+
 ![yesaislar](./img/isolatedyes.png)
+
 En la imagen donde podemos compronar el login vemos que el usuario ha sido Mane por lo tanto hay que aislarlo de la red clicando en contener.
+
 ![contenido](./img/bruteforcevpncontenido.png)
 
 ### Preguntas Possible Brute Force Detected on VPN
