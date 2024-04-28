@@ -6,8 +6,6 @@
 - **Criticidad:** Media
 - **Descripción del Incidente:** Se detectó un intento de ataque de fuerza bruta a través del protocolo RDP desde la dirección IP 218.92.0.56 hacia el host Matthew (IP: 172.16.17.148). El ataque consistió en intentos de inicio de sesión fallidos desde una sola fuente con diferentes cuentas no existentes.
 
-![Diagrama de Ataque](URL_DEL_DIAGRAMA)
-
 ### 1.b Proceso de Investigación
 
 Para determinar si el ataque de fuerza bruta fue exitoso, se revisaron los registros de auditoría de SSH/RDP:
