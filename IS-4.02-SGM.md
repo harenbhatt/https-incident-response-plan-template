@@ -685,7 +685,7 @@ Como podemos ver la dirección IP es sospechosa así que marcamos en el playbook
 
 ![apt35-virustotal](./img/apt35-virustotal-yes.png)
 
-Ahora indica el playbook que investigamos si más EDR han sido obhetivo, solo ha sido el de Arthur al investigar las conexiones hacia esa dirección IP externa.
+Ahora indica el playbook que investigamos si más EDR han sido objetivo, solo ha sido el de Arthur al investigar las conexiones hacia esa dirección IP externa.
 
 ![apt35-determinar](./img/apt35-determinar.png)
 
