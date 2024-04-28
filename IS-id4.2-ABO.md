@@ -3,7 +3,7 @@
 ## Índice de Incidentes de Seguridad
 
 1. [SOC239 - Remote Code Execution Detected in Splunk Enterprise](#incidente-1-soc239---remote-code-execution-detected-in-splunk-enterprise)
-2. [SOC176 - RDP Brute Force Detected](#incidente-2-soc176---rdp-brute-force-detected)
+2. [SOC176 - RDP Brute Force Detected](#incidente-2-soc176--rdp-brute-force-detected)
 3. [SOC227 - Microsoft SharePoint Server Elevation of Privilege](#incidente-3-soc227---microsoft-sharepoint-server-elevation-of-privilege)
 4. [SOC251 - Quishing Detected (QR Code Phishing)](#incidente-4-soc251---quishing-detected-qr-code-phishing)
 5. [Passwd Found in Requested URL - Possible LFI Attack](#incidente-5-passwd-found-in-requested-url---possible-lfi-attack)
