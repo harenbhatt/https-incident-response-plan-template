@@ -357,20 +357,33 @@ Se ha hecho un posible uso malicioso de Certutil que es una herramienta utilizad
 El primer paso del playbook nos indica que es un LOLBin que es un binario de uso legitimo que puede ser utilizado con fines maliciosos por un atacante.
 
 En el segundo paso, nos explica que debemos determinar que binario fue el que ha generado la alerta. Para ello podemos directamente ir a la alerta generada.
+
 ![certutil-binary](./img/certutil-binary.png)
+
 Lo siguiente es saber que acción sospecha se ha ejecutado, para ello el playbook nos indica una página web que nos permite saber como "normalmente" actúan los LOLBAS. Si miramos en la captura anterior el Command Line, podemos comprobar que se ha hecho un mal uso de este binario si lo comparamos al dado por la página web.
+
 ![Certutil-lolboas](./img/certutillboas.png)
+
 Por lo tanto indicamos que si ha sido utilizado de manera sospechosa.
+
 ![Certutil-suspiciousyes](./img/certutilsuspiciousyes.png)
+
 Lo siguiente es indicar el tipo de actividad que ha hecho, como podemos ver en el command line y en la web dada por el playbook, la actividad es descargar un zip.
+
 ![Certutil-download](./img/certutildownload.png)
+
 Tras indicar el tipo de actividad, el playbook nos pide que investiguemos si la actividad la ha ejecutado un malware o un usuario.
 
 Si investigamos el usuario vemos que entre los comandos que ha ejecutado el comando en cuestión para descargar nmap entonces esto me indica que ha sido el usuario y no un malware.
+
 ![Cerutil-download-user](./img/certutilcommandlineuser.png)
+
 Marcamos que ha sido por parte del usuario y no de un malware.
+
 ![Cerutil-user-mark](./img/cerutiluser-mark.png)
+
 Por último el playbook nos dice que debemos contener el EDR. Así que he buscado el EDR del usuario a tráves de la dirección IP dada por la alerta y se ha contenido.
+
 ![Certutil-contained](./img/Certutil-contained.png)
 
 ### Preguntas Suspicious Certutil.exe Usage
@@ -407,22 +420,39 @@ Al parecer un usuario ha recibido un posible QR malicioso a través de su correo
 ### Memoria Quishing Detected (QR Code Phishing)
 
 El primer paso del playbook es comprobar que la alarma es generada por una actividad sospechosa. Como podemos ver el correo recibido por Claire proviene de una Dirección de correo que no se corresponde con la de Microsoft.
+
 ![quisihingmail](./img/quishingemail.png)
+
 Es obvio que la dirección de correo electrónico es falsa pero podemos investigar también el QR con ScanQR.
+
 ![quishingqrscanned](./img/quishingqrscanned.png)
+
 Si colocamos la URL dada por ScanQR en Virustotal, podemos ver que la URL es maliciosa.
+
 ![quishingqrmaliciosa](./img/quishingurlmaliciosa.png)
+
 Una vez determinado que el QR es malicioso, avanzamos en el playbook hasta que nos pregunta el tipo de reconocimiento. Marcamos Phishing para obtener información.
+
 ![quishingforinformation](./img/quishingforinformation.png)
+
 El siguiente paso es indicar si la dirección IP es externa, la dirección IP no se encuentra dentro de la red de la empresa siendo la siguiente, 158.69.201.47. Por lo tanto la dirección IP la marcamos como externa.
+
 ![quishingexternal](./img/quishinexternal.png)
+
 Ahora debemos comprobar que la dirección IP es maliciosa, la he comprobado a través de Virustotal.
+
 ![quishingipmalicious](./img/quishingipmalicious.png)
+
 Así que marcamos que la dirección IP si es maliciosa.
+
 ![quishingmaliciousyes](./img/quishingipmaliciousyes.png)
+
 Debemos en el siguiente paso que indica el playbook comprobar quién fue el objetivo, si es solo Claire o hay alguien más. Si investigamos al dirección IP en log management o el email security nada que indique que haya otro objetivo aparte de Claire así que marcamos que no ha sido afectado nadie más.
+
 ![quishingemailnoafectado](./img/quishingemailnoafectados.png)
+
 Por último nos indica que si creemos necesario, deberemos contener el EDR y que si creemos que lo es. En mi opinión hasta que no se sepa bien el alcance del Quishing, se debe contener el EDR.
+
 ![quishingcontainedyes](./img/quishingcontainedyes.png)
 
 ### Preguntas Quishing Detected (QR Code Phishing)
@@ -459,6 +489,7 @@ Se ha encontrado en una solicitud web una ejecución de power shell posiblemente
 ### Memoria PowerShell Found in Requested URL - Possible CVE-2022-41082 Exploitation
 
 El primer paso de este playbook es comprobar si el trafico es malicioso, para ello he investigado el log generado en busca de la url.
+
 ![powershellmalicious](./img/powershellmalicious-url.png)
 
 Teniendo la URL he ido a virustotal para comprobar si la URL se puede considerar sospechosa encontrandome con 2 antivirus dandolo como sospechoso.
