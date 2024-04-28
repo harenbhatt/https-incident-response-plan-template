@@ -2,6 +2,71 @@
 
 ## Índice
 
+# Índice de Incidentes de Seguridad
+
+## Tabla de Contenidos
+1. [SOC239 - Remote Code Execution Detected in Splunk Enterprise](#incidente-1-soc239---remote-code-execution-detected-in-splunk-enterprise)
+2. [SOC176 - RDP Brute Force Detected](#incidente-2-soc176---rdp-brute-force-detected)
+3. [SOC227 - Microsoft SharePoint Server Elevation of Privilege](#incidente-3-soc227---microsoft-sharepoint-server-elevation-of-privilege)
+4. [SOC251 - Quishing Detected (QR Code Phishing)](#incidente-4-soc251---quishing-detected-qr-code-phishing)
+5. [SOC235 - Passwd Found in Requested URL - Possible LFI Attack](#incidente-5-passwd-found-in-requested-url---possible-lfi-attack)
+6. [SOC250 - APT35 HyperScrape Data Exfiltration Tool Detected](#incidente-6-soc250---apt35-hyperscrape-data-exfiltration-tool-detected)
+7. [SOC164 - Suspicious Mshta Behavior](#incidente-7-soc164---suspicious-mshta-behavior)
+8. [SOC166 - Javascript Code Detected in Requested URL](#incidente-8-soc166---javascript-code-detected-in-requested-url)
+9. [SOC169 - Possible IDOR Attack Detected](#incidente-9-soc169---possible-idor-attack-detected)
+10. [SOC235 - Atlassian Confluence Broken Access Control 0-Day CVE-2023-22515](#incidente-10-soc235---atlassian-confluence-broken-access-control-0-day)
+
+## Detalles de Incidentes
+
+### Incidente 1: SOC239 - Remote Code Execution Detected in Splunk Enterprise
+Descripción detallada del incidente, acciones tomadas y enlaces relevantes.
+### Descripción
+- **Taxonomía:** Acceso no autorizado
+- **Criticidad:** Alta
+- **Resumen:** Detección de carga XSLT maliciosa en Splunk Enterprise, potencialmente relacionada con CVE-2023-46213.
+
+### Acciones tomadas
+- Análisis de IPs y puertos involucrados.
+- Uso de Virustotal y AbuseIPDB para confirmación de actividad maliciosa.
+
+### Incidente 2: SOC176 - RDP Brute Force Detected
+Descripción detallada del incidente, acciones tomadas y enlaces relevantes.
+### Descripción
+- **Taxonomía:** Fuerza Bruta
+- **Criticidad:** Media
+- **Resumen:** Múltiples intentos de inicio de sesión vía RDP desde una única fuente IP.
+
+### Acciones tomadas
+- Identificación y análisis de IP origen mediante Virustotal y AbuseIPDB.
+- Confirmación de ataque de fuerza bruta mediante revisión de logs.
+
+### Incidente 3: SOC227 - Microsoft SharePoint Server Elevation of Privilege
+Descripción detallada del incidente, acciones tomadas y enlaces relevantes.
+
+### Incidente 4: SOC251 - Quishing Detected (QR Code Phishing)
+Descripción detallada del incidente, acciones tomadas y enlaces relevantes.
+
+### Incidente 5: Passwd Found in Requested URL - Possible LFI Attack
+Descripción detallada del incidente, acciones tomadas y enlaces relevantes.
+
+### Incidente 6: SOC250 - APT35 HyperScrape Data Exfiltration Tool Detected
+Descripción detallada del incidente, acciones tomadas y enlaces relevantes.
+
+### Incidente 7: SOC164 - Suspicious Mshta Behavior
+Descripción detallada del incidente, acciones tomadas y enlaces relevantes.
+
+### Incidente 8: SOC166 - Javascript Code Detected in Requested URL
+Descripción detallada del incidente, acciones tomadas y enlaces relevantes.
+
+### Incidente 9: SOC169 - Possible IDOR Attack Detected
+Descripción detallada del incidente, acciones tomadas y enlaces relevantes.
+
+### Incidente 10: SOC235 - Atlassian Confluence Broken Access Control 0-Day CVE-2023-22515
+Descripción detallada del incidente, acciones tomadas y enlaces relevantes.
+
+
+
+
 ## Incidente 1: SOC239 - Remote Code Execution Detected in Splunk Enterprise
 
 ### 1.a Clasificación según taxonomía
