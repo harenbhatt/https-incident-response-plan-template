@@ -53,7 +53,7 @@ Dado que el ataque no tuvo éxito, no fue necesario realizar ninguna acción par
 
 - **Tipo de Evento:** Explotación de Vulnerabilidad de Inyección de Comandos en Palo Alto Networks PAN-OS (CVE-2024-3400)
 - **Dispositivos Implicados:** Se detectó tráfico desde la dirección IP de origen 144.172.79.92 (Puerto de Origen: 51232) hacia la dirección IP de destino 172.16.17.139 (Puerto de Destino: 20077).
-![AlarmaActivada](image.png)
+![AlarmaActivada](imgNaim/image.png)
 
 
 
@@ -67,15 +67,15 @@ Dado que el ataque no tuvo éxito, no fue necesario realizar ninguna acción par
 ### Determinando la Malicia
 
 - **Análisis de la Solicitud HTTP:** La solicitud HTTP POST contenía una cookie modificada que incluía un comando `curl` que apuntaba a la dirección IP 144.172.79.92 en el puerto 4444, lo que indica un intento de explotar la vulnerabilidad conocida.
-![Cual es tipo de ataque](image-2.png)
+![Cual es tipo de ataque](imgNaim/image-2.png)
 
 Viendo en virus total se encontro que era maliciosa.
-![virustotal](image-4.png)
+![virustotal](imgNaim/image-4.png)
 
 
 
 Se concluye que el trafico era malicioso:
-![TraficoMalicioso](image-1.png)
+![TraficoMalicioso](imgNaim/image-1.png)
 
 ### Verificando si se Trata de Pruebas Planeadas
 
@@ -90,7 +90,7 @@ Se concluye que el trafico era malicioso:
 
 ### Artefactos
 
-![artefactos](image-3.png)
+![artefactos](imgNaim/image-3.png)
 
 
 ### Acciones Recomendadas
@@ -160,7 +160,7 @@ Se concluye que el trafico era malicioso:
 
 El incidente implica la detección de una herramienta de exfiltración de datos llamada Hyperscrape, utilizada por el grupo APT35 (Charming Kitten), para extraer correos electrónicos de las bandejas de entrada de las víctimas. Esta acción se alinea con el objetivo de robo de información confidencial y su posterior transferencia desde el sistema comprometido hacia un servidor controlado por el atacante. La detección de este tipo de actividad maliciosa constituye un grave riesgo para la seguridad de la información y puede resultar en pérdidas significativas para la organización afectada.
 
-![tipo](image-5.png)
+![tipo](imgNaim/image-5.png)
 
 #### Reconocimiento
 
@@ -183,7 +183,7 @@ Se recomienda aislar el dispositivo afectado para reducir el impacto del ataque.
 
 ### Artefactos
 
-![alt text](image-6.png)
+![alt text](imgNaim/image-6.png)
 
 - **Hash del Archivo:** cd2ba296828660ecd07a36e8931b851dda0802069ed926b3161745aae9aa6daa
 
@@ -233,7 +233,7 @@ Se recopilaron registros de firewall y proxy que muestran la interacción entre 
 #### Evaluación de IP
 
 La dirección IP de origen (180.101.88.240) se identificó como maliciosa por múltiples proveedores de seguridad. Perteneciente a la red de la empresa China Telecom, su reputación indica un alto riesgo de actividad maliciosa.
-![ip](image-7.png)
+![ip](imgNaim/image-7.png)
 
 #### Éxito del Ataque
 
@@ -281,7 +281,7 @@ Dado que la acción del dispositivo fue permitida y se detectó una carga de arc
 39.91.166.222 - - [06/Oct/2023:20:05:06 +0000] "GET /_api/web/siteusers HTTP/1.1" 200 1453 "-" "python-requests/2.28.1"
 39.91.166.222 - - [06/Oct/2023:20:05:06 +0000] "GET /_api/web/siteusers/web/siteusers HTTP/1.1" 404 1453 "-" "python-requests/2.28.1"
 ```
-![Ip](image-8.png)
+![Ip](imgNaim/image-8.png)
 
 Virustotal la identifica como maliciosa.
 
