@@ -29,7 +29,7 @@ Se detectó una carga XSLT maliciosa en Splunk Enterprise con el potencial de de
 
 ### 1.b Acciones tomadas para su resolución
 
-Lo primero que haremos será crear el playbook y examinar el nombre de la regla, donde veremos que esta relacionada con el CVE-2023-46213, el cual es una ejecución remota de código.
+Lo primero que haremos será crear el playbook y examinar el nombre de la regla, donde veremos que está relacionada con el CVE-2023-46213, el cual es una ejecución remota de código.
 Tendremos que ver entre que dos dispositivos se está produciendo el tráfico.
 
 En la siguiente ventana de Collect Data tenemos que recopilar información sobre direcciones ip, nombre de host...
@@ -48,25 +48,29 @@ Si nos vamos a Virustotal e introducimos la ip 180.101.88.240 nos da que es mali
 
 ![img01](img/img01.png)
 
-A continuación nos vamos a la página abuseipdb y aquí vemos que la dirección IP pertenece a una empresa China llamada Telecom.
+A continuación, nos vamos a la página abuseipdb y aquí vemos que la dirección IP pertenece a una empresa China llamada Telecom.
 
 ![img02](img/img02.png)
 
-A continuación Lets defend nos pregunta si el trafico es malicioso y le decimos que si, ya que con Virustotal y abuseipdb vemos que efectivamente eran maliciosos.
+A continuación, Lets defend nos pregunta si el tráfico es malicioso y le decimos que si, ya que con Virustotal y abuseipdb vemos que efectivamente eran maliciosos.
 
-![img03](img/img03.png)
+![img20](img/img20.png)
 
 Ahora nos pregunta el tipo de ataque que es, si investigamos encontraremos un archivo shell.zip si lo descomprimimos hay dos archivos un .sh (script) y un archivo .xsl, podemos analizar el contenido de estos para ver realmente el código que se está ejecutando y parece que quiere crear un documento y abrir una reverse shell, por lo tanto deducimos que el tipo de ataque es un XML Injection.
 
-Si buscamos en la parte de la bandeja de entrada e intentamos buscar la ip de origen o destino no vemos nada relevante por lo tanto deducimos que el ataque no esta planeado.
+![img0333](img/img0333.png)
 
-![img04](img/img04.png)
+Si buscamos en la parte de la bandeja de entrada e intentamos buscar la ip de origen o destino no vemos nada relevante por lo tanto deducimos que el ataque no está planeado.
 
-Ante esta pregunta hemos investigado y la dirección de origen 180.101.88.240 de la alerta pertenece a la red externa de la empresa china, pero la dirección de destino que es esta: 172.16.20.13  pertenece a la empresa Splunk. Por eso seleccionaremos la opción de Internet → Red de empresa.
+![img21](img/img21.png)
 
-![img05](img/img05.png)
+Ante esta pregunta hemos investigado y la dirección de origen 180.101.88.240 de la alerta pertenece a la red externa de la empresa china, pero la dirección de destino que es esta: 172.16.20.13 pertenece a la empresa Splunk. Por eso seleccionaremos la opción de Internet → Red de empresa.
+
+![img22](img/img22.png)
 
 Nos preguntan si el ataque fue exitoso, y si lo fue porque la acción del dispositivo está permitida.
+
+![img05](img/img05.png)
 
 La siguiente parte es el apartado de contención, Como se muestra aquí abajo debemos aislar el dispositivo así restringimos al atacante y contenemos el dispositivo:
 
@@ -74,11 +78,11 @@ La siguiente parte es el apartado de contención, Como se muestra aquí abajo de
 
 Como se muestra aquí abajo Debemos aislar el dispositivo así restringimos al atacante y contenemos el dispositivo:
 
-A cotinuación ponemos los artifacts que veamos importantes y nos quedaría así:
+A continuación, ponemos los artifacts que veamos importantes y nos quedaría así:
 
 ![img07](img/img07.png)
 
-Por ultimo nos pregutan si hay que escalarlo al nivel 2 y diremos que si:
+Por ultimo, nos preguntan si hay que escalarlo al nivel 2 y diremos que si:
 
 ![img08](img/img08.png)
 
@@ -86,13 +90,13 @@ Y ya habríamos terminado el playbook.
 
 ## Preguntas
 
-### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
 No fue necesario realizar ninguna acción específica para el restablecimiento de los servicios afectados, ya que el foco estaba en contener y analizar el incidente.
 
 ### 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
 
-Las acciones destacadas durante la resolución del incidente incluyen la recopilación de datos críticos como las direcciones IP y puertos involucrados, la confirmación de la malicia del tráfico usando herramientas como Virustotal y abuseipdb, y el análisis detallado del código malicioso encontrado en los archivos decomprimidos.
+Las acciones destacadas durante la resolución del incidente incluyen la recopilación de datos críticos como las direcciones IP y puertos involucrados, la confirmación de la malicia del tráfico usando herramientas como Virustotal y abuseipdb, y el análisis detallado del código malicioso encontrado en los archivos descomprimidos.
 
 ### 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
@@ -120,9 +124,9 @@ Error de inicio de sesión desde una única fuente con diferentes cuentas no exi
 
 Lo primero que haremos será crear el playbook y detectar los detalles más importantes del incidente:
 
-Direccion Ip de origen: 218.92.0.56
+Dirección Ip de origen: 218.92.0.56
 
-Direccón Ip de destino: 172.16.17.148
+Dirección Ip de destino: 172.16.17.148
 
 Nombre de host: Matthew
 
@@ -150,7 +154,7 @@ En la siguiente opción marcamos no, ya que si vemos los registros, todos los re
 
 ![img14](img/img14.png)
 
-Si miramos los logs, vemos que el ataque de fuerza bruta fue exitosos y el atacante obtuvo acceso al sistema:
+Si miramos los logs, vemos que el ataque de fuerza bruta fue exitoso y el atacante obtuvo acceso al sistema:
 
 ![img15](img/img15.png)
 
@@ -158,11 +162,11 @@ Así que seleccionamos que sí:
 
 ![img16](img/img16.png)
 
-Deberiamos aislar el equipo de Matthew, para ello nos vamos a Endpoint Security y le damos a la opción de contener/aislar:
+Deberíamos aislar el equipo de Matthew, para ello nos vamos a Endpoint Security y le damos a la opción de contener/aislar:
 
 ![img17](img/img17.png)
 
-A contunuación seleccionamos los artifacts más importantes:
+A continuación, seleccionamos los artifacts más importantes:
 
 ![img18](img/img18.png)
 
@@ -170,7 +174,7 @@ Y ya hemos terminado el playbook.
 
 ## Preguntas
 
-### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
 No fue necesario realizar acciones específicas para el restablecimiento de los servicios, ya que el enfoque estaba en la contención del ataque
 
@@ -204,9 +208,9 @@ Esta actividad puede ser indicativa de un intento de explotar la vulnerabilidad 
 
 Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
 
-Direccion Ip de origen: 39.91.166.222
+Dirección Ip de origen: 39.91.166.222
 
-Direccón Ip de destino: 172.16.17.233
+Dirección Ip de destino: 172.16.17.233
 
 Nombre de host: MS-SharePointServer
 
@@ -216,7 +220,7 @@ Lo primero que haremos como siempre meter la ip de origen en Virustotal y abusel
 
 ![img19](img/img19.png)
 
-Ahora nos preguntan si el trafico es malicioso y por lo que hemos visto en Virustotal, los logs y abuselPDB decimos que si es maliciosa:
+Ahora nos preguntan si el tráfico es malicioso y por lo que hemos visto en Virustotal, los logs y abuselPDB decimos que si es maliciosa:
 
 ![img20](img/img20.png)
 
@@ -248,7 +252,7 @@ Y por ultimo si necesitamos escalar a nivel 2 para alguien más especializado.
 
 ## Preguntas
 
-### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
 No se realizaron acciones específicas para el restablecimiento de servicios afectados, dado que el enfoque primario fue contener y analizar la actividad sospechosa y maliciosa.
 
@@ -280,19 +284,19 @@ Se trata de un codigo QR que no es legitimo y tiene un phishing.
 
 ### 1.b Acciones tomadas para su resolución
 
-Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
+Lo primero que haremos será seleccionar el incidente, asignárnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
 
-Direccion SMTP: 158.69.201.47
+Dirección SMTP: 158.69.201.47
 
 Correo de origen: security@microsecmfa.com
 
-Dirección de destinos : Claire@letsdefend.io
+Dirección de destino: Claire@letsdefend.io
 
 Luego tendremos que irnos a virustotal e introducir la ip 158.69.201.47 y vemos que es maliciosa y que saltan varios antivirus:
 
 ![img27](img/img27.png)
 
-Ahora haremos una busqueda por el correo security@microsecmfa.com y nos saldrá un mensaje con un qr de microsoft:
+Ahora haremos una búsqueda por el correo security@microsecmfa.com y nos saldrá un mensaje con un QR de microsoft:
 
 ![img28](img/img28.png)
 
@@ -312,7 +316,7 @@ Aquí elegiremos la opción de Phishing for Information.
 
 ![img31](img/img31.png)
 
-Vemos que el remitente de correo electronico y la URL del código QR es externa, por lo tanto la opción correcta es externa.
+Vemos que el remitente de correo electrónico y la URL del código QR es externa, por lo tanto la opción correcta es externa.
 
 ![img32](img/img32.png)
 
@@ -320,7 +324,7 @@ En virustotal hemos visto que la ip es maliciosa, así que la ip del atacante si
 
 ![img33](img/img33.png)
 
-Comprobamos si alguien más recibió el correo electronico con el phishing, pero vemos que solo lo recibió Claire, así que no hay mas de un usuario afectado.
+Comprobamos si alguien más recibió el correo electrónico con el phishing, pero vemos que solo lo recibió Claire, así que no hay más de un usuario afectado.
 
 ![img34](img/img34.png)
 
@@ -336,7 +340,7 @@ Y ya habriamos terminado el playbook.
 
 ## Preguntas
 
-### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
 No se requirieron acciones específicas para el restablecimiento de los servicios ya que el incidente se centró en la detección y contención de un correo de phishing.
 
@@ -368,7 +372,7 @@ La URL contiene contraseña.
 
 ### 1.b Acciones tomadas para su resolución
 
-Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
+Lo primero que haremos será seleccionar el incidente, asignárnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
 
 Direccion IP Destino: 172.16.17.13
 
@@ -386,7 +390,7 @@ Ahora metemos en virustotal la ip del atacante y veremos que varios detalles sob
 
 Si miramos en el apartado de correos y en el de comandos, tampoco vemos nada sospechoso por lo que podemos concluir que fue un falso positivo.
 
-Por  lo tanto deducimos que:
+Por lo tanto deducimos que:
 
 - El ataque falló
 - La dirección del tráfico es de: Internet a la red empresarial
@@ -395,11 +399,11 @@ Por  lo tanto deducimos que:
 - Tráfico malicioso
 - No es necesario escalar al Nivel 2 ya que hemos comprobado que el ataque falló y fue un falso positivo.
 
-Y ya habriamos terminado el playbook.
+Y ya habríamos terminado el playbook.
 
 ## Preguntas
 
-### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
 No se realizaron acciones específicas para el restablecimiento de los servicios, ya que el ataque resultó en un error y fue catalogado como un falso positivo.
 
@@ -433,11 +437,11 @@ Se han identificado patrones de comportamiento inusuales o sospechosos vinculado
 
 Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
 
-Dirección IP : 172.16.17.72
+Dirección IP: 172.16.17.72
 
-Nombre de Host/Usuario : Arthur
+Nombre de Host/Usuario: Arthur
 
-Nombre del proceso : EmailDownloader.exe
+Nombre del proceso: EmailDownloader.exe
 
 Si nos vamos a los logs y miramos la ip 172.16.17.72 veremos que hay varios logs que nos interesan:
 
@@ -471,11 +475,11 @@ Y por último aquí elegimos que sí, que tenemos que contenerlo:
 
 ![img48](img/img49.png)
 
-Y ya habriamos terminado el playbook.
+Y ya habríamos terminado el playbook.
 
 ## Preguntas
 
-### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
 No se menciona específicamente la necesidad de restablecer servicios, pero se tomó acción inmediata para contener la amenaza, lo que podría incluir el aislamiento de servicios afectados como medida preventiva.
 
@@ -507,13 +511,13 @@ Archivo hta de baja reputación fue ejecutado a través de mshta.exe
 
 ### 1.b Acciones tomadas para su resolución
 
-Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
+Lo primero que haremos será seleccionar el incidente, asignárnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
 
 Dirección IP : 172.16.17.38
 
-Nombre de Host/Usuario : Roberto
+Nombre de Host/Usuario: Roberto
 
-Nombre del proceso : mshta.exe
+Nombre del proceso: mshta.exe
 
 MD5 Hash: 6685c433705f558c5535789234db0e5a
 
@@ -549,11 +553,11 @@ Ahora vamos a contener el host:
 
 ![img53](img/img53.png)
 
-Y ya habriamos terminado el playbook.
+Y ya habríamos terminado el playbook.
 
 ## Preguntas
 
-### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
 No se mencionan acciones específicas para el restablecimiento de servicios ya que el enfoque principal fue la contención y análisis del comportamiento sospechoso.
 
@@ -585,19 +589,19 @@ Código de Javascript detectado en URL.
 
 ### 1.b Acciones tomadas para su resolución
 
-Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
+Lo primero que haremos será seleccionar el incidente, asignárnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
 
-Dirección IP destino : 172.16.17.17
+Dirección IP destino: 172.16.17.17
 
-Dirección IP origen : 112.85.42.13
+Dirección IP origen: 112.85.42.13
 
-URL solicitada : `https://172.16.17.17/search/?q=<$script>javascript:$alert(1)<$/script>`
+URL solicitada: `https://172.16.17.17/search/?q=<$script>javascript:$alert(1)<$/script>`
 
 Si nos vamos al tráfico HTTP de la alerta y buscamos por la URL solicitada, vemos que tiene el siguiente payload XSS:
 
 `<$script>javascript:$alert(1)<$script>`
 
-Por lo tanto el tráfico es malicioso:
+Por lo tanto, el tráfico es malicioso:
 
 ![img50](img/img57.png)
 
@@ -621,11 +625,11 @@ Por lo que dijimos antes, esta alerta no necesita una escalada al siguiente nive
 
 ![img62](img/img62.png)
 
-Y ya habriamos terminado el playbook.
+Y ya habríamos terminado el playbook.
 
 ## Preguntas
 
-### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
 No se realizaron acciones específicas para el restablecimiento de los servicios ya que el incidente no comprometió el servidor web, solo se identificó y clasificó el intento de ataque.
 
@@ -657,13 +661,13 @@ Se han encontrado solicitudes consecutivas a la misma página
 
 ### 1.b Acciones tomadas para su resolución
 
-Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
+Lo primero que haremos será seleccionar el incidente, asignárnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
 
-Dirección IP destino : 172.16.17.15
+Dirección IP destino: 172.16.17.15
 
-Dirección IP origen : 134.209.118.137
+Dirección IP origen: 134.209.118.137
 
-Si nos vamos al apartado de Log Management podremos ver que el atacante esta cambiando los parametros del id del usuario, lo intenta con el user_id=1, user_id=2, user_id=3, user_id=4, user_id=5.
+Si nos vamos al apartado de Log Management podremos ver que el atacante esta cambiando los parámetros del id del usuario, lo intenta con el user_id=1, user_id=2, user_id=3, user_id=4, user_id=5.
 
 ![img63](img/img63.png)
 
@@ -673,7 +677,7 @@ Sabemos por la investigación de alertas y registros lo siguiente:
 - La IP de origen tiene un impacto malicioso en virustotal.
 - El tráfico es entrante.
 
-Como vimos antes con el tema del atacante y los parametros del user_id, deducimos que el tráfico es malicioso:
+Como vimos antes con el tema del atacante y los parámetros del user_id, deducimos que el tráfico es malicioso:
 
 ![img64](img/img64.png)
 
@@ -681,11 +685,11 @@ El tipo de ataque es IDOR:
 
 ![img65](img/img65.png)
 
-Vemos en el apartado de Correo que no hay ningun correo indicando que el ataque fuera planeado, por lo tanto no lo es:
+Vemos en el apartado de Correo que no hay ningún correo indicando que el ataque fuera planeado, por lo tanto no lo es:
 
 ![img66](img/img66.png)
 
-La dirección de trafico es de Internet a la red de la compañía:
+La dirección de tráfico es de Internet a la red de la compañía:
 
 ![img67](img/img67.png)
 
@@ -705,11 +709,11 @@ Como vemos que el ataque fue exitoso, la vulnerabilidad IDOR debe derivarse al e
 
 ![img71](img/img71.png)
 
-Y ya habriamos terminado el playbook.
+Y ya habríamos terminado el playbook.
 
 ## Preguntas
 
-### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
 No se mencionan acciones específicas para el restablecimiento de los servicios, ya que el enfoque principal fue la contención y análisis del ataque.
 
@@ -741,7 +745,7 @@ Esta actividad puede ser indicativa de un intento de explotar la vulnerabilidad 
 
 ### 1.b Acciones tomadas para su resolución
 
-Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
+Lo primero que haremos será seleccionar el incidente, asignárnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
 
 Dirección IP destino: 172.16.17.234
 
@@ -751,7 +755,7 @@ Nombre de Host: Confluence Data Center
 
 URL solicitada: /server-info.action?bootstrapStatusProvider.applicationConfig.setupComplete=false
 
-Si nos vamos al apartado de Log Management podremos vervarios logs intenresantes y en Threat Intel veremos que tiene marcado como TAG que es malicoso.
+Si nos vamos al apartado de Log Management podremos ver varios logs interesantes y en Threat Intel veremos que tiene marcado como TAG que es malicioso.
 
 ![img72](img/img72.png)
 
@@ -791,7 +795,7 @@ Y ya habríamos terminado el playbook.
 
 ## Preguntas
 
-### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restablecimiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
 No se mencionan acciones específicas para el restablecimiento de los servicios, ya que el foco estaba en contener y analizar el incidente.
 
