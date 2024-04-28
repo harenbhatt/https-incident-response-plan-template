@@ -717,5 +717,4 @@ Los playbooks que hemos creado anteriormente se deben mejorar con la intención 
 
 **4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?**
 
- Se debe concienciar a los empleados, prohibir el uso de aplicaciones no permitidas por la empresa y
- crear reglas que impidan las conexiones hacia el exterior que no sean de la empresa.
+Prohibir el uso de aplicaciones no permitidas por la empresa y crear reglas que impidan las conexiones hacia el exterior que no sean de la empresa.
