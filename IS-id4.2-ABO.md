@@ -2,16 +2,17 @@
 
 ## Índice de Incidentes de Seguridad
 
-1. [SOC239 - Remote Code Execution Detected in Splunk Enterprise](#incident-1-soc239---remote-code-execution-detected-in-splunk-enterprise)
-2. [SOC176 - RDP Brute Force Detected](#incident-2-soc176---rdp-brute-force-detected)
-3. [SOC227 - Microsoft SharePoint Server Elevation of Privilege](#incident-3-soc227---microsoft-sharepoint-server-elevation-of-privilege)
-4. [SOC251 - Quishing Detected (QR Code Phishing)](#incident-4-soc251---quishing-detected-qr-code-phishing)
-5. [Passwd Found in Requested URL - Possible LFI Attack](#incident-5-passwd-found-in-requested-url---possible-lfi-attack)
-6. [SOC250 - APT35 HyperScrape Data Exfiltration Tool Detected](#incident-6-soc250---apt35-hyperscrape-data-exfiltration-tool-detected)
-7. [SOC164 - Suspicious Mshta Behavior](#incident-7-soc164---suspicious-mshta-behavior)
-8. [SOC166 - Javascript Code Detected in Requested URL](#incident-8-soc166---javascript-code-detected-in-requested-url)
-9. [SOC169 - Possible IDOR Attack Detected](#incident-9-soc169---possible-idor-attack-detected)
-10. [SOC235 - Atlassian Confluence Broken Access Control 0-Day CVE-2023-22515](#incident-10-soc235---atlassian-confluence-broken-access-control-0-day)
+1. [SOC239 - Remote Code Execution Detected in Splunk Enterprise](#incidente-1-soc239---remote-code-execution-detected-in-splunk-enterprise)
+2. [SOC176 - RDP Brute Force Detected](#incidente-2-soc176---rdp-brute-force-detected)
+3. [SOC227 - Microsoft SharePoint Server Elevation of Privilege](#incidente-3-soc227---microsoft-sharepoint-server-elevation-of-privilege)
+4. [SOC251 - Quishing Detected (QR Code Phishing)](#incidente-4-soc251---quishing-detected-qr-code-phishing)
+5. [Passwd Found in Requested URL - Possible LFI Attack](#incidente-5-passwd-found-in-requested-url---possible-lfi-attack)
+6. [SOC250 - APT35 HyperScrape Data Exfiltration Tool Detected](#incidente-6-soc250---apt35-hyperscrape-data-exfiltration-tool-detected)
+7. [SOC164 - Suspicious Mshta Behavior](#incidente-7-soc164---suspicious-mshta-behavior)
+8. [SOC166 - Javascript Code Detected in Requested URL](#incidente-8-soc166---javascript-code-detected-in-requested-url)
+9. [SOC169 - Possible IDOR Attack Detected](#incidente-9-soc169---possible-idor-attack-detected)
+10. [SOC235 - Atlassian Confluence Broken Access Control 0-Day CVE-2023-22515](#incidente-10-soc235---atlassian-confluence-broken-access-control-0-day)
+
 
 ## Incidente 1: SOC239 - Remote Code Execution Detected in Splunk Enterprise
 
