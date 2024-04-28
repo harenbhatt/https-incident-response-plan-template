@@ -16,9 +16,7 @@ Alta
 
 Se detectó una carga XSLT maliciosa en Splunk Enterprise con el potencial de desencadenar la ejecución remota de código.
 
-1.b ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente?
-
-### Acciones tomadas para su resolución
+### 1.b Acciones tomadas para su resolución
 
 Lo primero que haremos será crear el playbook y examinar el nombre de la regla, donde veremos que esta relacionada con el CVE-2023-46213, el cual es una ejecución remota de código.
 Tendremos que ver entre que dos dispositivos se está produciendo el tráfico.
@@ -107,9 +105,7 @@ Media
 
 Error de inicio de sesión desde una única fuente con diferentes cuentas no existentes.
 
-1.b ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente? 
-
-### Acciones tomadas para su resolución
+### 1.b Acciones tomadas para su resolución
 
 Lo primero que haremos será crear el playbook y detectar los detalles más importantes del incidente:
 
@@ -179,7 +175,6 @@ El análisis reveló la importancia de mejorar las configuraciones de seguridad 
 
 Para prevenir incidentes similares, se decidió mejorar la monitorización de intentos de inicio de sesión fallidos y configurar alertas automáticas para patrones sospechosos, además de reforzar el uso de VPN para accesos remotos y la segmentación de la red.
 
-
 ## Incidente 3: SOC227 - Microsoft SharePoint Server Elevation of Privilege
 
 ### 1.a Clasificación según taxonomía
@@ -194,9 +189,7 @@ Critica
 
 Esta actividad puede ser indicativa de un intento de explotar la vulnerabilidad CVE-2023-29357, que podría conducir a un acceso no autorizado y a una escalada de privilegios dentro del servidor de SharePoint.
 
-1.b ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente? 
-
-### Acciones tomadas para su resolución
+### 1.b Acciones tomadas para su resolución
 
 Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
 
@@ -242,23 +235,27 @@ Y por ultimo si necesitamos escalar a nivel 2 para alguien más especializado.
 
 ![img26](img/img26.png)
 
-
 ## Preguntas
 
 ### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+No se realizaron acciones específicas para el restablecimiento de servicios afectados, dado que el enfoque primario fue contener y analizar la actividad sospechosa y maliciosa.
+
 ### 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+
+Las acciones destacadas incluyeron la verificación de la IP de origen en Virustotal y AbuseIPDB, confirmación de que la actividad era maliciosa y la investigación de logs que mostraban acceso no autorizado a URLs críticas dentro del servidor SharePoint.
 
 ### 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
+El análisis llevado a cabo destacó la importancia de mejorar las alertas automáticas y la respuesta ante indicadores de compromiso. Se sugieren mejoras en las configuraciones de seguridad de SharePoint y en la formación del personal para detectar actividades sospechosas más rápidamente.
+
 ### 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
+Para prevenir futuros incidentes similares, se ha decidido aumentar la monitorización de las URLs críticas de SharePoint, fortalecer las políticas de acceso y implementar mejores prácticas de seguridad como la segmentación de la red y el endurecimiento de endpoints.
 
 ## Incidente 4: SOC251 - Quishing Detected (QR Code Phishing)
 
-1.a Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
-
-### Clasificación según taxonomía
+### 1.a Clasificación según taxonomía
 
 Intercambio
 
@@ -270,9 +267,7 @@ Media
 
 Se trata de un codigo QR que no es legitimo y tiene un phishing.
 
-1.b ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente? 
-
-### Acciones tomadas para su resolución
+### 1.b Acciones tomadas para su resolución
 
 Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
 
@@ -332,12 +327,19 @@ Y ya habriamos terminado el playbook.
 
 ### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+No se requirieron acciones específicas para el restablecimiento de los servicios ya que el incidente se centró en la detección y contención de un correo de phishing.
+
 ### 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+
+Las principales acciones incluyeron la verificación de la dirección IP y del correo de origen en Virustotal, la descodificación del QR para identificar la URL maliciosa y la eliminación del correo malicioso.
 
 ### 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
+El análisis destacó la necesidad de mejorar los filtros de correo y la educación del usuario sobre seguridad. Mejoras en el playbook podrían incluir automatización en la detección y respuesta a correos sospechosos, así como pruebas regulares de penetración y simulacros de phishing para mejorar la conciencia de seguridad.
+
 ### 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
+Para prevenir futuros incidentes similares, se ha decidido implementar mejores prácticas de seguridad, como la validación y bloqueo de URLs en QRs sospechosos, y la mejora de la capacitación de los empleados sobre los riesgos del phishing.
 
 ## Incidente 5: Passwd Found in Requested URL - Possible LFI Attack
 
@@ -353,9 +355,7 @@ Alta
 
 La URL contiene contraseña.
 
-1.b ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente? 
-
-### Acciones tomadas para su resolución
+### 1.b Acciones tomadas para su resolución
 
 Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
 
@@ -390,12 +390,19 @@ Y ya habriamos terminado el playbook.
 
 ### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+No se realizaron acciones específicas para el restablecimiento de los servicios, ya que el ataque resultó en un error y fue catalogado como un falso positivo.
+
 ### 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+
+Las acciones destacadas incluyeron la revisión de los logs para identificar y analizar la URL maliciosa y la verificación de la IP de origen en Virustotal, que confirmó su naturaleza maliciosa pero procedente de un ataque que no tuvo éxito.
 
 ### 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
+El análisis subrayó la importancia de tener robustos sistemas de detección de anomalías y la validación de URLs para evitar falsos positivos. Mejoras en el playbook podrían incluir la implementación de mejores filtros de URL y la educación continuada sobre las últimas técnicas de ataques LFI.
+
 ### 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
+Para prevenir futuros incidentes similares, se ha decidido fortalecer las políticas de seguridad de las aplicaciones web, incluyendo la validación de todas las entradas de los usuarios para evitar manipulaciones maliciosas de las URLs.
 
 ## Incidente 6: SOC250 - APT35 HyperScrape Data Exfiltration Tool Detected
 
@@ -411,9 +418,7 @@ Media
 
 Se han identificado patrones de comportamiento inusuales o sospechosos vinculados al hash, lo que indica posibles intenciones maliciosas.
 
-1.b ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente? 
-
-### Acciones tomadas para su resolución
+### 1.b Acciones tomadas para su resolución
 
 Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
 
@@ -461,12 +466,19 @@ Y ya habriamos terminado el playbook.
 
 ### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+No se menciona específicamente la necesidad de restablecer servicios, pero se tomó acción inmediata para contener la amenaza, lo que podría incluir el aislamiento de servicios afectados como medida preventiva.
+
 ### 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+
+Las acciones destacadas incluyeron la revisión de logs para identificar actividad sospechosa relacionada con el proceso EmailDownloader.exe y la verificación de la dirección IP en Virustotal, que confirmó la naturaleza maliciosa de la conexión.
 
 ### 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
+El análisis resaltó la necesidad de mejorar la detección y respuesta rápida a herramientas de exfiltración de datos. Mejoras en el playbook podrían incluir la implementación de sistemas avanzados de detección de anomalías y la integración de respuestas automáticas a patrones de comportamiento conocidos de APTs.
+
 ### 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
+Para prevenir futuros incidentes similares, se decidió fortalecer los controles de seguridad en el correo electrónico y en puntos finales, además de realizar capacitaciones regulares sobre amenazas avanzadas persistentes y cómo detectarlas tempranamente.
 
 ## Incidente 7: SOC164 - Suspicious Mshta Behavior
 
@@ -482,9 +494,7 @@ Alta
 
 Archivo hta de baja reputación fue ejecutado a través de mshta.exe
 
-1.b ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente? 
-
-### Acciones tomadas para su resolución
+### 1.b Acciones tomadas para su resolución
 
 Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
 
@@ -534,11 +544,19 @@ Y ya habriamos terminado el playbook.
 
 ### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+No se mencionan acciones específicas para el restablecimiento de servicios ya que el enfoque principal fue la contención y análisis del comportamiento sospechoso.
+
 ### 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+
+Las acciones destacadas incluyeron el análisis del hash del archivo sospechoso en Virustotal y la revisión de los comandos ejecutados en el host de Roberto, identificando intentos de descarga y ejecución maliciosa.
 
 ### 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
+El análisis subrayó la importancia de mejorar los sistemas de detección de malware y la respuesta a indicadores de ataque. Se sugieren mejoras como la actualización de las firmas de antivirus y la configuración de alertas automáticas para comportamientos anómalos.
+
 ### 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+
+Para prevenir futuros incidentes similares, se decidió fortalecer las políticas de seguridad del endpoint, incluyendo la restricción de ejecución de scripts y la mejora de la monitorización de la actividad de los procesos sospechosos.
 
 ## Incidente 8: SOC166 - Javascript Code Detected in Requested URL
 
@@ -554,9 +572,7 @@ Media
 
 Código de Javascript detectado en URL.
 
-1.b ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente? 
-
-### Acciones tomadas para su resolución
+### 1.b Acciones tomadas para su resolución
 
 Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
 
@@ -600,11 +616,19 @@ Y ya habriamos terminado el playbook.
 
 ### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+No se realizaron acciones específicas para el restablecimiento de los servicios ya que el incidente no comprometió el servidor web, solo se identificó y clasificó el intento de ataque.
+
 ### 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+
+Las acciones destacadas incluyeron la identificación de la naturaleza maliciosa del tráfico mediante la revisión de la URL con código JavaScript inyectado y la confirmación de que no era un test planificado.
 
 ### 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
+El análisis reveló la importancia de mejorar los filtros de URL y las prácticas de seguridad en los navegadores web y servidores. Se sugiere mejorar la detección de scripts maliciosos y configurar alertas para intentos similares en el futuro.
+
 ### 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+
+Para prevenir futuros incidentes similares, se decidió implementar mejoras en la validación de entradas en formularios y URLs, aumentar la educación en seguridad para los empleados sobre los riesgos de XSS y fortalecer las políticas de seguridad web.
 
 ## Incidente 9: SOC169 - Possible IDOR Attack Detected
 
@@ -620,9 +644,7 @@ Media
 
 Se han encontrado solicitudes consecutivas a la misma página
 
-1.b ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente? 
-
-### Acciones tomadas para su resolución
+### 1.b Acciones tomadas para su resolución
 
 Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
 
@@ -678,11 +700,19 @@ Y ya habriamos terminado el playbook.
 
 ### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+No se mencionan acciones específicas para el restablecimiento de los servicios, ya que el enfoque principal fue la contención y análisis del ataque.
+
 ### 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+
+Las acciones destacadas incluyeron el análisis de los registros de log para identificar los intentos de manipulación de parámetros de usuario y la verificación de la IP de origen en Virustotal, confirmándose como maliciosa.
 
 ### 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
+El análisis resaltó la necesidad de mejorar la gestión y control de acceso a los datos de usuarios. Mejoras en el playbook podrían incluir la implementación de validaciones más estrictas en el servidor para parámetros críticos y la revisión periódica de los controles de acceso.
+
 ### 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+
+Para prevenir futuros incidentes similares, se decidió fortalecer las políticas de seguridad en la gestión de identidades y accesos, incluyendo la implementación de controles más robustos en las aplicaciones web para detectar y bloquear automáticamente solicitudes sospechosas.
 
 ## Incidente 10: SOC235 - Atlassian Confluence Broken Access Control 0-Day CVE-2023-22515
 
@@ -698,9 +728,7 @@ Alta
 
 Esta actividad puede ser indicativa de un intento de explotar la vulnerabilidad CVE-2023-22515, lo que podría conducir a la creación de un nuevo usuario administrador.
 
-1.b ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente? 
-
-### Acciones tomadas para su resolución
+### 1.b Acciones tomadas para su resolución
 
 Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
 
@@ -754,15 +782,18 @@ Y ya habríamos terminado el playbook.
 
 ### 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
+No se mencionan acciones específicas para el restablecimiento de los servicios, ya que el foco estaba en contener y analizar el incidente.
+
 ### 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+
+Las acciones destacadas incluyeron la revisión de los registros de log para identificar la solicitud maliciosa y la verificación de la IP de origen en Virustotal, confirmando su naturaleza maliciosa.
 
 ### 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
+El análisis resaltó la necesidad de mejorar la monitorización y las respuestas automáticas ante vulnerabilidades conocidas. Se sugieren mejoras como la actualización y fortalecimiento de las configuraciones de seguridad y la implementación de parches de forma más proactiva.
+
 ### 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
-
-
-4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
-
+Para prevenir futuros incidentes similares, se decidió fortalecer las políticas de seguridad en las aplicaciones críticas y realizar auditorías de seguridad más frecuentes para detectar y remediar configuraciones incorrectas o vulnerabilidades sin parchear.
 
 
