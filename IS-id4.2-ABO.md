@@ -521,8 +521,25 @@ Y seleccionamos la siguiente opción, porque la herramienta hyperscrape se utili
 
 ![img43](img/img43.png)
 
-Ahora vamos a virustotal y vemos 
+Ahora vamos a virustotal y vemos que las direcciones ips son externas y son maliciosas:
 
+![img43](img/img46.png)
+
+Aquí seleccionamos la opción de externa:
+
+![img44](img/img44.png)
+
+Si miramos en la página de Endpoint Security veremos que solo el host de Arthur fue afectado, y determinamos por tanto que el alcance fue solo a un dispositivo:
+
+![img47](img/img47.png)
+
+Y como vemos que el ataque tuvo éxito, pues aislamos el dispositivo:
+
+![img48](img/img48.png)
+
+Y por último aquí elegimos que sí, que tenemos que contenerlo:
+
+![img48](img/img49.png)
 
 Y ya habriamos terminado el playbook.
 
@@ -533,35 +550,294 @@ No no es necesario ya que no ha afectado a ninguna caída o error de los servici
 
 ### Documentar acciones y proponer mejoras para futuras respuestas.
 
-HACERRRRRR
+
 ### Desarrollar estrategias preventivas para evitar la repetición de incidentes similares
-HACERRRRRRRRR
+
 
 
 ## Preguntas
 
 2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
 
-HACERR
+
 3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
 
-HACERRR
+
 3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
 
-HACERRR 
+
 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
 
-## Incidente 7
+## Incidente 7: SOC164 - Suspicious Mshta Behavior
+
+1.a Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
+
+### Clasificación según taxonomía
+
+Analista de seguridad 
+
+### Criticidad
+
+Alta
+
+### Descripción del incidente
+
+Archivo hta de baja reputación fue ejecutado a través de mshta.exe
+
+1.b ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente? 
+
+### Acciones tomadas para su resolución
+
+Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
+
+Dirección IP : 172.16.17.38
+
+Nombre de Host/Usuario : Roberto
+
+Nombre del proceso : mshta.exe
+
+MD5 Hash: 6685c433705f558c5535789234db0e5a
+
+Si nos vamos a virustotal y analizamos el hash veremos que es bastante malicioso:
+
+![img50](img/img50.png)
+
+Ahora nos vamos al apartado de Endpoint y buscamos por Roberto y veremos algunos comandos sospechosos:
+
+![img51](img/img51.png)
+
+En los comandos podemos ver que intenta descargar y ejecutar algunos procesos en Powersheel desde una URL de Internet, podemos deducir que el comando fue el resultado de un intento malicioso.
+
+Si nos vamos a los logs y filtramos por la ip, nos saldrá esta información de una solicitud 404.
+
+![img52](img/img52.png)
+
+Por lo tanto deducimos que fue sospechoso:
+
+![img54](img/img54.png)
+
+Lo que significa que el código malicioso en server.txt no se ejecutó, aunque el script ofuscado intentó acceder a él. 
+
+La actividad fue sospechosa por ejecución de comandos:
+
+![img55](img/img55.png)
+
+Para esta pregunta de quién realizó esta acción, pudimos ver en el historial de procesos que fue iniciado por explorer.exe, lo que implica que fue una ejecución interactiva por parte del usuario final.
+
+![img55](img/img56.png)
+
+Ahora vamos a contener el host: 
+
+![img53](img/img53.png)
+
+Y ya habriamos terminado el playbook.
 
 
-## Incidente 8
+### ¿Es necesario realizar alguna acción específica para el restablecimiento de los servicios afectados?
+
+No no es necesario ya que no ha afectado a ninguna caída o error de los servicios o servidores, basta con contener el host.
+
+### Documentar acciones y proponer mejoras para futuras respuestas.
 
 
-## Incidente 9
+### Desarrollar estrategias preventivas para evitar la repetición de incidentes similares
 
+
+
+## Preguntas
+
+2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+
+
+3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+
+
+3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+
+
+4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+
+
+
+## Incidente 8: SOC166 - Javascript Code Detected in Requested URL
+
+1.a Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
+
+### Clasificación según taxonomía
+
+Analista de seguridad 
+
+### Criticidad
+
+Media
+
+### Descripción del incidente
+
+Código de Javascript detectado en URL.
+
+1.b ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente? 
+
+### Acciones tomadas para su resolución
+
+Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
+
+Dirección IP destino : 172.16.17.17
+
+Dirección IP origen : 112.85.42.13
+
+URL solicitada : `https://172.16.17.17/search/?q=<$script>javascript:$alert(1)<$/script>`
+
+Si nos vamos al tráfico HTTP de la alerta y buscamos por la URL solicitada, vemos que tiene el siguiente payload XSS:
+
+`<$script>javascript:$alert(1)<$script>`
+
+Por lo tanto el tráfico es malicioso:
+
+![img50](img/img57.png)
+
+Y el tipo de ataque es un XSS:
+
+![img50](img/img58.png)
+
+Si nos vamos a la pestaña de Email Security y miramos no hay ningún correo que indique que sea un test planificado, por lo tanto no lo es:
+
+![img50](img/img59.png)
+
+La dirección IP del atacante es 112.85.42.13, por lo que pertenece a una IP pública. Entonces, la dirección del tráfico es Internet -> Company Network.
+
+![img50](img/img60.png)
+
+Ahora nos vamos al apartado de Endpoint Security y veremos los distintos historiales del navegador y de la terminal, si vemos el payload del XSS vemos que no se representaba ningún intento para compremeter el Web Server, así que el host no fue comprometido.
+
+![img61](img/img61.png)
+
+Por lo que dijimos antes, esta alerta no necesita una escalada al siguiente nivel:
+
+![img62](img/img62.png)
+
+Y ya habriamos terminado el playbook.
+
+
+### ¿Es necesario realizar alguna acción específica para el restablecimiento de los servicios afectados?
+
+No no es necesario ya que no ha afectado a ninguna caída o error de los servicios o servidores, basta con contener el host.
+
+### Documentar acciones y proponer mejoras para futuras respuestas.
+
+### Desarrollar estrategias preventivas para evitar la repetición de incidentes similares
+
+
+## Preguntas
+
+2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+
+
+3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+
+
+3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+
+
+4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
+
+
+## Incidente 9: SOC169 - Possible IDOR Attack Detected
+
+1.a Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
+
+### Clasificación según taxonomía
+
+Analista de seguridad 
+
+### Criticidad
+
+Media
+
+### Descripción del incidente
+
+Se han encontrado solicitudes consecutivas a la misma página
+
+1.b ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente? 
+
+### Acciones tomadas para su resolución
+
+Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
+
+Dirección IP destino : 172.16.17.15
+
+Dirección IP origen : 134.209.118.137
+
+Si nos vamos al apartado de Log Management podremos ver que el atacante esta cambiando los parametros del id del usuario, lo intenta con el user_id=1, user_id=2, user_id=3, user_id=4, user_id=5.
+
+![img63](img/img63.png)
+
+Sabemos por la investigación de alertas y registros lo siguiente:
+
+- La IP de destino es un servidor web con nombre de host WebServer1005, el usuario principal es webadmin35.
+- La IP de origen tiene un impacto malicioso en virustotal.
+- El tráfico es entrante.
+
+Como vimos antes con el tema del atacante y los parametros del user_id, deducimos que el tráfico es malicioso:
+
+![img64](img/img64.png)
+
+El tipo de ataque es IDOR:
+
+![img65](img/img65.png)
+
+Vemos en el apartado de Correo que no hay ningun correo indicando que el ataque fuera planeado, por lo tanto no lo es:
+
+![img66](img/img66.png)
+
+La dirección de trafico es de Internet a la red de la compañía:
+
+![img67](img/img67.png)
+
+Si nos fijamos en la captura de RAW LOG de antes veremos que el HTTP Response Status es 200, eso significa que el ataque fue exitoso:
+
+![img67](img/img68.png)
+
+En la parte de contener, tendremos que irnos al host y contener el WebServer1005:
+
+![img69](img/img69.png)
+
+Y ahora pondremos este artifact:
+
+![img70](img/img70.png)
+
+Como vemos que el ataque fue exitoso, la vulnerabilidad IDOR debe derivarse al equipo de aplicación/web para su solución/correción.
+
+![img71](img/img71.png)
+
+Y ya habriamos terminado el playbook.
+
+### ¿Es necesario realizar alguna acción específica para el restablecimiento de los servicios afectados?
+
+No no es necesario ya que no ha afectado a ninguna caída o error de los servicios o servidores, basta con contener el host.
+
+### Documentar acciones y proponer mejoras para futuras respuestas.
+
+### Desarrollar estrategias preventivas para evitar la repetición de incidentes similares
+
+
+## Preguntas
+
+2.a Durante la resolución del incidente ¿has tenido que realizar algún tipo de actuación para el restableciciomiento de servicios afectados por el incidente, con el objetivo de volver a la normalidad?
+
+
+3.a Tras trabajar en la resolución del incidente ¿Que acciones/actuaciones destacadas se han realizado para solucionar el incidente? 
+
+
+3.b Realizar un proceso de análisis de las actuaciones llevadas a cabo y obtener un registro de lecciones aprendidas, para finalmente concluir en las posibles mejoras que podrías plantear para tu plan/playbooks desarrollado en la práctica anterior.
+
+
+4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
 
 ## Incidente 10
+
+
+
 
 
