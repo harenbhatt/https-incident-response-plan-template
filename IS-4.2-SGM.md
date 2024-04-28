@@ -93,21 +93,37 @@ Follina 0-Day es una vulnerabilidad que se encuentra en una herramienta de Micro
 ### Memoria Follina 0-Day
 
 El primer paso es seleccionar el indicador de amenaza. En este caso ninguna de las opciones define el indicador de amenaza así que seleccionamos otro.
+
 ![0dayamenaza](./img/indicadoramenaza0day.png)
+
 Lo siguiente es comprobar si el malware ha sido eliminado o contenido y como podemos ver no ha sido contenido.
+
 ![nocontenido](./img/nocontenidofollina.png)
+
 Marcamos que no ha sido puesto en cuarentena.
+
 ![noquarantined](./img/notquarantined.png)
+
 El siguiente paso es comprobar el hash del malware que nos da el log management en virustotal para analizar el malware.
+
 ![virustotalfollina](./img/follinavirustotal.png)
+
 Lo marcamos como malicioso ya que como hemos visto en virustotal, 41/61 lo detectan como tal.
+
 ![maliciousfollina](./img/maliciousfollinamark.png)
+
 El playbook nos pregunta si alguien accedio a la URL. Como podemos ver en virus total las URL que accede es la misma que se encuentra en los logs dados.
+
 ![urlvirustotal](./img/urlvirustotalfollina.png)
+
 ![urlfollina](./img/urlfollina.png)
+
 Así que marcamos accessed.
+
 ![accessedfollina](./img/accessedfollina.png)
+
 Lo siguiente del playbook es contener el EDR.
+
 ![edrcontained](./img/contenerfollina.png)
 
 ### Preguntas 0-Day Detected
@@ -146,22 +162,39 @@ Un atacante ha escalado privilegios a través de Microsoft SharePoint Server.
 El primer paso es comprobar si la amenaza ha sido un falso positivo, para ello debemos investigar la dirección IP de origen en virustotal para comprobar si es maliciosa. Por lo tanto no lo es.
 
 Como podemos ver la dirección IP proviene de China UNICOM
+
 ![MSshareip](./img/MS%20shareserverip.png)
+
 Según el playbook hay que comprobar el tráfico HTTP para ver si es inyección SQL, XSS, inyección de comandos, IDOR o RFI/LF.
+
 Si comprobamos los logs generados con el CVE dado por el log, podemos ver que las solicitudes son exactas a las del CVE dado comprobando el script del exploit en su [github](https://github.com/Chocapikk/CVE-2023-29357/blob/main/exploit.py).
+
 ![siteuserapi](./img/siteuserapimssharesiem.png)
+
 ![siteuserap](./img/siteuserapimsshare.png)
+
 Lo marcamos como malicioso.
+
 ![malicious](./img/maliciousmsshare.png)
+
 El origen del ataque no es ninguno de los mencionados anteriormente así que marcamos otro.
+
 ![other](./img/msshareother.png)
+
 El siguiente punto es comprobar si ha sido planeado, en mi investigación no he encontrado nada que indique que haya sido planeado.
+
 ![notplanedmsshare](./img/Notplanedmsshare.png)
+
 Como hemos podido ver anteriormente el atacante pudo acceder con exito a dos de las tres URL como hemos podido ver en la captura que muestra el script en la web de Lestdefend como ejemplo. Lo marcamos como que si ha sido exitoso.
+
 ![msshareyes](./img/msshareyes.png)
+
 Lo siguiente es contener el equipo de la red.
+
 ![containedshare](./img/mssharecontained.png)
+
 Como el ataque ha sido exitoso, escalamos a nivel 2.
+
 ![escalatemsshare](./img/msshareescalation.png)
 
 ### Preguntas Microsoft SharePoint Server Elevation of Privilege 
