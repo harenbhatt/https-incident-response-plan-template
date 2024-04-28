@@ -742,7 +742,7 @@ No no es necesario ya que no ha afectado a ninguna caída o error de los servici
 4.a Seguro que en el proceso de análisis para obtener un registro de lecciones aprendidas anterior, has pensado como evitar que una situación similar se vuelva a repetir. ¿Que actuaciones has decidido para evitar que se pueda dar una situación similar?
 
 
-## Incidente 9
+## Incidente 9: SOC169 - Possible IDOR Attack Detected
 
 1.a Trabaja una memoria del trabajo realizado en la resolución de los incidentes. Tipo según taxonomía, Criticidad, Descripción del incidente para entender que ha sucedido. Utiliza imágenes y cualquier tipo de explicación y diagrama que permita aclarar tu trabajo. 
 
@@ -756,7 +756,7 @@ Media
 
 ### Descripción del incidente
 
-Código de Javascript detectado en URL.
+Se han encontrado solicitudes consecutivas a la misma página
 
 1.b ¿Cuál es el proceso de investigación seguido para investigar el incidente y que evidencias han sido clave para la resolución del incidente? 
 
@@ -764,42 +764,53 @@ Código de Javascript detectado en URL.
 
 Lo primero que haremos será seleccionar el incidente, asignarnoslo y luego empezar el playbook y detectaremos las direcciones ip y los detalles más importantes del incidente:
 
-Dirección IP destino : 172.16.17.17
+Dirección IP destino : 172.16.17.15
 
-Dirección IP origen : 112.85.42.13
+Dirección IP origen : 134.209.118.137
 
-URL solicitada : `https://172.16.17.17/search/?q=<$script>javascript:$alert(1)<$/script>`
+Si nos vamos al apartado de Log Management podremos ver que el atacante esta cambiando los parametros del id del usuario, lo intenta con el user_id=1, user_id=2, user_id=3, user_id=4, user_id=5.
 
-Si nos vamos al tráfico HTTP de la alerta y buscamos por la URL solicitada, vemos que tiene el siguiente payload XSS:
+![img63](img/img63.png)
 
-`<$script>javascript:$alert(1)<$script>`
+Sabemos por la investigación de alertas y registros lo siguiente:
 
-Por lo tanto el tráfico es malicioso:
+- La IP de destino es un servidor web con nombre de host WebServer1005, el usuario principal es webadmin35.
+- La IP de origen tiene un impacto malicioso en virustotal.
+- El tráfico es entrante.
 
-![img50](img/img57.png)
+Como vimos antes con el tema del atacante y los parametros del user_id, deducimos que el tráfico es malicioso:
 
-Y el tipo de ataque es un XSS:
+![img64](img/img64.png)
 
-![img50](img/img58.png)
+El tipo de ataque es IDOR:
 
-Si nos vamos a la pestaña de Email Security y miramos no hay ningún correo que indique que sea un test planificado, por lo tanto no lo es:
+![img65](img/img65.png)
 
-![img50](img/img59.png)
+Vemos en el apartado de Correo que no hay ningun correo indicando que el ataque fuera planeado, por lo tanto no lo es:
 
-La dirección IP del atacante es 112.85.42.13, por lo que pertenece a una IP pública. Entonces, la dirección del tráfico es Internet -> Company Network.
+![img66](img/img66.png)
 
-![img50](img/img60.png)
+La dirección de trafico es de Internet a la red de la compañía:
 
-Ahora nos vamos al apartado de Endpoint Security y veremos los distintos historiales del navegador y de la terminal, si vemos el payload del XSS vemos que no se representaba ningún intento para compremeter el Web Server, así que el host no fue comprometido.
+![img67](img/img67.png)
 
-![img61](img/img61.png)
+Si nos fijamos en la captura de RAW LOG de antes veremos que el HTTP Response Status es 200, eso significa que el ataque fue exitoso:
 
-Por lo que dijimos antes, esta alerta no necesita una escalada al siguiente nivel:
+![img67](img/img68.png)
 
-![img62](img/img62.png)
+En la parte de contener, tendremos que irnos al host y contener el WebServer1005:
+
+![img69](img/img69.png)
+
+Y ahora pondremos este artifact:
+
+![img70](img/img70.png)
+
+Como vemos que el ataque fue exitoso, la vulnerabilidad IDOR debe derivarse al equipo de aplicación/web para su solución/correción.
+
+![img71](img/img71.png)
 
 Y ya habriamos terminado el playbook.
-
 
 ### ¿Es necesario realizar alguna acción específica para el restablecimiento de los servicios afectados?
 
