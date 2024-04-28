@@ -231,24 +231,43 @@ Un atacante a ejecutado codigo en Splunk Enterprise que es un software para busc
 ### Memoria Code Execution Detected in Splunk Enterprise
 
 Lo primero que indica el playbook es que se debe investigar el origen del ataque. Si investigamos la dirección IP en virustotal, encontramos que la dirección de origen es maliciosa. Como podemos ver proviene de internet y de Chinanet.
+
 ![codeexceution](./img/codeexecutionvirustotal.png)
+
 Si comprobamos los logs, el atacante ha enviado varias peticiones desde una dirección IP haciendo referencia a un archivo shell.sh y un shell.xsl
+
 ![shell](./img/shellremotecode.png)
+
 Considero que varias peticiones a un archivo shell.sh es tráfico malicioso.
+
 ![remoteshellmalicioso](./img/remotecodemalicioso.png)
+
 Podría ser un ataque de inyección de XML ya que hace referencia a un shell.xsl como ya se ha mencionado anteriormente.
+
 ![xmlinyection](./img/xmlinyectionremote.png)
+
 En el siguiente paso el playbook nos pregunta si ha sido planeado, no he encontrado nada que indique que haya sido planeado.
+
 ![remotecodenotplanned](./img/remotecodenotplanned.png)
+
 Como vemos por el origen de la dirección IP, la conexión ha sido desde internet a la empresa.
+
 ![codeinternet-empresa](./img/remotecodeinternet-empesa.png)
+
 Teniendo en cuenta el último log, se puede comprobar de que obtuvo acceso al usuario administrador y su contraseña.
+
 ![remotecodeexitoso](./img/remotecodeexitoso.png)
+
 Entonces marcamos que si ha sido exitoso.
+
 ![remotecodeexitososi](./img/remotecodeexitososi.png)
+
 Contenemos el equipo que ha sido afectado según el playbook.
+
 ![remotecodecontained](./img/remotecodecontained.png)
+
 Como el ataque ha sido exitoso y el playbook indica que entonces debemos escalarlo, se escala al nivel 2.
+
 ![escaladoremote](./img/remotecodeescalation.png)
 
 ### Preguntas Code Execution Detected in Splunk Enterprise
